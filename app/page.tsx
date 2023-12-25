@@ -14,8 +14,8 @@ export default function Home() {
           </div>
           <div>
             <p className="text-lg">
-              "This library has saved me countless hours of work and helped me deliver stunning designs to my clients
-              faster than ever before."
+            &quot;"This library has saved me countless hours of work and helped me deliver stunning designs to my clients
+              faster than ever before."&quot;
             </p>
             <p className="mt-4 text-lg font-semibold">Sofia Davis</p>
           </div>
