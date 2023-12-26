@@ -9,11 +9,11 @@ export default function SettingsProfilePage() {
             Overview
           </h2>
           <p className="text-sm text-muted-foreground">
-            &ldquo; Welcome to [Your Company/Website Name] ("we," "us," or "our"). This
+            Welcome to [Your Company/Website Name]. This
             Privacy Policy is designed to inform you about how we collect, use,
             disclose, and safeguard your personal information. By using our
             website and services, you agree to the terms outlined in this
-            policy. For more details, please visit our Overview page. &rdquo;
+            policy. For more details, please visit our Overview page.
           </p>
         </div>
         <div className="mt-4">
@@ -21,11 +21,11 @@ export default function SettingsProfilePage() {
             Information We Collect
           </h2>
           <p className="text-sm text-muted-foreground">
-            &ldquo; At [Your Company/Website Name], we collect various types of
+            At [Your Company/Website Name], we collect various types of
             information to provide and improve our services. This may include
             personal information, such as your name, contact information, and
             usage data. To learn more about the types of information we collect
-            and how we gather it, please visit our Information We Collect page. &rdquo;
+            and how we gather it, please visit our Information We Collect page.
           </p>
         </div>
         <div className="mt-4">
@@ -33,12 +33,12 @@ export default function SettingsProfilePage() {
             How We Use Your Information
           </h2>
           <p className="text-sm text-muted-foreground">
-          &ldquo; We use the information we collect for various purposes, including to
+            We use the information we collect for various purposes, including to
             provide and improve our services, personalize your experience, and
             communicate with you. We are committed to ensuring that your
             information is used responsibly and in accordance with applicable
             laws. To learn more, please visit our How We Use Your Information
-            page. &rdquo;
+            page.
           </p>
         </div>
         <div className="mt-4">
@@ -46,23 +46,23 @@ export default function SettingsProfilePage() {
             Your Rights
           </h2>
           <p className="text-sm text-muted-foreground">
-          &ldquo; As a user of our services, you have certain rights regarding your
+            As a user of our services, you have certain rights regarding your
             personal information. These rights may include the ability to
             access, correct, or delete your data. We are dedicated to respecting
             and fulfilling your privacy rights. To learn more, please visit our
-            Your Rights page. &rdquo;
+            Your Rights page.
           </p>
         </div>
         <div className="mt-4">
           <h2 id="security-measures" className="text-lg font-medium">
             Security Measures
           </h2>
-          <p className="text-sm text-muted-foreground">
-          &ldquo; We prioritize the security of your personal information and employ
+        @  <p className="text-sm text-muted-foreground">
+            We prioritize the security of your personal information and employ
             various measures to protect it from unauthorized access, disclosure,
             alteration, and destruction. Our commitment to data security is a
             fundamental aspect of our services. To learn more, please visit our
-            Security Measures page. &rdquo;
+            Security Measures page.
           </p>
         </div>
         <div className="mt-4">
@@ -70,10 +70,10 @@ export default function SettingsProfilePage() {
             Data Deletion
           </h2>
           <p className="text-sm text-muted-foreground">
-          &ldquo; If you wish to delete your personal information from our records, we
+            If you wish to delete your personal information from our records, we
             provide options to do so. Our Data Deletion procedures are designed
             to respect your privacy preferences. To learn more, please visit our
-            Data Deletion page. &rdquo;
+            Data Deletion page.
           </p>
         </div>
         <div className="mt-4">
@@ -84,10 +84,10 @@ export default function SettingsProfilePage() {
             Updates to This Privacy Policy
           </h2>
           <p className="text-sm text-muted-foreground">
-          &ldquo; We may update this Privacy Policy from time to time to reflect
+             We may update this Privacy Policy from time to time to reflect
             changes in our practices and services. It is important to review
             this policy periodically for any updates. To learn more, please
-            visit our Updates to This Privacy Policy page. &rdquo;
+            visit our Updates to This Privacy Policy page.
           </p>
         </div>
         <div className="mt-4">
@@ -95,10 +95,10 @@ export default function SettingsProfilePage() {
             Contact Information
           </h2>
           <p className="text-sm text-muted-foreground">
-          &ldquo; If you have any questions, concerns, or requests regarding this
+            If you have any questions, concerns, or requests regarding this
             Privacy Policy, please contact us at the following: [Your
             Company/Website Name] [Contact Information] To learn more, please
-            visit our Contact Information page. &rdquo;
+            visit our Contact Information page.
           </p>
         </div>
       </div>
