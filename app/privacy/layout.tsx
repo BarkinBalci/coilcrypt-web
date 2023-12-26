@@ -12,35 +12,35 @@ export const metadata: Metadata = {
 const sidebarNavItems = [
   {
     title: "Overview",
-    href: "/privacy/overview",
+    href: "#overview",
   },
   {
     title: "Information We Collect",
-    href: "/privacy/information-we-collect",
+    href: "#information-we-collect",
   },
   {
     title: "How We Use Your Information",
-    href: "/privacy/how-we-use-your-information",
+    href: "#how-we-use-your-information",
   },
   {
     title: "Your Rights",
-    href: "/privacy/your-rights",
+    href: "#your-rights",
   },
   {
     title: "Security Measures",
-    href: "/privacy/security-measures",
+    href: "#security-measures",
   },
   {
     title: "Data Deletion",
-    href: "/privacy/data-deletion",
+    href: "#data-deletion",
   },
   {
     title: "Updates to This Privacy Policy",
-    href: "/privacy/updates-to-this-privacy-policy",
+    href: "#updates-to-this-privacy-policy",
   },
   {
     title: "Contact Information",
-    href: "/privacy/contact-information",
+    href: "#contact-information",
   },
 ];
 
@@ -48,7 +48,7 @@ interface SettingsLayoutProps {
   children: React.ReactNode;
 }
 
-export default function SettingsLayout({ children }: SettingsLayoutProps) {
+export default function policyLayout({ children }: SettingsLayoutProps) {
   return (
     <div className="hidden space-y-6 p-10 pb-16 md:block">
       <div className="space-y-0.5">
@@ -59,8 +59,8 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
         </p>
       </div>
       <Separator className="my-6" />
-      <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-        <aside className="-mx-4 lg:w-1/5">
+      <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-12 lg:space-y-0">
+        <aside className="-mx-4 lg:w-1/6">
           <SidebarNav items={sidebarNavItems} />
         </aside>
         <div className="flex-1 lg:max-w-2xl">{children}</div>
