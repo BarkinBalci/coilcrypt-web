@@ -1,17 +1,37 @@
 import ReactMarkdown from "react-markdown";
 import { Separator } from "@/components/ui/separator";
-import rehypeSlug from 'rehype-slug';
+import rehypeSlug from "rehype-slug";
 
 export default function TermsPage() {
-    return (
-        <div className="space-y-6">
-            <ReactMarkdown rehypePlugins={[rehypeSlug]}>{markdownContent}</ReactMarkdown>   
-            <Separator />
-        </div>
-    );
+  return (
+    <div className="space-y-6">
+      <ReactMarkdown
+        rehypePlugins={[rehypeSlug]}
+        components={{
+          h1: ({ node, ...props }) => (
+            <h1 className="text-3xl font-bold" {...props} />
+          ),
+          h2: ({ node, ...props }) => (
+            <h2 className="text-xl font-bold pt-6" {...props} />
+          ),
+          h3: ({ node, ...props }) => (
+            <h3 className="text-lg font-bold opacity-75" {...props} />
+          ),
+          p: ({ node, ...props }) => (
+            <p className="text-base leading-6" {...props} />
+          ),
+        }}
+      >
+        {markdownContent}
+      </ReactMarkdown>
+      <Separator />
+    </div>
+  );
 }
 
 const markdownContent = `
+# Terms of Service
+
 ## Overview
 ### 1.1 Acceptance of Terms:
 By accessing or using [Your Company Name]'s services, you agree to comply with and be bound by these terms and conditions. If you do not agree to these terms, please do not use our services.
