@@ -1,42 +1,62 @@
 "use client";
 import { usePathname } from "next/navigation";
 
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
     href: string;
     title: string;
   }[];
+  children?: React.ReactNode; // Add this line
 }
 
-export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
+export function SidebarNav({
+  className,
+  items,
+  children,
+  ...props
+}: SidebarNavProps) {
   const pathname = usePathname();
 
   return (
-    <nav
-      className={cn(
-        "flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1",
-        className
-      )}
-      {...props}
-    >
-      {items.map((item) => (
-        <button
-          key={item.href}
-          onClick={() => document.querySelector(item.href)?.scrollIntoView()}
-          className={cn(
-            buttonVariants({ variant: "ghost" }),
-            pathname === item.href
-              ? "bg-muted hover:bg-muted"
-              : "hover:bg-transparent hover:underline",
-            "justify-start"
-          )}
+    <div className="drawer lg:drawer-open">
+      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content flex flex-col items-center justify-center">
+        {/* Page content here */}
+        {children} {/* Render the children here */}
+        <label
+          htmlFor="my-drawer-2"
+          className="btn btn-primary drawer-button lg:hidden"
         >
-          {item.title}
-        </button>
-      ))}
-    </nav>
+          Open drawer
+        </label>
+      </div>
+      <div className="drawer-side">
+        <label
+          htmlFor="my-drawer-2"
+          aria-label="close sidebar"
+          className="drawer-overlay"
+        ></label>
+        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          {/* Sidebar content here */}
+          {items.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                onClick={() =>
+                  document.querySelector(item.href)?.scrollIntoView()
+                }
+                className={
+                  pathname === item.href
+                    ? "bg-muted hover:bg-muted"
+                    : "hover:bg-transparent hover:underline"
+                }
+              >
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

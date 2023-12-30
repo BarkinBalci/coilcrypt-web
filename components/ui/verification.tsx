@@ -5,7 +5,10 @@ import { signIn } from "next-auth/react";
 
 interface VerificationDialogProps {}
 export function VerificationDialog({ }: VerificationDialogProps) {
-    const email = localStorage.getItem('email');
+    let email = '';
+    if (typeof window !== 'undefined') {
+        email = localStorage.getItem('email') || '';
+    }
     const handleClick = () => {
         signIn("email", {
             email: email,
@@ -25,7 +28,7 @@ export function VerificationDialog({ }: VerificationDialogProps) {
         <p className=" text-center text-sm text-muted-foreground">
             Didn&apos;t receive an email?{" "}
             <a
-                className="underline underline-offset-4 hover:text-primary px-0"
+                className="text-primary hover:underline px-0 cursor-pointer"
                 onClick={() => handleClick()}
             >
                 Click here to resend

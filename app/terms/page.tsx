@@ -4,7 +4,7 @@ import rehypeSlug from "rehype-slug";
 
 export default function TermsPage() {
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col space-y-6 pt-12">
       <ReactMarkdown
         rehypePlugins={[rehypeSlug]}
         components={{

@@ -4,7 +4,7 @@ import rehypeSlug from "rehype-slug";
 
 export default function PrivacyPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pt-12">
       <ReactMarkdown
         rehypePlugins={[rehypeSlug]}
         components={{
@@ -28,7 +28,6 @@ export default function PrivacyPage() {
     </div>
   );
 }
-
 
 const markdownContent = `
 # Privacy Policy

@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button"
-
 export default function ErrorPage() {
     return (
         <div className="flex items-center justify-center h-screen">
@@ -16,9 +13,7 @@ export default function ErrorPage() {
                 <p className="text-center text-sm text-muted-foreground">
                     It may have been used already or it may have expired.
                 </p>
-                <Link href="./signin" className={buttonVariants({ variant: "outline" })}>
-                    Sign In
-                </Link>
+                <a href="/api/auth/signin" className="btn">Sign-in</a>
             </div>
         </div>
     );
