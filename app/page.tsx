@@ -190,7 +190,7 @@ export default function Home() {
             </svg>
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Protect what&aposs important to you</h2>
+            <h2 className="card-title">Protect what&apos;s important to you</h2>
             <p>
               Zero knowledge, end-to-end encryption guides the CoilCrypt open
               source approach to trust, accountability, and security.
