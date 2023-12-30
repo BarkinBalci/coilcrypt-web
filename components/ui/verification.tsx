@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 
 interface VerificationDialogProps {}
@@ -24,14 +23,13 @@ export function VerificationDialog({ }: VerificationDialogProps) {
             </p>
         </div>
         <p className=" text-center text-sm text-muted-foreground">
-            Didn't receive an email?{" "}
-            <Button
-                variant="link"
+            Didn&apos;t receive an email?{" "}
+            <a
                 className="underline underline-offset-4 hover:text-primary px-0"
                 onClick={() => handleClick()}
             >
                 Click here to resend
-            </Button>{" "}
+            </a>{" "}
         </p>
     </div>
     );

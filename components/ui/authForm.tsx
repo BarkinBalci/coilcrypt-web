@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { signIn } from "next-auth/react";
+import { Icons } from "../../app/icons";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -37,10 +38,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     }
   }
   return (
-    <div className="min-h-screen bg-base-200 flex items-center">
+    <div className="bg-base-200 flex items-center flex-1 py-16">
       <div className="card mx-auto w-full max-w-xl  shadow-xl">
         <div className="bg-base-100 rounded-xl">
-          <div className="py-24 px-10">
+          <div className="py-16 px-10">
             <h2 className="text-2xl font-semibold mb-2 text-center">
               Create an account
             </h2>
@@ -74,19 +75,20 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               </p>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
+            
             <button
               type="submit"
               className={"btn mt-2 w-full btn-neutral"}
               onClick={() => signIn("google")}
             >
-              Google
+              <Icons.google className="mr-1 h-5 w-5" />Google
             </button>
             <button
               type="submit"
               className={"btn mt-4 w-full btn-neutral"}
               onClick={() => signIn("github")}
             >
-              Github
+              <Icons.gitHub className="mr-1 h-5 w-5" />GitHub
             </button>
 
             <div className="text-center mt-4">

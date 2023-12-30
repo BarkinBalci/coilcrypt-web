@@ -20,10 +20,8 @@ export function Navbar() {
         </li>
       </ul>
     </div>
-    <a href="/" className="btn btn-ghost text-xl">GearStick</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <a href="/" className="btn btn-ghost text-xl">CoilCrypt</a>
+    <ul className="menu menu-horizontal  hidden lg:flex px-1">
       <li><a>Overview</a></li>
       <li><a>Help</a></li>
       <li>
@@ -38,7 +36,7 @@ export function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    <a href="/api/auth/signin">Sign-in</a>
+    <a className=" btn btn-ghost" href="/api/auth/signin">Sign-in</a>
   </div>
 </div>
   )
