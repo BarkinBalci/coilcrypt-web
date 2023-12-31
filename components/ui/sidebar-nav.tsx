@@ -1,12 +1,12 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
     href: string;
     title: string;
   }[];
-  children?: React.ReactNode; // Add this line
+  children?: React.ReactNode;
 }
 
 export function SidebarNav({
@@ -15,14 +15,43 @@ export function SidebarNav({
   children,
   ...props
 }: SidebarNavProps) {
-  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentLink = "";
+      for (let i = 0; i < items.length; i++) {
+        const element = document.querySelector(items[i].href);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 0) {
+            currentLink = items[i].href;
+            if (i + 1 < items.length) {
+              const nextElement = document.querySelector(items[i + 1].href);
+              if (nextElement) {
+                const nextRect = nextElement.getBoundingClientRect();
+                if (nextRect.top > 0) {
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+      setActiveLink(currentLink);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [items]);
 
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
-        {/* Page content here */}
-        {children} {/* Render the children here */}
+        {children}
         <label
           htmlFor="my-drawer-2"
           className="btn btn-primary drawer-button lg:hidden"
@@ -37,19 +66,18 @@ export function SidebarNav({
           className="drawer-overlay"
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-          {/* Sidebar content here */}
           {items.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                onClick={() =>
-                  document.querySelector(item.href)?.scrollIntoView()
-                }
-                className={
-                  pathname === item.href
-                    ? "bg-muted hover:bg-muted"
-                    : "hover:bg-transparent hover:underline"
-                }
+                className={item.href === activeLink ? "font-bold" : ""}
+                onClick={(event) => {
+                  event.preventDefault();
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    element.scrollIntoView();
+                  }
+                }}
               >
                 {item.title}
               </a>

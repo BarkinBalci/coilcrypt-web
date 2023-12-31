@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { SidebarNav } from "@/components/ui/sidebar-nav";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Privacy Policy",
   description: "",
 };
 
