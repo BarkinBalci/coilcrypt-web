@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function vaultPage() {
+export default function VaultPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
