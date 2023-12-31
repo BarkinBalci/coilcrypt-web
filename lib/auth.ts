@@ -8,7 +8,6 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
 export const authConfig: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
   providers: [
     EmailProvider({
       server: {
@@ -35,7 +34,8 @@ export const authConfig: NextAuthOptions = {
     signOut: '/auth/signout',
     error: '/auth/error', // Error code passed in query string as ?error=
     verifyRequest: '/auth/verify-request', // (used for check email message)
-  }
+  },
+  adapter: PrismaAdapter(prisma),
 }
 
 
