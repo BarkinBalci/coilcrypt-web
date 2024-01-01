@@ -1,7 +1,4 @@
 import * as React from "react";
-import { signIn } from "next-auth/react";
-
-import { Footer } from "@/components/ui/footer";
 
 export default function Home() {
   return (
