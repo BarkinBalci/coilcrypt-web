@@ -3,8 +3,6 @@ import * as React from "react";
  
 export default function HelpPage() {
   return (
-    <div>
-      
-    </div>
+    <div>Help Page</div>
   );
 }
