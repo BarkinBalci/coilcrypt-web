@@ -8,14 +8,14 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 function setEmailError(error: string) {
   const emailInput = document.getElementById("email") as HTMLInputElement;
-  emailInput.placeholder = error
-  emailInput.value = '';
+  emailInput.placeholder = error;
+  emailInput.value = "";
   emailInput.classList.add("input-error");
 }
 
 function clearEmailError() {
   const emailInput = document.getElementById("email") as HTMLInputElement;
-  emailInput.placeholder = "Enter your email adress"
+  emailInput.placeholder = "Enter your email adress";
   emailInput.classList.remove("input-error");
 }
 
@@ -34,7 +34,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       });
       setIsLoading(false);
     } else {
-      setEmailError('Please enter a valid email address.');
+      setEmailError("Please enter a valid email address.");
     }
   }
   return (
@@ -61,10 +61,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                   onInput={clearEmailError}
                 />
               </div>
-              <button
-                type="submit"
-                className={"btn mt-2 w-full btn-primary"}
-              >
+              <button type="submit" className={"btn mt-2 w-full btn-primary"}>
                 Sign-in with Email{" "}
               </button>
             </form>
@@ -75,20 +72,22 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               </p>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
-            
+
             <button
               type="submit"
               className={"btn mt-2 w-full btn-neutral"}
               onClick={() => signIn("google")}
             >
-              <Icons.google className="mr-1 h-5 w-5" />Google
+              <Icons.google className="mr-1 h-5 w-5" />
+              Google
             </button>
             <button
               type="submit"
               className={"btn mt-4 w-full btn-neutral"}
               onClick={() => signIn("github")}
             >
-              <Icons.gitHub className="mr-1 h-5 w-5" />GitHub
+              <Icons.gitHub className="mr-1 h-5 w-5" />
+              GitHub
             </button>
 
             <div className="text-center mt-4">

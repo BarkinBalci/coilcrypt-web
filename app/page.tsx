@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import * as React from "react";
+
+export const metadata: Metadata = {
+  title: "CoilCrypt - Home",
+  description: "",
+};
 
 export default function Home() {
   return (

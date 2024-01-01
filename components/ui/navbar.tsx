@@ -1,6 +1,10 @@
-import * as React from "react";
+"use client";
 
+import * as React from "react";
+import { useSession, signOut } from "next-auth/react";
 export function Navbar() {
+  const { data: session, status: loading } = useSession();
+
   return (
     <div className="bg-base-200 ">
       <div className="navbar container mx-auto">
@@ -26,9 +30,11 @@ export function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Overview</a>
-              </li>
+              {session && (
+                <li>
+                  <a href="/vault">Vault</a>
+                </li>
+              )}
               <li>
                 <a href="/help">Help</a>
               </li>
@@ -49,9 +55,11 @@ export function Navbar() {
             CoilCrypt
           </a>
           <ul className="menu menu-horizontal  hidden lg:flex px-1">
-            <li>
-              <a>Overview</a>
-            </li>
+            {session && (
+              <li>
+                <a href="/vault">Vault</a>
+              </li>
+            )}
             <li>
               <a href="/help">Help</a>
             </li>
@@ -71,9 +79,15 @@ export function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className=" btn btn-ghost" href="/api/auth/signin">
-            Sign-in
-          </a>
+          {session ? (
+            <button className="btn btn-ghost" onClick={() => signOut()}>
+              Sign out
+            </button>
+          ) : (
+            <a className="btn btn-ghost" href="/api/auth/signin">
+              Sign in
+            </a>
+          )}
         </div>
       </div>
     </div>
