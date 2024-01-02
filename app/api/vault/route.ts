@@ -9,9 +9,13 @@ export async function GET(request: Request, response: Response) {
   const session = await getServerSession(authConfig);
   const userEmail = session?.user?.email;
 
+  if (!userEmail) {
+    return NextResponse.json("User email not found", { status: 404 });
+  }
+  
   const user = await prisma.user.findUnique({
     where: {
-      email: userEmail ?? undefined,
+      email: userEmail,
     },
   });
   
@@ -19,7 +23,7 @@ export async function GET(request: Request, response: Response) {
     return NextResponse.json("User not found", { status: 404 });
   }
 
-  const vault = await prisma.vault.findMany({
+  const vault = await prisma.vault.findUnique({
     where: {
       userId: user.id,
     },
