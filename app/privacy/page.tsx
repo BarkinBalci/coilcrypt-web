@@ -4,7 +4,7 @@ import rehypeSlug from "rehype-slug";
 
 export default function PrivacyPage() {
   return (
-    <div className="flex flex-col space-y-6 pt-12 pb-24">
+    <div className="flex flex-col space-y-6 pt-6 pb-24 mx-6">
       <ReactMarkdown
         rehypePlugins={[rehypeSlug]}
         components={{

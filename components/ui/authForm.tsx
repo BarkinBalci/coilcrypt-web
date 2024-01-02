@@ -38,7 +38,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     }
   }
   return (
-    <div className="bg-base-100 flex items-center flex-1 py-16">
+    <div className="bg-base-100 flex items-center flex-1 py-16 mx-6">
       <div className="card mx-auto w-full max-w-xl  shadow-xl">
         <div className="bg-base-200 rounded-xl">
           <div className="py-16 px-10">

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mx-4">
-      <h1 className="text-3xl pt-16 pb-4">
+      <h1 className="text-3xl pt-16 pb-4 flex-wrap text-center">
         Everything you need out of a password manager
       </h1>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-        <div className="card w-full md:w-96 bg-base-100">
+        <div className="card card-compact w-full md:w-96 bg-base-100">
           <figure className="px-10 pt-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card w-full md:w-96 bg-base-100">
+        <div className="card card-compact w-full md:w-96 bg-base-100">
           <figure className="px-10 pt-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card w-full md:w-96 bg-base-100">
+        <div className="card card-compact w-full md:w-96 bg-base-100">
           <figure className="px-10 pt-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +204,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h1 className="text-3xl pt-16 pb-12">
+      <h1 className="text-3xl pt-16 pb-12 text-center">
         CoilCrypt helps businesses run quickly and securely
       </h1>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 pb-16">

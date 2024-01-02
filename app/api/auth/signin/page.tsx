@@ -7,7 +7,7 @@ import { UserAuthForm } from "@/components/ui/authForm"
 export default function AuthenticationPage() {
 
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="h-screen flex flex-col">
       <UserAuthForm/>
     </div>
   )

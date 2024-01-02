@@ -28,7 +28,7 @@ export function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52 z-30"
             >
               {session && (
                 <li>
@@ -40,14 +40,6 @@ export function Navbar() {
               </li>
               <li>
                 <a>Settings</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Dark</a>
-                  </li>
-                  <li>
-                    <a>Light</a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -64,17 +56,7 @@ export function Navbar() {
               <a href="/help">Help</a>
             </li>
             <li>
-              <details>
-                <summary>Settings</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Dark</a>
-                  </li>
-                  <li>
-                    <a>Light</a>
-                  </li>
-                </ul>
-              </details>
+              <a href="/settings">Settings</a>
             </li>
           </ul>
         </div>

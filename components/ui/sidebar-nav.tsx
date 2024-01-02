@@ -48,16 +48,29 @@ export function SidebarNav({
   }, [items]);
 
   return (
-    <div className="drawer lg:drawer-open">
+    <div className="drawer lg:drawer-open z-10">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
-        {children}
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+          className="btn btn-neutral drawer-button lg:hidden fixed bottom-0 right-0 my-6 mx-6 z-20"
         >
-          Open drawer
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+            />
+          </svg>
         </label>
+        {children}
       </div>
       <div className="drawer-side">
         <label
@@ -67,7 +80,7 @@ export function SidebarNav({
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
           {items.map((item) => (
-            <li key={item.href}>
+            <li className="text-base" key={item.href}>
               <a
                 href={item.href}
                 className={item.href === activeLink ? "font-bold" : ""}
