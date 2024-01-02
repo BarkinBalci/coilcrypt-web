@@ -3,10 +3,9 @@ import { useSession, signOut } from "next-auth/react";
 import { getServerSession } from "next-auth";
 import { authConfig } from "@/lib/auth";
 import { SignOutButton } from "@/components/ui/signOutButton";
-import {ThemeToggle } from "@/components/ui/themeToggle";
+import { ThemeToggle } from "@/components/ui/themeToggle";
 export async function Navbar() {
-  
-  const session = await getServerSession(authConfig)
+  const session = await getServerSession(authConfig);
 
   return (
     <div className="bg-base-200 ">
@@ -38,11 +37,13 @@ export async function Navbar() {
                   <a href="/vault">Vault</a>
                 </li>
               )}
+              {session && (
+                <li>
+                  <a href="/settings">Settings</a>
+                </li>
+              )}
               <li>
                 <a href="/help">Help</a>
-              </li>
-              <li>
-                <a>Settings</a>
               </li>
             </ul>
           </div>
@@ -55,23 +56,25 @@ export async function Navbar() {
                 <a href="/vault">Vault</a>
               </li>
             )}
+            {session && (
+              <li>
+                <a href="/settings">Settings</a>
+              </li>
+            )}
             <li>
               <a href="/help">Help</a>
-            </li>
-            <li>
-              <a href="/settings">Settings</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <ThemeToggle/>
           {session ? (
-          <SignOutButton/>
+            <div></div>
           ) : (
             <a className="btn btn-ghost" href="/api/auth/signin">
               Sign in
             </a>
           )}
+          <ThemeToggle />
         </div>
       </div>
     </div>
