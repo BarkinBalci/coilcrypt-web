@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-neutral: theme('colors.neutral');
+    --color-secondary: theme('colors.secondary');
+    --color-primary: theme('colors.primary');
+    --color-accent: theme('colors.accent');
+    --color-base-100: theme('colors.base-100');
+  }

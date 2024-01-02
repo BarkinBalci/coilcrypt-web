@@ -7,16 +7,16 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        white: {
+        Light: {
           "primary": "#82CB00",
-          "secondary": "#3d4451",
+          "secondary": "#8B8B8B",
           "accent": "#348240",
-          "neutral": "#FFFFFF",
-          "base-100": "#1D1D1D",
+          "neutral": "#1D1D1D",
+          "base-100": "#FFFFFF",
         },
-        dark: {
+        Dark: {
           "primary": "#82CB00",
-          "secondary": "#3d4451",
+          "secondary": "#8B8B8B",
           "accent": "#348240",
           "neutral": "#FFFFFF",
           "base-100": "#1D1D1D",

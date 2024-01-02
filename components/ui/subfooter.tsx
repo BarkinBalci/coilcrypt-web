@@ -4,7 +4,7 @@ export function SubFooter() {
   return (
     <div className="bg-base-100">
       <div className="container mx-auto">
-        <footer className="footer px-10 py-4 border-t text-base-content border-base-300">
+        <footer className="footer px-10 py-4 text-base-content">
           <aside className="items-center grid-flow-col">
             <p>&#169; 2023 CoilCrypt. All rights reserved.</p>
           </aside>

@@ -1,4 +1,5 @@
-import {VaultHero} from "@/components/ui/vaulthero";
+import { VaultCreateHero } from "@/components/ui/vaultCreateHero";
+import { VaultUnlockHero } from "@/components/ui/vaultUnlockHero";
 import { authConfig } from "@/lib/auth";
 import { Metadata } from "next";
 import { getServerSession } from "next-auth";
@@ -17,7 +18,7 @@ export default async function VaultPage() {
   }
   return (
     <div>
-      <VaultHero/>
+      <VaultCreateHero/>
     </div>
   );
 }

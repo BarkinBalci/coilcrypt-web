@@ -3,6 +3,7 @@ import { useSession, signOut } from "next-auth/react";
 import { getServerSession } from "next-auth";
 import { authConfig } from "@/lib/auth";
 import { SignOutButton } from "@/components/ui/signOutButton";
+import {ThemeToggle } from "@/components/ui/themeToggle";
 export async function Navbar() {
   
   const session = await getServerSession(authConfig)
@@ -63,6 +64,7 @@ export async function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
+          <ThemeToggle/>
           {session ? (
           <SignOutButton/>
           ) : (

@@ -30,7 +30,7 @@ export async function GET(request: Request, response: Response) {
   });
 
   if (!vault) {
-    return NextResponse.json("Vault not found", { status: 404 });
+    return NextResponse.json({ message: "Vault not found", action: "createVault" }, { status: 404 });
   }
 
   return NextResponse.json({ vault });

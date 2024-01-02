@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export function VaultHero() {
+export function VaultUnlockHero() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -23,6 +23,7 @@ export function VaultHero() {
               className="input input-bordered w-72"
               required
             />
+            
             <button
               onClick={() => setShowPassword(!showPassword)}
               className="btn btn-secondary"
@@ -30,7 +31,7 @@ export function VaultHero() {
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
-          <button className="btn btn-primary">Create Vault</button>
+          <button className="btn btn-primary">Unlock Vault</button>
         </div>
       </div>
     </div>
