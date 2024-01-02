@@ -1,9 +1,11 @@
-"use client";
-
 import * as React from "react";
 import { useSession, signOut } from "next-auth/react";
-export function Navbar() {
-  const { data: session, status: loading } = useSession();
+import { getServerSession } from "next-auth";
+import { authConfig } from "@/lib/auth";
+import { SignOutButton } from "@/components/ui/signOutButton";
+export async function Navbar() {
+  
+  const session = await getServerSession(authConfig)
 
   return (
     <div className="bg-base-200 ">
@@ -62,9 +64,7 @@ export function Navbar() {
         </div>
         <div className="navbar-end">
           {session ? (
-            <button className="btn btn-ghost" onClick={() => signOut()}>
-              Sign out
-            </button>
+          <SignOutButton/>
           ) : (
             <a className="btn btn-ghost" href="/api/auth/signin">
               Sign in
