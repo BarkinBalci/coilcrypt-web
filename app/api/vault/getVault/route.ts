@@ -1,9 +1,9 @@
+//vault
+
 import { getServerSession } from "next-auth";
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '@/lib/prisma'
 import { authConfig } from "@/lib/auth";
 import { NextResponse } from "next/server";
-
-const prisma = new PrismaClient()
 
 export async function GET(request: Request, response: Response) {
   const session = await getServerSession(authConfig);
@@ -26,6 +26,10 @@ export async function GET(request: Request, response: Response) {
   const vault = await prisma.vault.findUnique({
     where: {
       userId: user.id,
+    },
+    include: {
+      notes: true,
+      credentials: true,
     },
   });
 
