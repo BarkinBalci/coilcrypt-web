@@ -50,7 +50,7 @@ export function SidebarNav({
   return (
     <div className="drawer lg:drawer-open z-10">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
+      <div className="drawer-content flex flex-col justify-center">
         <label
           htmlFor="my-drawer-2"
           className="btn btn-neutral drawer-button lg:hidden fixed bottom-0 right-0 my-6 mx-6 z-20"

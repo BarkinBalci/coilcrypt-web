@@ -28,7 +28,7 @@ export function VerificationDialog({ }: VerificationDialogProps) {
         <p className=" text-center text-sm text-muted-foreground">
             Didn&apos;t receive an email?{" "}
             <a
-                className="text-primary hover:underline px-0 cursor-pointer"
+                className="text-accent hover:underline px-0 cursor-pointer"
                 onClick={() => handleClick()}
             >
                 Click here to resend

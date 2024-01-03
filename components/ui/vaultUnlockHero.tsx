@@ -31,7 +31,7 @@ export function VaultUnlockHero() {
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
-          <button className="btn btn-primary">Unlock Vault</button>
+          <button className="btn btn-accent">Unlock Vault</button>
         </div>
       </div>
     </div>

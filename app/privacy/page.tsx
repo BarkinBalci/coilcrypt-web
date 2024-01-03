@@ -1,5 +1,4 @@
 import ReactMarkdown from "react-markdown";
-import { Separator } from "@/components/ui/separator";
 import rehypeSlug from "rehype-slug";
 
 export default function PrivacyPage() {
@@ -24,7 +23,6 @@ export default function PrivacyPage() {
       >
         {markdownContent}
       </ReactMarkdown>
-      <Separator />
     </div>
   );
 }
@@ -33,26 +31,104 @@ const markdownContent = `
 # Privacy Policy
 
 ## Overview
-Welcome to [Your Company/Website Name]. This Privacy Policy is designed to inform you about how we collect, use, disclose, and safeguard your personal information. By using our website and services, you agree to the terms outlined in this policy. For more details, please visit our Overview page.
+### 1. Introduction
+Welcome to [Your Company Name]! These terms of service ("Terms") govern your access and use of our services. By using our services, you agree to comply with and be bound by these Terms. Please read them carefully before proceeding.
+
+### 1.1 Acceptance of Terms
+By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree with any part of these Terms, please do not use our services.
 
 ## Information We Collect
-At [Your Company/Website Name], we collect various types of information to provide and improve our services. This may include personal information, such as your name, contact information, and usage data. To learn more about the types of information we collect and how we gather it, please visit our Information We Collect page.
+### 2. Types of Information Collected
+We collect various types of information to provide and improve our services. This includes:
+
+### 2.1 Personal Information
+- 2.1.1 Name
+- 2.1.2 Contact Information
+- 2.1.3 Payment Details
+
+### 2.2 Non-Personal Information
+- 2.2.1 Usage Patterns
+- 2.2.2 Interactions with Our Platform
+
+### 2.3 Collection Methods
+We employ different methods to collect information, such as cookies, log files, and third-party analytics tools. Each method is designed to enhance your experience and improve our services.
 
 ## How We Use Your Information
-We use the information we collect for various purposes, including to provide and improve our services, personalize your experience, and communicate with you. We are committed to ensuring that your information is used responsibly and in accordance with applicable laws. To learn more, please visit our How We Use Your Information page.
+### 3. Purpose of Information Usage
+We use the collected information for various purposes, including:
+
+### 3.1 Service Enhancement
+- 3.1.1 Personalization
+- 3.1.2 User Experience Improvement
+
+### 3.2 Customer Support
+- 3.2.1 Assistance with Inquiries
+- 3.2.2 Issue Resolution
+
+### 3.3 Security and Compliance
+- 3.3.1 Protection Against Unauthorized Access
+- 3.3.2 Compliance with Applicable Laws
+
+### 3.4 Third-Party Sharing
+In certain instances, we may share information with third-party service providers. This sharing is outlined in detail in subsequent sections.
 
 ## Your Rights
-As a user of our services, you have certain rights regarding your personal information. These rights may include the ability to access, correct, or delete your data. We are dedicated to respecting and fulfilling your privacy rights. To learn more, please visit our Your Rights page.
+### 4. User Rights
+As a user, you have specific rights regarding your information, including:
+
+### 4.1 Access
+- 4.1.1 Request for Access to Personal Information
+- 4.1.2 Access to Usage Data
+
+### 4.2 Correction
+- 4.2.1 Updating Personal Information
+- 4.2.2 Correction of Inaccurate Data
+
+### 4.3 Deletion
+- 4.3.1 Request for Deletion of Personal Information
+- 4.3.2 Deletion of Non-Essential Data
+
+### 4.4 Opt-Out
+Users have the right to opt-out of certain data collection practices. Details on opting out are provided in the subsequent sections.
 
 ## Security Measures
-We prioritize the security of your personal information and employ various measures to protect it from unauthorized access, disclosure, alteration, and destruction. Our commitment to data security is a fundamental aspect of our services. To learn more, please visit our Security Measures page.
+### 5. Security Protocols
+Protecting your information is our top priority. We have implemented various security measures, including:
+
+### 5.1 Encryption
+- 5.1.1 Data Transmission Encryption
+- 5.1.2 Stored Data Encryption
+
+### 5.2 Access Controls
+- 5.2.1 Restricted Access to Sensitive Information
+- 5.2.2 Two-Factor Authentication
+
+### 5.3 Regular Audits
+- 5.3.1 Internal Audits
+- 5.3.2 Third-Party Security Audits
 
 ## Data Deletion
-If you wish to delete your personal information from our records, we provide options to do so. Our Data Deletion procedures are designed to respect your privacy preferences. To learn more, please visit our Data Deletion page.
+### 6. Deletion Procedures
+Users have the right to request the deletion of their data. The deletion process involves:
+
+### 6.1 User-Requested Deletion
+- 6.1.1 Submitting a Deletion Request
+- 6.1.2 Confirmation of Deletion
+
+### 6.2 Retention Periods
+Different types of information have varying retention periods. This section outlines the retention timelines for each category.
 
 ## Updates to This Privacy Policy
-We may update this Privacy Policy from time to time to reflect changes in our practices and services. It is important to review this policy periodically for any updates. To learn more, please visit our Updates to This Privacy Policy page.
+### 7. Policy Modification
+This Privacy Policy may be updated to reflect changes in our practices and services. Users are encouraged to review this section regularly for updates.
+
+### 7.1 Notification of Changes
+When significant changes are made to the Privacy Policy, users will be notified through appropriate channels, such as email or in-app notifications.
 
 ## Contact Information
-If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at the following: [Your Company/Website Name] [Contact Information] To learn more, please visit our Contact Information page.
+### 8. Customer Support
+If you have any questions, concerns, or requests regarding these Terms or our privacy practices, please contact our customer support team at [Your Contact Information]. We are here to assist you and address any issues promptly.
+
+*Remember to replace "[Your Company Name]" and "[Your Contact Information]" with your actual company name and contact details.*
+
 `;

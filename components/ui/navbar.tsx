@@ -70,7 +70,7 @@ export async function Navbar() {
           {session ? (
             <div></div>
           ) : (
-            <a className="btn btn-ghost" href="/api/auth/signin">
+            <a className="btn btn-ghost " href="/api/auth/signin">
               Sign in
             </a>
           )}

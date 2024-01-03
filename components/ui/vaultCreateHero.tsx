@@ -36,7 +36,7 @@ export function VaultCreateHero() {
               className="input input-bordered w-72"
               required
             />
-          <button className="btn btn-primary">Create Vault</button>
+          <button className="btn btn-accent">Create Vault</button>
         </div>
       </div>
     </div>

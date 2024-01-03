@@ -39,7 +39,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   }
   return (
     <div className="bg-base-100 flex items-center flex-1 py-16 mx-6">
-      <div className="card mx-auto w-full max-w-xl  shadow-xl">
+      <div className="card mx-auto w-full max-w-xl">
         <div className="bg-base-200 rounded-xl">
           <div className="py-16 px-10">
             <h2 className="text-2xl font-semibold mb-2 text-center">
@@ -61,7 +61,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                   onInput={clearEmailError}
                 />
               </div>
-              <button type="submit" className={"btn mt-2 w-full btn-primary"}>
+              <button type="submit" className={"btn mt-2 w-full btn-accent"}>
                 Sign-in with Email{" "}
               </button>
             </form>
@@ -92,11 +92,11 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
             <div className="text-center mt-4">
               By clicking continue, you agree to our{" "}
-              <a href="/terms" className="text-primary hover:underline">
+              <a href="/terms" className="text-accent hover:underline">
                 Terms of Service
               </a>{" "}
               and{" "}
-              <a href="/privacy" className="text-primary hover:underline">
+              <a href="/privacy" className="text-accent hover:underline">
                 Privacy Policy
               </a>
               .

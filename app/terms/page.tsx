@@ -1,5 +1,4 @@
 import ReactMarkdown from "react-markdown";
-import { Separator } from "@/components/ui/separator";
 import rehypeSlug from "rehype-slug";
 
 export default function TermsPage() {
@@ -24,7 +23,6 @@ export default function TermsPage() {
       >
         {markdownContent}
       </ReactMarkdown>
-      <Separator />
     </div>
   );
 }
