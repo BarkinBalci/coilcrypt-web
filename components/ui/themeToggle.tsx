@@ -1,13 +1,16 @@
 "use client";
 
 import * as React from "react";
-
 export function ThemeToggle() {
-  const [theme, setTheme] = React.useState(localStorage.getItem('theme') || "Light");
+  const [theme, setTheme] = React.useState(
+    typeof window !== "undefined" ? localStorage.getItem('theme') || "Light" : "Light"
+  );
 
   React.useEffect(() => {
-    document.body.dataset.theme = theme;
-    localStorage.setItem('theme', theme);
+    if (typeof window !== "undefined") {
+      document.body.dataset.theme = theme;
+      localStorage.setItem('theme', theme);
+    }
   }, [theme]);
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
