@@ -1,7 +1,7 @@
 import { VaultCreateHero } from "@/components/ui/vaultCreateHero";
 import { VaultUnlockHero } from "@/components/ui/vaultUnlockHero";
-import { authConfig } from "@/lib/auth";
 import { Metadata } from "next";
+import { authConfig } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
