@@ -5,7 +5,7 @@ import React, { useState } from "react";
 export function SignOutButton() {
 
   return (
-    <button className="btn btn-warning" onClick={() => signOut()}>
+    <button className="btn-ghost text-lg text-error" onClick={() => signOut()}>
     Sign out
   </button>
   );
