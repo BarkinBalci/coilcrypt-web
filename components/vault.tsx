@@ -63,7 +63,7 @@ function VaultComponent() {
   };
 
   return (
-    <div className="flex-col flex items-center space-y-6 mx-6 pb-64 pt-4 ">
+<div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-4 max-w-5xl px-4">
       <h2>Notes:</h2>
       {vault.notes.map((note) => (
         <div
@@ -111,7 +111,7 @@ function VaultComponent() {
             <div className="label">
               <span className="label-text">Password:</span>
             </div>
-            <div className="join">
+            <div className="join flex">
             <input
               type={showPassword.includes(credential.id) ? "text" : "password"}
               placeholder="Type here"
@@ -120,7 +120,7 @@ function VaultComponent() {
               readOnly
             />
             <button
-              className="btn btn-neutral ml-2 join-item"
+              className="btn btn-neutral join-item"
               onClick={() => handleShowPassword(credential.id)}
             >
               {showPassword.includes(credential.id) ? (
@@ -161,7 +161,7 @@ function VaultComponent() {
               )}
             </button>
             <button
-                className="btn btn-neutral ml-2 join-item"
+                className="btn btn-neutral join-item"
                 onClick={() => copyToClipboard(credential.password)}
             >
                 <svg
