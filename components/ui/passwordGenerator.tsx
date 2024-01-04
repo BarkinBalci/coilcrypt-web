@@ -1,6 +1,6 @@
+"use client"
 import { useState } from "react";
 import { Icons } from "@/app/icons";
-
 
 interface PasswordGeneratorProps {
     onPasswordChange: (newPassword: string) => void;

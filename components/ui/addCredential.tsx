@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 import { Icons } from "@/app/icons";
 import { PasswordGenerator } from "./passwordGenerator";
