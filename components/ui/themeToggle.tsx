@@ -1,20 +1,20 @@
 "use client";
 
 import * as React from "react";
+import { useTheme } from "next-themes";
+
 export function ThemeToggle() {
-  const [theme, setTheme] = React.useState(
-    typeof window !== "undefined" ? localStorage.getItem('theme') || "Light" : "Light"
-  );
+  const { resolvedTheme, setTheme } = useTheme();
+  const [isChecked, setIsChecked] = React.useState(false);
 
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      document.body.dataset.theme = theme;
-      localStorage.setItem('theme', theme);
+    if (resolvedTheme) {
+      setIsChecked(resolvedTheme === "dark");
     }
-  }, [theme]);
+  }, [resolvedTheme]);
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTheme(event.target.checked ? "Dark" : "Light");
+    setTheme(event.target.checked ? "dark" : "light");
   };
 
   return (
@@ -23,7 +23,7 @@ export function ThemeToggle() {
         <input
           type="checkbox"
           className="theme-controller"
-          checked={theme === "Dark"}
+          checked={resolvedTheme === "dark"}
           onChange={handleThemeChange}
         />
 

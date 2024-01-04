@@ -128,7 +128,7 @@ export default function Home() {
               style={{ width: "80%", height: "80%" }}
             >
               <path
-                fill="var(--color-secondary)"
+                fill="var(--color-primary)"
                 fill-rule="evenodd"
                 d="M35 97a18 18 0 0 1 18-18h94a18 18 0 0 1 18 18v15h-4V97a14 14 0 0 0-14-14H53a14 14 0 0 0-14 14v15h-4V97Zm4 61.5v7.5a14 14 0 0 0 14 14h94a14 14 0 0 0 14-14v-7.5h4v7.5a18 18 0 0 1-18 18H53a18 18 0 0 1-18-18v-7.5h4Z"
                 clip-rule="evenodd"
