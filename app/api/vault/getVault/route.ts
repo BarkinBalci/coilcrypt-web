@@ -12,27 +12,19 @@ export async function GET(request: Request, response: Response) {
   if (!userEmail) {
     return NextResponse.json("User email not found", { status: 404 });
   }
-  
-  const user = await prisma.user.findUnique({
-    where: {
-      email: userEmail,
-    },
-  });
-  
-  if (!user) {
-    return NextResponse.json("User not found", { status: 404 });
-  }
 
-  const vault = await prisma.vault.findUnique({
+  const vault = await prisma.vault.findFirst({
     where: {
-      userId: user.id,
+      user: {
+        email: userEmail,
+      },
     },
     include: {
       notes: true,
       credentials: true,
     },
   });
-
+  
   if (!vault) {
     return NextResponse.json({ message: "Vault not found", action: "createVault" }, { status: 404 });
   }

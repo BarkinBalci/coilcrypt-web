@@ -6,52 +6,47 @@ import { prisma } from '@/lib/prisma'
 import { authConfig } from "@/lib/auth";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request, response: Response) {
+export async function POST(request: Request, response: Response) {
   const session = await getServerSession(authConfig);
   const userEmail = session?.user?.email;
 
   if (!userEmail) {
     return NextResponse.json("User email not found", { status: 404 });
   }
-  
-  const user = await prisma.user.findUnique({
+
+  const vault = await prisma.vault.findFirst({
     where: {
-      email: userEmail,
+      user: {
+        email: userEmail,
+      },
+    },
+    include: {
+      notes: true,
+      credentials: true,
     },
   });
-  
-  if (!user) {
-    return NextResponse.json("User not found", { status: 404 });
-  }
 
-const vault = await prisma.vault.findUnique({
-    where: {
-        userId: user.id,
-    },
-});
-
-if (!vault) {
+  if (!vault) {
     return NextResponse.json({ message: "Vault not found", action: "createVault" }, { status: 404 });
   }
 
-const updatedVault = await prisma.vault.update({
+  const { name, username, password, url } = await request.json();
+
+  const updatedVault = await prisma.vault.update({
     where: {
         id: vault.id,
     },
     data: {
         credentials: {
             create: {
-                name: "Github Credential",
-                username: "barkin.balci@gmail.com",
-                password: "Hello World!",
-                url: "https://github.com",
+                name: name,
+                username: username,
+                password: password,
+                url: url,
             },
         },
     },
-    include: {
-        credentials: true,
-    },
-});
+  });
 
-return NextResponse.json(updatedVault, { status: 200 });
+  return NextResponse.json("Successfully added credential", { status: 200 });
 };
