@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { authConfig } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import VaultComponent from "@/components/vault";
 
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default async function VaultPage() {
   }
   return (
     <div>
-      <VaultCreateHero/>
+      <VaultComponent/>
     </div>
   );
 }
