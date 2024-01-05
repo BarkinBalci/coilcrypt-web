@@ -127,13 +127,13 @@ function VaultComponent() {
         <AddNoteModal />
       </div>
       <h2>Notes:</h2>
-      {sortedNotes.map((note) => (
-        <NoteItem note={note} />
+      {sortedNotes.map((note, index) => (
+        <NoteItem key={index} note={note} />
       ))}
 
       <h2>Credentials:</h2>
-      {sortedCredentials.map((credential) => (
-        <CredentialItem credential={credential} />
+      {sortedCredentials.map((credential, index) => (
+        <CredentialItem key={index} credential={credential} />
       ))}
     </div>
   );
