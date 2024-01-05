@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { Icons } from "@/app/icons";
 import { AddCredentialModal } from "./ui/addCredential";
+import { AddNoteModal } from "./ui/addNote";
+import { CredentialItem } from "./ui/credentialItem";
+import { NoteItem } from "./ui/noteItem";
 
 interface Vault {
   notes: Note[];
@@ -50,7 +53,8 @@ async function deleteCredential(credentialId: String) {
 
 function VaultComponent() {
   const [vault, setVault] = useState<Vault | null>(null);
-  const [showPassword, setShowPassword] = useState<number[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOption, setSortOption] = useState("A-Z");
 
   useEffect(() => {
     fetch("/api/vault/getVault")
@@ -73,13 +77,31 @@ function VaultComponent() {
     return <div>Loading...</div>;
   }
 
-  const handleShowPassword = (credentialId: number) => {
-    setShowPassword((prevShowPassword) =>
-      prevShowPassword.includes(credentialId)
-        ? prevShowPassword.filter((id) => id !== credentialId)
-        : [...prevShowPassword, credentialId]
-    );
-  };
+  const sortedNotes = vault.notes
+  .filter((note) => note.name.toLowerCase().includes(searchTerm))
+  .sort((a, b) => {
+    switch (sortOption) {
+      case "A-Z":
+        return a.name.localeCompare(b.name);
+      case "Z-A":
+        return b.name.localeCompare(a.name);
+      default:
+        return 0;
+    }
+  });
+
+    const sortedCredentials = vault.credentials
+    .filter((credential) => credential.name.toLowerCase().includes(searchTerm))
+    .sort((a, b) => {
+      switch (sortOption) {
+        case "A-Z":
+          return a.name.localeCompare(b.name);
+        case "Z-A":
+          return b.name.localeCompare(a.name);
+        default:
+          return 0;
+      }
+    });
 
   return (
     <div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
@@ -91,124 +113,27 @@ function VaultComponent() {
           <input
             className="join-item input input-bordered input-primary w-full"
             type="text"
+            onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
           />
-          <select className="join-item select-primary select">
+          <select
+            className="join-item select-primary select"
+            onChange={(e) => setSortOption(e.target.value)}
+          >
             <option selected>A-Z</option>
             <option>Z-A</option>
           </select>
         </div>
         <AddCredentialModal />
-        <button className="btn btn-primary">
-          {" "}
-          <div className="flex flex-row items-center">
-            <span className="hidden lg:inline-block mr-2 whitespace-nowrap">
-              Add Note
-            </span>
-            <Icons.edit />
-          </div>
-        </button>
+        <AddNoteModal />
       </div>
       <h2>Notes:</h2>
-      {vault.notes.map((note) => (
-        <div
-          key={note.id}
-          id={note.id.toString()}
-          className="collapse collapse-arrow bg-base-200"
-        >
-          <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium">
-            <h3>{note.name}</h3>
-          </div>
-          <div className="collapse-content">
-            <textarea
-              className="textarea textarea-bordered w-full"
-              value={note.content}
-              readOnly
-            ></textarea>
-            <div className="flex items-center justify-end space-x-2 pt-6">
-              <button className="btn btn-warning">
-                <Icons.edit />
-              </button>
-              <button className="btn btn-error">
-                <Icons.trash />
-              </button>
-            </div>
-          </div>
-        </div>
+      {sortedNotes.map((note) => (
+        <NoteItem note={note} />
       ))}
 
       <h2>Credentials:</h2>
-      {vault.credentials.map((credential) => (
-        <div
-          key={credential.id}
-          id={credential.id.toString()}
-          className="collapse collapse-arrow bg-base-200"
-        >
-          <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium">
-            <h3>{credential.name}</h3>
-          </div>
-          <div className="collapse-content">
-            <div className="label">
-              <span className="label-text">Username:</span>
-            </div>
-            <input
-              type="text"
-              className="input input-bordered w-full  "
-              value={credential.username}
-              readOnly
-            />
-            <div className="label">
-              <span className="label-text">Password:</span>
-            </div>
-            <div className="join flex">
-              <input
-                type={
-                  showPassword.includes(credential.id) ? "text" : "password"
-                }
-                className="input input-bordered w-full   disabled join-item"
-                value={credential.password}
-                readOnly
-              />
-              <button
-                className="btn btn-neutral join-item"
-                onClick={() => handleShowPassword(credential.id)}
-              >
-                {showPassword.includes(credential.id) ? (
-                  <Icons.showPassword />
-                ) : (
-                  <Icons.hidePassword />
-                )}
-              </button>
-              <button
-                className="btn btn-neutral join-item"
-                onClick={() => copyToClipboard(credential.password)}
-              >
-                <Icons.clipboard />
-              </button>
-            </div>
-            <div className="label">
-              <span className="label-text">URL:</span>
-            </div>
-            <input
-              type="text"
-              className="input input-bordered w-full  "
-              value={credential.url}
-              readOnly
-            />
-            <div className="flex items-center justify-end space-x-2 pt-6">
-              <button className="btn btn-warning">
-                <Icons.edit />
-              </button>
-              <button
-                className="btn btn-error"
-                onClick={() => deleteCredential(credential.id.toString())}
-              >
-                <Icons.trash />
-              </button>
-            </div>
-          </div>
-        </div>
+      {sortedCredentials.map((credential) => (
+        <CredentialItem credential={credential} />
       ))}
     </div>
   );

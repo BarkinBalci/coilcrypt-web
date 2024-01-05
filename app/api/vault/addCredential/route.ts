@@ -2,7 +2,6 @@
 
 import { getServerSession } from "next-auth";
 import { prisma } from '@/lib/prisma'
-
 import { authConfig } from "@/lib/auth";
 import { NextResponse } from "next/server";
 
@@ -19,10 +18,6 @@ export async function POST(request: Request, response: Response) {
       user: {
         email: userEmail,
       },
-    },
-    include: {
-      notes: true,
-      credentials: true,
     },
   });
 

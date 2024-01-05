@@ -2,40 +2,33 @@
 
 import { useState } from "react";
 import { Icons } from "@/app/icons";
-import { PasswordGenerator } from "./passwordGenerator";
 
-export function AddCredentialModal() {
+export function AddNoteModal() {
   const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [url, setUrl] = useState("");
+  const [content, setContent] = useState("");
+
 
   const resetValues = () => {
     setName("");
-    setUsername("");
-    setPassword("");
-    setUrl("");
+    setContent("");
   };
 
   const handleSave = async () => {
-    const response = await fetch("/api/vault/addCredential", {
+    const response = await fetch("/api/vault/addNote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         name,
-        username,
-        password,
-        url,
+        content,
       }),
     });
 
     if (!response.ok) {
-      //Error response
-      }
-      //Success response
-      
+    //Error response
+    }
+    //Success response
     resetValues();
   };
 
@@ -45,21 +38,21 @@ export function AddCredentialModal() {
         className="btn btn-primary"
         onClick={() =>
           (
-            document.getElementById("my_modal_1") as HTMLDialogElement
+            document.getElementById("my_modal_3") as HTMLDialogElement
           )?.showModal()
         }
       >
         <div className="flex flex-row items-center">
-          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">Add Credential</span>
-          <Icons.addUser />
+          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">Add Note</span>
+          <Icons.edit />
         </div>
       </button>
-      <dialog id="my_modal_1" className="modal modal-bottom sm:modal-middle">
+      <dialog id="my_modal_3" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
             ✕
           </button>
-          <h3 className="font-bold text-lg">Add Credential</h3>
+          <h3 className="font-bold text-lg">Add Note</h3>
           <div className="py-4">
             <div className="label">
               <span className="label-text">Name:</span>
@@ -70,25 +63,14 @@ export function AddCredentialModal() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <div className="label pt-8">
-              <span className="label-text">Username:</span>
+            <div className="label pt-6">
+              <span className="label-text">Content:</span>
             </div>
-            <input
-              type="text"
-              className="input input-bordered w-full"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-
-            <PasswordGenerator onPasswordChange={setPassword} />
-            <div className="label">
-              <span className="label-text">URL:</span>
-            </div>
-            <input
-              type="text"
-              className="input input-bordered w-full"
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
+            <textarea
+                className="textarea textarea-bordered w-full"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                rows={6}
             />
           </div>
           <div className="modal-action">
