@@ -10,6 +10,13 @@ export function AddCredentialModal() {
   const [password, setPassword] = useState("");
   const [url, setUrl] = useState("");
 
+  const resetValues = () => {
+    setName("");
+    setUsername("");
+    setPassword("");
+    setUrl("");
+  };
+
   const handleSave = async () => {
     const response = await fetch("/api/vault/addCredential", {
       method: "POST",
@@ -58,6 +65,7 @@ export function AddCredentialModal() {
       </svg>
       <span>Your purchase has been confirmed!</span>
     </div>;
+    resetValues();
   };
 
   return (

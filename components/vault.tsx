@@ -31,6 +31,23 @@ function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
 }
 
+async function deleteCredential(credentialId: String) {
+  const response = await fetch('/api/vault/deleteCredential', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ credentialId }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const message = await response.json();
+  console.log(message);
+}
+
 function VaultComponent() {
   const [vault, setVault] = useState<Vault | null>(null);
   const [showPassword, setShowPassword] = useState<number[]>([]);
@@ -66,7 +83,7 @@ function VaultComponent() {
 
   return (
     <div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-4 max-w-5xl px-4">
-      <AddCredentialModal/>
+      <AddCredentialModal />
       <h2>Notes:</h2>
       {vault.notes.map((note) => (
         <div
@@ -159,7 +176,10 @@ function VaultComponent() {
               <button className="btn btn-warning">
                 <Icons.edit />
               </button>
-              <button className="btn btn-error">
+              <button
+                className="btn btn-error"
+                onClick={() => deleteCredential(credential.id.toString())}
+              >
                 <Icons.trash />
               </button>
             </div>

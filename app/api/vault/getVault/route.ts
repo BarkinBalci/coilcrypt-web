@@ -26,7 +26,16 @@ export async function GET(request: Request, response: Response) {
   });
   
   if (!vault) {
-    return NextResponse.json({ message: "Vault not found", action: "createVault" }, { status: 404 });
+    const vault = await prisma.vault.create({
+      data: {
+        user: {
+          connect: {
+            email: userEmail,
+          },
+        },
+      },
+    });
+    return NextResponse.json({ vault });
   }
 
   return NextResponse.json({ vault });
