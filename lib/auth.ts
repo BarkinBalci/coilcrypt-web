@@ -32,14 +32,7 @@ export const authConfig: NextAuthOptions = {
     signOut: '/auth/signout',
     error: '/auth/error', // Error code passed in query string as ?error=
     verifyRequest: '/auth/verify-request', // (used for check email message)
-
-  },
-  callbacks: {
-    async redirect({ url, baseUrl }) {
-      if (url.startsWith("/")) return `${baseUrl}${url}`
-      else if (new URL(url).origin === baseUrl) return url
-      return `${baseUrl}/vault`
-    }
+    
   },
   adapter: PrismaAdapter(prisma),
 }
