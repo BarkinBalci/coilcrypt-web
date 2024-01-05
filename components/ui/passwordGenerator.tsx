@@ -15,7 +15,7 @@ interface PasswordGeneratorProps {
   };
 
   return (
-    <div className="py-4 space-y-4">
+    <div className=" space-y-4">
       <div>
         <div className="label">
           <span className="label-text">Password:</span>

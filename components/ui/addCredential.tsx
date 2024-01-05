@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { Icons } from "@/app/icons";
@@ -71,14 +71,17 @@ export function AddCredentialModal() {
   return (
     <div>
       <button
-        className="btn"
+        className="btn btn-primary"
         onClick={() =>
           (
             document.getElementById("my_modal_1") as HTMLDialogElement
           )?.showModal()
         }
       >
-        Add Credential
+        <div className="flex flex-row items-center">
+          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">Add Credential</span>
+          <Icons.addUser />
+        </div>
       </button>
       <dialog id="my_modal_1" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
@@ -86,7 +89,7 @@ export function AddCredentialModal() {
             ✕
           </button>
           <h3 className="font-bold text-lg">Add Credential</h3>
-          <p className="py-4">
+          <div className="py-4">
             <div className="label">
               <span className="label-text">Name:</span>
             </div>
@@ -96,7 +99,7 @@ export function AddCredentialModal() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <div className="label">
+            <div className="label pt-8">
               <span className="label-text">Username:</span>
             </div>
             <input
@@ -116,13 +119,15 @@ export function AddCredentialModal() {
               value={url}
               onChange={(e) => setUrl(e.target.value)}
             />
-          </p>
+          </div>
           <div className="modal-action">
             <form method="dialog">
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                 ✕
               </button>
-              <button className="btn btn-accent" onClick={handleSave}>Save</button>
+              <button className="btn btn-accent" onClick={handleSave}>
+                Save
+              </button>
             </form>
           </div>
         </div>

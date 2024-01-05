@@ -32,10 +32,10 @@ function copyToClipboard(text: string) {
 }
 
 async function deleteCredential(credentialId: String) {
-  const response = await fetch('/api/vault/deleteCredential', {
-    method: 'POST',
+  const response = await fetch("/api/vault/deleteCredential", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ credentialId }),
   });
@@ -82,8 +82,32 @@ function VaultComponent() {
   };
 
   return (
-    <div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-4 max-w-5xl px-4">
-      <AddCredentialModal />
+    <div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
+      <div className="flex flex-row space-x-2 mx-auto w-full">
+        <div className="join w-full">
+          <button className="btn btn-primary join-item">
+            <Icons.search />
+          </button>
+          <input
+            className="join-item input input-bordered input-primary w-full"
+            type="text"
+          />
+          <select className="join-item select-primary select">
+            <option selected>A-Z</option>
+            <option>Z-A</option>
+          </select>
+        </div>
+        <AddCredentialModal />
+        <button className="btn btn-primary">
+          {" "}
+          <div className="flex flex-row items-center">
+            <span className="hidden lg:inline-block mr-2 whitespace-nowrap">
+              Add Note
+            </span>
+            <Icons.edit />
+          </div>
+        </button>
+      </div>
       <h2>Notes:</h2>
       {vault.notes.map((note) => (
         <div
