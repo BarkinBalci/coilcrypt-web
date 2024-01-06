@@ -55,7 +55,10 @@ export function PasswordGenerator({
             type="text"
             className="input input-bordered w-full join-item"
             value={password}
-            onChange={handlePasswordChange}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              onPasswordChange(e.target.value); // update the parent component with the manually entered password
+            }}
           />
           <button
             className="btn btn-neutral join-item"
