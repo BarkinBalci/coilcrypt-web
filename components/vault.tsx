@@ -11,7 +11,6 @@ interface Vault {
   notes: Note[];
   credentials: Credential[];
 }
-
 interface Note {
   id: number;
   name: string;
@@ -19,7 +18,6 @@ interface Note {
   creationDate: string;
   revisionDate: string;
 }
-
 interface Credential {
   id: number;
   name: string;
@@ -29,27 +27,6 @@ interface Credential {
   password: string;
   creationDate: string;
   revisionDate: string;
-}
-
-function copyToClipboard(text: string) {
-  navigator.clipboard.writeText(text);
-}
-
-async function deleteCredential(credentialId: String) {
-  const response = await fetch("/api/vault/deleteCredential", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ credentialId }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-
-  const message = await response.json();
-  console.log(message);
 }
 
 function VaultComponent() {
@@ -141,14 +118,14 @@ function VaultComponent() {
         <AddNoteModal />
       </div>
       <h2>Notes:</h2>
-      {sortedNotes.map((note, index) => (
-        <NoteItem key={index} note={note} />
+      {sortedNotes.map((note) => (
+        <NoteItem key={note.id} note={note} />
       ))}
 
       <h2>Credentials:</h2>
-      {sortedCredentials.map((credential, index) => (
+      {sortedCredentials.map((credential) => (
         <CredentialItem
-          key={index}
+          key={credential.id}
           credential={credential}
           triggerUpdate={triggerUpdate}
         />

@@ -30,7 +30,6 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
         url,
       }),
     });
-
     if (!response.ok) {
       //Error response
     } else {
@@ -39,7 +38,6 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
       props.triggerUpdate();
     }
   };
-
   return (
     <div>
       <button
@@ -82,7 +80,6 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-
             <PasswordGenerator onPasswordChange={setPassword} />
             <div className="label">
               <span className="label-text">URL:</span>
