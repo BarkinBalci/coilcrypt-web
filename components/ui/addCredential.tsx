@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Icons } from "@/app/icons";
 import { PasswordGenerator } from "./passwordGenerator";
 
-export function AddCredentialModal() {
+export function AddCredentialModal(props: { triggerUpdate: () => void }) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -33,10 +33,11 @@ export function AddCredentialModal() {
 
     if (!response.ok) {
       //Error response
-      }
+    } else {
       //Success response
-      
-    resetValues();
+      resetValues();
+      props.triggerUpdate();
+    }
   };
 
   return (
@@ -50,7 +51,9 @@ export function AddCredentialModal() {
         }
       >
         <div className="flex flex-row items-center">
-          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">Add Credential</span>
+          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">
+            Add Credential
+          </span>
           <Icons.addUser />
         </div>
       </button>

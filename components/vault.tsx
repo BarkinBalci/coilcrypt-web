@@ -24,6 +24,7 @@ interface Credential {
   id: number;
   name: string;
   url: string;
+  favorite: boolean;
   username: string;
   password: string;
   creationDate: string;
@@ -55,6 +56,9 @@ function VaultComponent() {
   const [vault, setVault] = useState<Vault | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOption, setSortOption] = useState("A-Z");
+  const [updateTrigger, setUpdateTrigger] = useState(false);
+
+  const triggerUpdate = () => setUpdateTrigger(!updateTrigger);
 
   useEffect(() => {
     fetch("/api/vault/getVault")
@@ -71,7 +75,7 @@ function VaultComponent() {
           error
         );
       });
-  }, []);
+  }, [updateTrigger]);
 
   if (!vault) {
     return (
@@ -97,13 +101,19 @@ function VaultComponent() {
   const sortedCredentials = vault.credentials
     .filter((credential) => credential.name.toLowerCase().includes(searchTerm))
     .sort((a, b) => {
-      switch (sortOption) {
-        case "A-Z":
-          return a.name.localeCompare(b.name);
-        case "Z-A":
-          return b.name.localeCompare(a.name);
-        default:
-          return 0;
+      if (a.favorite && !b.favorite) {
+        return -1;
+      } else if (!a.favorite && b.favorite) {
+        return 1;
+      } else {
+        switch (sortOption) {
+          case "A-Z":
+            return a.name.localeCompare(b.name);
+          case "Z-A":
+            return b.name.localeCompare(a.name);
+          default:
+            return 0;
+        }
       }
     });
 
@@ -127,7 +137,7 @@ function VaultComponent() {
             <option>Z-A</option>
           </select>
         </div>
-        <AddCredentialModal />
+        <AddCredentialModal triggerUpdate={triggerUpdate} />
         <AddNoteModal />
       </div>
       <h2>Notes:</h2>
@@ -137,7 +147,11 @@ function VaultComponent() {
 
       <h2>Credentials:</h2>
       {sortedCredentials.map((credential, index) => (
-        <CredentialItem key={index} credential={credential} />
+        <CredentialItem
+          key={index}
+          credential={credential}
+          triggerUpdate={triggerUpdate}
+        />
       ))}
     </div>
   );

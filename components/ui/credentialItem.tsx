@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Icons } from "@/app/icons";
+import { FavoriteToggle } from "./favoriteToggle";
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
@@ -7,6 +8,10 @@ function copyToClipboard(text: string) {
 
 function openUrl(url: string) {
   window.open(url, "_blank");
+}
+interface CredentialItemProps {
+  credential: any;
+  triggerUpdate: () => void;
 }
 
 async function deleteCredential(credentialId: String) {
@@ -25,13 +30,10 @@ async function deleteCredential(credentialId: String) {
   const message = await response.json();
   console.log(message);
 }
-interface CredentialItemProps {
-  credential: any;
-}
 
-export function CredentialItem({ credential }: CredentialItemProps) {
+export function CredentialItem({ credential, triggerUpdate }: CredentialItemProps) {
   const [showPassword, setShowPassword] = useState<number[]>([]);
-
+  const dialogRef = useRef<HTMLDialogElement>(null);
   const handleShowPassword = (credentialId: number) => {
     setShowPassword((prevShowPassword) =>
       prevShowPassword.includes(credentialId)
@@ -39,90 +41,117 @@ export function CredentialItem({ credential }: CredentialItemProps) {
         : [...prevShowPassword, credentialId]
     );
   };
+  const handleDeleteCredential = async (credentialId: String) => {
+    await deleteCredential(credentialId);
+    triggerUpdate();
+  }
   return (
     <div
       key={credential.id}
       id={credential.id.toString()}
       className="collapse collapse-arrow bg-base-200"
     >
-      <input type="checkbox" />
-      <div className="collapse-title text-xl font-medium">
-        <h3>{credential.name}</h3>
+      <div className="flex flex-row items-center py-3 px-3">
+        <FavoriteToggle credential={credential} triggerUpdate={triggerUpdate} />
+        <label
+          className="pl-4 cursor-pointer text-2xl flex-grow"
+          onClick={() => {
+            if (dialogRef.current) {
+              dialogRef.current.showModal();
+            }
+          }}
+        >
+          {credential.name}
+        </label>
       </div>
-      <div className="collapse-content">
-        <div className="label">
-          <span className="label-text">Username:</span>
+      <dialog
+        ref={dialogRef}
+        id={credential.id}
+        className="modal modal-bottom sm:modal-middle"
+      >
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">{credential.name}</h3>
+          <div className="label">
+            <span className="label-text">Username:</span>
+          </div>
+          <div className="join flex">
+            <input
+              type="text"
+              className="input input-bordered w-full join-item"
+              value={credential.username}
+              readOnly
+            />
+            <button
+              className="btn btn-neutral join-item"
+              onClick={() => copyToClipboard(credential.username)}
+            >
+              <Icons.clipboard />
+            </button>
+          </div>
+          <div className="label">
+            <span className="label-text">Password:</span>
+          </div>
+          <div className="join flex">
+            <input
+              type={showPassword.includes(credential.id) ? "text" : "password"}
+              className="input input-bordered w-full   disabled join-item"
+              value={credential.password}
+              readOnly
+            />
+            <button
+              className="btn btn-neutral join-item"
+              onClick={() => handleShowPassword(credential.id)}
+            >
+              {showPassword.includes(credential.id) ? (
+                <Icons.showPassword />
+              ) : (
+                <Icons.hidePassword />
+              )}
+            </button>
+            <button
+              className="btn btn-neutral join-item"
+              onClick={() => copyToClipboard(credential.password)}
+            >
+              <Icons.clipboard />
+            </button>
+          </div>
+          <div className="label">
+            <span className="label-text">URL:</span>
+          </div>
+          <div className="join flex">
+            <input
+              type="text"
+              className="input input-bordered w-full join-item "
+              value={credential.url}
+              readOnly
+            />
+            <button
+              className="btn btn-neutral join-item"
+              onClick={() => openUrl(credential.url)}
+            >
+              <Icons.link />
+            </button>
+          </div>
+          <div className="flex items-center justify-between pt-8">
+            <div>
+              <button className="btn btn-warning">
+                Edit <Icons.edit />
+              </button>
+            </div>
+            <div>
+              <button
+                className="btn btn-error"
+                onClick={() => handleDeleteCredential(credential.id.toString())}
+              >
+                Delete <Icons.trash />
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="join flex">
-          <input
-            type="text"
-            className="input input-bordered w-full join-item"
-            value={credential.username}
-            readOnly
-          />
-          <button
-            className="btn btn-neutral join-item"
-            onClick={() => copyToClipboard(credential.username)}
-          >
-            <Icons.clipboard />
-          </button>
-        </div>
-        <div className="label">
-          <span className="label-text">Password:</span>
-        </div>
-        <div className="join flex">
-          <input
-            type={showPassword.includes(credential.id) ? "text" : "password"}
-            className="input input-bordered w-full   disabled join-item"
-            value={credential.password}
-            readOnly
-          />
-          <button
-            className="btn btn-neutral join-item"
-            onClick={() => handleShowPassword(credential.id)}
-          >
-            {showPassword.includes(credential.id) ? (
-              <Icons.showPassword />
-            ) : (
-              <Icons.hidePassword />
-            )}
-          </button>
-          <button
-            className="btn btn-neutral join-item"
-            onClick={() => copyToClipboard(credential.password)}
-          >
-            <Icons.clipboard />
-          </button>
-        </div>
-        <div className="label">
-          <span className="label-text">URL:</span>
-        </div>
-        <div className="join flex">
-          <input
-            type="text"
-            className="input input-bordered w-full join-item "
-            value={credential.url}
-            readOnly
-          />
-          <button
-            className="btn btn-neutral join-item"
-            onClick={() => openUrl(credential.url)}
-          >
-            <Icons.link />
-          </button>
-        </div>
-        <div className="flex items-center justify-end space-x-2 pt-6">
-          <button className="btn btn-warning">
-            <Icons.edit />
-          </button>
-          <button
-            className="btn btn-error"
-            onClick={() => deleteCredential(credential.id.toString())}
-          >
-            <Icons.trash />
-          </button>
-        </div>
-      </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </div>
   );
 }
