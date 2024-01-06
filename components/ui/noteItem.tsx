@@ -22,6 +22,7 @@ export function NoteItem({note}: NoteItemProps) {
           <textarea
             className="textarea textarea-bordered w-full"
             value={note.content}
+            rows={6}
             readOnly
           ></textarea>
           <div className="flex items-center justify-end space-x-2 pt-6">
