@@ -74,23 +74,27 @@ function VaultComponent() {
   }, []);
 
   if (!vault) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
   }
 
   const sortedNotes = vault.notes
-  .filter((note) => note.name.toLowerCase().includes(searchTerm))
-  .sort((a, b) => {
-    switch (sortOption) {
-      case "A-Z":
-        return a.name.localeCompare(b.name);
-      case "Z-A":
-        return b.name.localeCompare(a.name);
-      default:
-        return 0;
-    }
-  });
+    .filter((note) => note.name.toLowerCase().includes(searchTerm))
+    .sort((a, b) => {
+      switch (sortOption) {
+        case "A-Z":
+          return a.name.localeCompare(b.name);
+        case "Z-A":
+          return b.name.localeCompare(a.name);
+        default:
+          return 0;
+      }
+    });
 
-    const sortedCredentials = vault.credentials
+  const sortedCredentials = vault.credentials
     .filter((credential) => credential.name.toLowerCase().includes(searchTerm))
     .sort((a, b) => {
       switch (sortOption) {

@@ -70,7 +70,7 @@ export function AddCredentialModal() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <div className="label pt-8">
+            <div className="label">
               <span className="label-text">Username:</span>
             </div>
             <input

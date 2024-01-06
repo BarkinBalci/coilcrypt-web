@@ -63,7 +63,7 @@ export function AddNoteModal() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <div className="label pt-6">
+            <div className="label">
               <span className="label-text">Content:</span>
             </div>
             <textarea
