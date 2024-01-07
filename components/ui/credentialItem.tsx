@@ -2,9 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { Icons } from "@/app/icons";
 import { FavoriteToggle } from "./favoriteToggle";
 import { PasswordGenerator } from "./passwordGenerator";
+import { Toaster } from "react-hot-toast";
+import { showSuccessToast } from "./toast";
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
+  const id = "copyToClipboard"
+showSuccessToast("Copied to Clipboard", "copyToClipboard");
 }
 
 function openUrl(url: string) {
@@ -28,8 +32,11 @@ async function deleteCredential(credentialId: String) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
+  showSuccessToast("Deleted the Credential!", "deletedCredential");
+
   const message = await response.json();
   console.log(message);
+
 }
 
 async function updateCredential(
@@ -50,6 +57,8 @@ async function updateCredential(
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
+  
+  showSuccessToast("Updated the Credential!", "updatedCredential");
 
   const message = await response.json();
   console.log(message);
@@ -315,6 +324,7 @@ export function CredentialItem({
         <form method="dialog" className="modal-backdrop">
           <button onClick={() => setIsEditing(false)}>close</button>
         </form>
+        <Toaster />
       </dialog>
     </div>
   );

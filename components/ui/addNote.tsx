@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Icons } from "@/app/icons";
+import { showSuccessToast } from "./toast";
 
 export function AddNoteModal(props: { triggerUpdate: () => void }) {
   const [name, setName] = useState("");
@@ -27,7 +28,7 @@ export function AddNoteModal(props: { triggerUpdate: () => void }) {
     if (!response.ok) {
       //Error response
     }
-    //Success response
+      showSuccessToast("Added Note!", "addedNote");
       resetValues();
       props.triggerUpdate();
   };

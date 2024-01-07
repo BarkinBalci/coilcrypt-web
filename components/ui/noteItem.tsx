@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Icons } from "@/app/icons";
 import { FavoriteToggle } from "./favoriteToggle";
-
+import { Toaster } from "react-hot-toast";
+import { showSuccessToast } from "./toast";
 interface NoteItemProps {
   note: any;
   triggerUpdate: () => void;
@@ -19,6 +20,7 @@ async function deleteNote(noteId: String) {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
+  showSuccessToast("Deleted the Note!", "deletedNote");
 
   const message = await response.json();
   console.log(message);
@@ -36,7 +38,7 @@ async function updateNote(name: String, content: String, noteId: String) {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-
+  showSuccessToast("Updated the Note!", "updatedNote");
   const message = await response.json();
   console.log(message);
 }
@@ -179,6 +181,7 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
         <form method="dialog" className="modal-backdrop">
           <button onClick={() => setIsEditing(false)}>close</button>
         </form>
+        <Toaster />
       </dialog>
     </div>
   );

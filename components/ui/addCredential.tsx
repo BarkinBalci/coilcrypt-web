@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Icons } from "@/app/icons";
 import { PasswordGenerator } from "./passwordGenerator";
+import { showSuccessToast } from "./toast";
 
 export function AddCredentialModal(props: { triggerUpdate: () => void }) {
   const [name, setName] = useState("");
@@ -33,7 +34,7 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
     if (!response.ok) {
       //Error response
     } else {
-      //Success response
+      showSuccessToast("Added Credential!", "addedCredential");
       resetValues();
       props.triggerUpdate();
     }
