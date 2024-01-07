@@ -3,12 +3,17 @@ import { Icons } from "@/app/icons";
 import { FavoriteToggle } from "./favoriteToggle";
 import { PasswordGenerator } from "./passwordGenerator";
 import { Toaster } from "react-hot-toast";
-import { showSuccessToast } from "./toast";
+import { showToast } from "./toast";
+import e from "express";
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
   const id = "copyToClipboard"
-showSuccessToast("Copied to Clipboard", "copyToClipboard");
+    showToast({
+      message: "Copied to Clipboard!",
+      toastId: "copyClipboard",
+      type: "success",
+    });
 }
 
 function openUrl(url: string) {
@@ -20,6 +25,13 @@ interface CredentialItemProps {
 }
 
 async function deleteCredential(credentialId: String) {
+
+  showToast({
+    message: "Waiting for response...",
+    toastId: "deleteCredential",
+    type: "loading",
+  });
+
   const response = await fetch("/api/vault/deleteCredential", {
     method: "POST",
     headers: {
@@ -29,10 +41,20 @@ async function deleteCredential(credentialId: String) {
   });
 
   if (!response.ok) {
+    showToast({
+      message: "Error while deleting the Credential!",
+      toastId: "deleteCredential",
+      type: "error",
+    });
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-
-  showSuccessToast("Deleted the Credential!", "deletedCredential");
+else{
+  showToast({
+    message: "Deleted the Credential!",
+    toastId: "deleteCredential",
+    type: "success",
+  });
+}
 
   const message = await response.json();
   console.log(message);
@@ -46,6 +68,11 @@ async function updateCredential(
   password: String,
   credentialId: String
 ) {
+  showToast({
+    message: "Waiting for response...",
+    toastId: "updateCredential",
+    type: "loading",
+  });
   const response = await fetch("/api/vault/updateCredential", {
     method: "POST",
     headers: {
@@ -55,10 +82,20 @@ async function updateCredential(
   });
 
   if (!response.ok) {
+    showToast({
+      message: "Error while updating the Credential!",
+      toastId: "updateCredential",
+      type: "error",
+    });
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  
-  showSuccessToast("Updated the Credential!", "updatedCredential");
+  else{
+  showToast({
+    message: "Updated the Credential!",
+    toastId: "updateCredential",
+    type: "success",
+  });
+}
 
   const message = await response.json();
   console.log(message);

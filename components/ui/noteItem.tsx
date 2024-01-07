@@ -2,13 +2,19 @@ import React, { useEffect, useState, useRef } from "react";
 import { Icons } from "@/app/icons";
 import { FavoriteToggle } from "./favoriteToggle";
 import { Toaster } from "react-hot-toast";
-import { showSuccessToast } from "./toast";
+import { showToast } from "./toast";
 interface NoteItemProps {
   note: any;
   triggerUpdate: () => void;
 }
 
 async function deleteNote(noteId: String) {
+  showToast({
+    message: "Waiting for response...",
+    toastId: "deleteNote",
+    type: "loading",
+  });
+
   const response = await fetch("/api/vault/deleteNote", {
     method: "POST",
     headers: {
@@ -18,15 +24,31 @@ async function deleteNote(noteId: String) {
   });
 
   if (!response.ok) {
+    showToast({
+      message: "Error while deleting the Note!",
+      toastId: "deleteNote",
+      type: "error",
+    });
+
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  showSuccessToast("Deleted the Note!", "deletedNote");
-
+  else{
+  showToast({
+    message: "Deleted the Note!",
+    toastId: "deleteNote",
+    type: "success",
+  });
+  }
   const message = await response.json();
   console.log(message);
 }
 
 async function updateNote(name: String, content: String, noteId: String) {
+  showToast({
+    message: "Waiting for response...",
+    toastId: "updateNote",
+    type: "loading",
+  });
   const response = await fetch("/api/vault/updateNote", {
     method: "POST",
     headers: {
@@ -36,9 +58,20 @@ async function updateNote(name: String, content: String, noteId: String) {
   });
 
   if (!response.ok) {
+    showToast({
+      message: "Error while updating the Note!",
+      toastId: "updateNote",
+      type: "error",
+    });
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  showSuccessToast("Updated the Note!", "updatedNote");
+  else{
+    showToast({
+      message: "Updated the Note!",
+      toastId: "updateNote",
+      type: "success",
+    });
+  }
   const message = await response.json();
   console.log(message);
 }

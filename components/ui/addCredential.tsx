@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Icons } from "@/app/icons";
 import { PasswordGenerator } from "./passwordGenerator";
-import { showSuccessToast } from "./toast";
+import { showToast } from "./toast";
 
 export function AddCredentialModal(props: { triggerUpdate: () => void }) {
   const [name, setName] = useState("");
@@ -19,6 +19,11 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
   };
 
   const handleSave = async () => {
+    showToast({
+      message: "Waiting for response...",
+      toastId: "addCredential",
+      type: "loading",
+    });
     const response = await fetch("/api/vault/addCredential", {
       method: "POST",
       headers: {
@@ -32,9 +37,17 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
       }),
     });
     if (!response.ok) {
-      //Error response
+      showToast({
+        message: "Error while adding credential.",
+        toastId: "addCredential",
+        type: "error",
+      });
     } else {
-      showSuccessToast("Added Credential!", "addedCredential");
+      showToast({
+        message: "Added Credential!",
+        toastId: "addCredential",
+        type: "success",
+      });
       resetValues();
       props.triggerUpdate();
     }

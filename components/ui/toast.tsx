@@ -1,18 +1,38 @@
 import React from "react";
 import toast from "react-hot-toast";
 
-interface SuccessToastProps {
-    message: string;
-    toastId: string;
+interface ToastProps {
+  message: string;
+  toastId: string;
+  type: "success" | "error" | "loading";
 }
 
-export function showSuccessToast(message: string, toastId: string) {
-  toast.custom(<SuccessToast message={message} toastId={toastId} />, {
-    id: toastId,
-  });
+export function showToast({ message, toastId, type }: ToastProps) {
+  if (type === "success") {
+    toast.custom(
+      <SuccessToast message={message} toastId={toastId} type={"success"} />,
+      {
+        id: toastId,
+      }
+    );
+  } else if (type === "error") {
+    toast.custom(
+      <ErrorToast message={message} toastId={toastId} type={"error"} />,
+      {
+        id: toastId,
+      }
+    );
+  } else if (type === "loading") {
+    toast.custom(
+      <LoadingToast message={message} toastId={toastId} type={"loading"} />,
+      {
+        id: toastId,
+      }
+    );
+  }
 }
 
-function SuccessToast({ message, toastId }: SuccessToastProps) {
+function SuccessToast({ message, toastId }: ToastProps) {
   return (
     <div
       role="alert"
@@ -36,10 +56,53 @@ function SuccessToast({ message, toastId }: SuccessToastProps) {
       </div>
       <button
         className="btn btn-sm btn-ghost"
-        onClick={() => toast.dismiss(toastId)}
+        onClick={() => toast.remove(toastId)}
       >
         Dismiss
       </button>
     </div>
   );
-};
+}
+
+function ErrorToast({ message, toastId }: ToastProps) {
+  return (
+    <div
+      role="alert"
+      className="alert alert-error flex flex-row max-w-sm justify-between"
+    >
+      <div className="flex flex-row space-x-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="stroke-current shrink-0 h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span>{message}</span>
+      </div>
+      <button
+        className="btn btn-sm btn-ghost"
+        onClick={() => toast.remove(toastId)}
+      >
+        Dismiss
+      </button>
+    </div>
+  );
+}
+
+function LoadingToast({ message, toastId }: ToastProps) {
+  return (
+    <div role="alert" className="alert flex flex-row max-w-sm justify-between">
+      <div className="flex flex-row space-x-4">
+        <span className="loading loading-spinner loading-md"></span>
+        <span>{message}</span>
+      </div>
+    </div>
+  );
+}

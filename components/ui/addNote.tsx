@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Icons } from "@/app/icons";
-import { showSuccessToast } from "./toast";
+import { showToast } from "./toast";
 
 export function AddNoteModal(props: { triggerUpdate: () => void }) {
   const [name, setName] = useState("");
@@ -14,6 +14,11 @@ export function AddNoteModal(props: { triggerUpdate: () => void }) {
   };
 
   const handleSave = async () => {
+    showToast({
+      message: "Waiting for response...",
+      toastId: "addNote",
+      type: "loading",
+    });
     const response = await fetch("/api/vault/addNote", {
       method: "POST",
       headers: {
@@ -26,9 +31,20 @@ export function AddNoteModal(props: { triggerUpdate: () => void }) {
     });
 
     if (!response.ok) {
-      //Error response
+      showToast({
+        message: "Error while adding Note.",
+        toastId: "addNote",
+        type: "error",
+      });
+
     }
-      showSuccessToast("Added Note!", "addedNote");
+    else {
+      showToast({
+        message: "Added Note!",
+        toastId: "addNote",
+        type: "success",
+      });
+    }
       resetValues();
       props.triggerUpdate();
   };
