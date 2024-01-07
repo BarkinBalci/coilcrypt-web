@@ -35,14 +35,6 @@ export const authConfig: NextAuthOptions = {
     verifyRequest: '/auth/verify-request', // (used for check email message)
 
   },
-  callbacks: {
-    async jwt({ token, user, account, profile, isNewUser }) {
-      return token
-    },
-    
-    async session({ session, token, user }) {
-      return session
-    }
-  },
+
   adapter: PrismaAdapter(prisma),
 }

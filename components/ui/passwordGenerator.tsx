@@ -4,12 +4,15 @@ import { Icons } from "@/app/icons";
 
 interface PasswordGeneratorProps {
   onPasswordChange: (newPassword: string) => void;
+  defaultPassword?: string; // Add this line
 }
+
 
 export function PasswordGenerator({
   onPasswordChange,
+  defaultPassword = "", // Add this line
 }: PasswordGeneratorProps) {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(defaultPassword); // Modify this line
   const [length, setLength] = useState(24);
   const [useUppercase, setUseUppercase] = useState(true);
   const [useLowercase, setUseLowercase] = useState(true);
@@ -45,7 +48,7 @@ export function PasswordGenerator({
   };
 
   return (
-    <div className=" space-y-4">
+    <div className="space-y-4">
       <div>
         <div className="label">
           <span className="label-text">Password:</span>

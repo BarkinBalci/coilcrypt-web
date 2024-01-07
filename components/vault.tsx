@@ -63,43 +63,49 @@ function VaultComponent() {
     );
   }
 
-  const sortedNotes = vault.notes
-    .filter((note) => note.name.toLowerCase().includes(searchTerm))
-    .sort((a, b) => {
-      if (a.favorite && !b.favorite) {
-        return -1;
-      } else if (!a.favorite && b.favorite) {
-        return 1;
-      } else {
-        switch (sortOption) {
-          case "A-Z":
-            return a.name.localeCompare(b.name);
-          case "Z-A":
-            return b.name.localeCompare(a.name);
-          default:
-            return 0;
+const sortedNotes = vault.notes
+  ? vault.notes
+      .filter((note) => note.name.toLowerCase().includes(searchTerm))
+      .sort((a, b) => {
+        if (a.favorite && !b.favorite) {
+          return -1;
+        } else if (!a.favorite && b.favorite) {
+          return 1;
+        } else {
+          switch (sortOption) {
+            case "A-Z":
+              return a.name.localeCompare(b.name);
+            case "Z-A":
+              return b.name.localeCompare(a.name);
+            default:
+              return 0;
+          }
         }
-      }
-    });
+      })
+  : [];
 
-  const sortedCredentials = vault.credentials
-    .filter((credential) => credential.name.toLowerCase().includes(searchTerm))
-    .sort((a, b) => {
-      if (a.favorite && !b.favorite) {
-        return -1;
-      } else if (!a.favorite && b.favorite) {
-        return 1;
-      } else {
-        switch (sortOption) {
-          case "A-Z":
-            return a.name.localeCompare(b.name);
-          case "Z-A":
-            return b.name.localeCompare(a.name);
-          default:
-            return 0;
+const sortedCredentials = vault.credentials
+  ? vault.credentials
+      .filter((credential) =>
+        credential.name.toLowerCase().includes(searchTerm)
+      )
+      .sort((a, b) => {
+        if (a.favorite && !b.favorite) {
+          return -1;
+        } else if (!a.favorite && b.favorite) {
+          return 1;
+        } else {
+          switch (sortOption) {
+            case "A-Z":
+              return a.name.localeCompare(b.name);
+            case "Z-A":
+              return b.name.localeCompare(a.name);
+            default:
+              return 0;
+          }
         }
-      }
-    });
+      })
+  : [];
 
   return (
     <div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
@@ -124,12 +130,15 @@ function VaultComponent() {
         <AddCredentialModal triggerUpdate={triggerUpdate} />
         <AddNoteModal triggerUpdate={triggerUpdate} />
       </div>
-      <h2 className="text-left w-full text-xl font-bold">Notes:</h2>
+      {sortedNotes.length > 0 && (
+        <h2 className="text-left w-full text-xl font-bold">Notes:</h2>
+      )}
       {sortedNotes.map((note) => (
         <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
       ))}
-
-      <h2 className="text-left w-full text-xl font-bold">Credentials:</h2>
+      {sortedCredentials.length > 0 && (
+        <h2 className="text-left w-full text-xl font-bold">Credentials:</h2>
+      )}
       {sortedCredentials.map((credential) => (
         <CredentialItem
           key={credential.id}
