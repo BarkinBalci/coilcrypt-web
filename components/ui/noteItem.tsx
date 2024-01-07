@@ -24,12 +24,46 @@ async function deleteNote(noteId: String) {
   console.log(message);
 }
 
+async function updateNote(name: String, content: String, noteId: String) {
+  const response = await fetch("/api/vault/updateNote", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, content, noteId }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const message = await response.json();
+  console.log(message);
+}
+
 export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const [isEditing, setIsEditing] = useState(false);
+
+  const [name, setName] = useState(note.name);
+  const [content, setContent] = useState(note.content);
 
   const handleDeleteNote = async (noteId: String) => {
     await deleteNote(noteId);
     triggerUpdate();
+  };
+
+  const handleUpdateNote = async (
+    name: String,
+    content: String,
+    noteId: String
+  ) => {
+    await updateNote(name, content, noteId);
+    setIsEditing(false);
+    triggerUpdate();
+    if (dialogRef.current) {
+      dialogRef.current.close();
+    }
   };
   return (
     <div
@@ -60,36 +94,90 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
         className="modal modal-bottom sm:modal-middle"
       >
         <div className="modal-box">
-          <h3 className="font-bold text-lg">{note.name}</h3>
-          <div className="label">
-            <span className="label-text">Content:</span>
-          </div>
-          <div>
-            <textarea
-              className="textarea textarea-bordered w-full"
-              value={note.content}
-              rows={6}
-              readOnly
-            />
-          </div>
-          <div className="flex items-center justify-between pt-8">
+          {isEditing ? (
             <div>
-              <button className="btn btn-warning">
-                Edit <Icons.edit />
-              </button>
+              <h3 className="font-bold text-lg">Edit Note</h3>
+              <div className="label">
+                <span className="label-text">Name:</span>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  className="input input-bordered w-full"
+                  defaultValue={note.name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="label">
+                <span className="label-text">Content:</span>
+              </div>
+              <div>
+                <textarea
+                  className="textarea textarea-bordered w-full"
+                  defaultValue={note.content}
+                  rows={6}
+                  onChange={(e) => setContent(e.target.value)}
+                />
+              </div>
+              <div className="flex items-center justify-between pt-8">
+                <div>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => handleUpdateNote(name, content, note.id)}
+                  >
+                    Save <Icons.save />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => {
+                      dialogRef?.current?.close();
+                      setIsEditing(false);
+                    }}
+                  >
+                    Discard <Icons.discard />
+                  </button>
+                </div>
+              </div>
             </div>
+          ) : (
             <div>
-              <button
-                className="btn btn-error"
-                onClick={() => handleDeleteNote(note.id.toString())}
-              >
-                Delete <Icons.trash />
-              </button>
+              <h3 className="font-bold text-lg">{note.name}</h3>
+              <div className="label">
+                <span className="label-text">Content:</span>
+              </div>
+              <div>
+                <textarea
+                  className="textarea textarea-bordered w-full"
+                  value={note.content}
+                  rows={6}
+                  readOnly
+                />
+              </div>
+              <div className="flex items-center justify-between pt-8">
+                <div>
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => setIsEditing(true)}
+                  >
+                    Edit <Icons.edit />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    className="btn btn-error"
+                    onClick={() => handleDeleteNote(note.id.toString())}
+                  >
+                    Delete <Icons.trash />
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <form method="dialog" className="modal-backdrop">
-          <button>close</button>
+          <button onClick={() => setIsEditing(false)}>close</button>
         </form>
       </dialog>
     </div>
