@@ -5,7 +5,8 @@ import { PasswordGenerator } from "@/components/ui/passwordGenerator";
 
 export default function GeneratorPage() {
   return (
-  <div>
-    <PasswordGenerator onPasswordChange={() => {}} />
-    </div>)
+    <div className="px-4 py-8 max-w-2xl mx-auto">
+      <PasswordGenerator onPasswordChange={() => {}} />
+    </div>
+  );
 }

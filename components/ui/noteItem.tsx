@@ -37,14 +37,14 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
       id={note.id.toString()}
       className="collapse collapse-arrow bg-base-200"
     >
-      <div className="flex flex-row items-center py-3 px-3">
+      <div className="flex flex-row items-center py-2 px-2">
         <FavoriteToggle
           item={note}
           itemType="Note"
           triggerUpdate={triggerUpdate}
         />
         <label
-          className="pl-4 cursor-pointer text-2xl flex-grow"
+          className="pl-2 cursor-pointer text-xl flex-grow"
           onClick={() => {
             if (dialogRef.current) {
               dialogRef.current.showModal();

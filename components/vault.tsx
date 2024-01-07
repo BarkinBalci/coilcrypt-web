@@ -124,12 +124,12 @@ function VaultComponent() {
         <AddCredentialModal triggerUpdate={triggerUpdate} />
         <AddNoteModal triggerUpdate={triggerUpdate} />
       </div>
-      <h2>Notes:</h2>
+      <h2 className="text-left w-full text-xl font-bold">Notes:</h2>
       {sortedNotes.map((note) => (
         <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
       ))}
 
-      <h2>Credentials:</h2>
+      <h2 className="text-left w-full text-xl font-bold">Credentials:</h2>
       {sortedCredentials.map((credential) => (
         <CredentialItem
           key={credential.id}
