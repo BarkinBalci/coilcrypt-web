@@ -88,6 +88,7 @@ export function CredentialItem({
     credentialId: String
   ) => {
     await updateCredential(name, url, username, password, credentialId);
+    setIsEditing(false);
     triggerUpdate();
     if (dialogRef.current) {
       dialogRef.current.close();
@@ -106,16 +107,18 @@ export function CredentialItem({
           itemType="Credential"
           triggerUpdate={triggerUpdate}
         />
-        <label
-          className="pl-2 cursor-pointer text-xl flex-grow"
+        <div
+          className="flex-grow cursor-pointer"
           onClick={() => {
             if (dialogRef.current) {
               dialogRef.current.showModal();
             }
           }}
         >
-          {credential.name}
-        </label>
+          <label className="pl-2 text-xl flex-grow cursor-pointer">
+            {credential.name}
+          </label>
+        </div>
         <div className="tooltip tooltip-left" data-tip="Open Link">
           <button
             className="btn btn-ghost btn-xs"
@@ -174,7 +177,10 @@ export function CredentialItem({
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
-              <PasswordGenerator onPasswordChange={setPassword} defaultPassword={credential.password}/>
+              <PasswordGenerator
+                onPasswordChange={setPassword}
+                defaultPassword={credential.password}
+              />
               <div className="label">
                 <span className="label-text">URL:</span>
               </div>
@@ -201,12 +207,18 @@ export function CredentialItem({
                       )
                     }
                   >
-                    Save <Icons.edit />
+                    Save <Icons.save />
                   </button>
                 </div>
                 <div>
-                  <button className="btn btn-error">
-                    Discard <Icons.trash />
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => {
+                      dialogRef?.current?.close();
+                      setIsEditing(false);
+                    }}
+                  >
+                    Discard <Icons.discard />
                   </button>
                 </div>
               </div>

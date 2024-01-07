@@ -108,7 +108,7 @@ const sortedCredentials = vault.credentials
   : [];
 
   return (
-    <div className="flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
+    <div className="min-h-screen h-full flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
       <div className="flex flex-row space-x-2 mx-auto w-full">
         <div className="join w-full">
           <button className="btn btn-primary join-item">
