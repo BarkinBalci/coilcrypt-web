@@ -98,10 +98,10 @@ function ErrorToast({ message, toastId }: ToastProps) {
 
 function LoadingToast({ message, toastId }: ToastProps) {
   return (
-    <div role="alert" className="alert flex flex-row max-w-sm justify-between">
+    <div role="alert" className="alert bg-secondary flex flex-row max-w-sm justify-between">
       <div className="flex flex-row space-x-4">
-        <span className="loading loading-spinner loading-md"></span>
-        <span>{message}</span>
+        <span className="loading loading-spinner loading-md text-base-100"></span>
+        <span className="text-base-100">{message}</span>
       </div>
     </div>
   );
