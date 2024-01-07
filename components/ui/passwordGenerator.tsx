@@ -59,6 +59,7 @@ export function PasswordGenerator({
               setPassword(e.target.value);
               onPasswordChange(e.target.value); // update the parent component with the manually entered password
             }}
+            maxLength={64}
           />
           <button
             className="btn btn-neutral join-item"

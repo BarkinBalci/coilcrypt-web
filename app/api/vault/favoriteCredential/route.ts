@@ -29,10 +29,10 @@ export async function POST(request: Request, response: Response) {
     return NextResponse.json({ message: "Vault not found", action: "createVault" }, { status: 404 });
   }
 
-  const { credentialId } = await request.json();
+  const { itemId } = await request.json();
 
   // Check if the credential belongs to the user's vault
-  const credential = vault.credentials.find(cred => cred.id === credentialId);
+  const credential = vault.credentials.find(cred => cred.id === itemId);
 
   if (!credential) {
     return NextResponse.json("Credential not found in user's vault", { status: 404 });
@@ -40,7 +40,7 @@ export async function POST(request: Request, response: Response) {
 
 const updatedCredential = await prisma.credential.update({
     where: {
-        id: credentialId,
+    id: itemId,
     },
     data: {
         favorite: !credential.favorite,

@@ -3,10 +3,9 @@
 import { useState } from "react";
 import { Icons } from "@/app/icons";
 
-export function AddNoteModal() {
+export function AddNoteModal(props: { triggerUpdate: () => void }) {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
-
 
   const resetValues = () => {
     setName("");
@@ -26,10 +25,11 @@ export function AddNoteModal() {
     });
 
     if (!response.ok) {
-    //Error response
+      //Error response
     }
     //Success response
-    resetValues();
+      resetValues();
+      props.triggerUpdate();
   };
 
   return (
@@ -43,7 +43,9 @@ export function AddNoteModal() {
         }
       >
         <div className="flex flex-row items-center">
-          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">Add Note</span>
+          <span className="hidden lg:inline-block mr-2 whitespace-nowrap">
+            Add Note
+          </span>
           <Icons.edit />
         </div>
       </button>
@@ -62,15 +64,17 @@ export function AddNoteModal() {
               className="input input-bordered w-full"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={64}
             />
             <div className="label">
               <span className="label-text">Content:</span>
             </div>
             <textarea
-                className="textarea textarea-bordered w-full"
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-                rows={6}
+              className="textarea textarea-bordered w-full"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              rows={6}
+              maxLength={3000}
             />
           </div>
           <div className="modal-action">

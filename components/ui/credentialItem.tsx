@@ -31,7 +31,10 @@ async function deleteCredential(credentialId: String) {
   console.log(message);
 }
 
-export function CredentialItem({ credential, triggerUpdate }: CredentialItemProps) {
+export function CredentialItem({
+  credential,
+  triggerUpdate,
+}: CredentialItemProps) {
   const [showPassword, setShowPassword] = useState<number[]>([]);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const handleShowPassword = (credentialId: number) => {
@@ -44,7 +47,7 @@ export function CredentialItem({ credential, triggerUpdate }: CredentialItemProp
   const handleDeleteCredential = async (credentialId: String) => {
     await deleteCredential(credentialId);
     triggerUpdate();
-  }
+  };
   return (
     <div
       key={credential.id}
@@ -52,7 +55,11 @@ export function CredentialItem({ credential, triggerUpdate }: CredentialItemProp
       className="collapse collapse-arrow bg-base-200"
     >
       <div className="flex flex-row items-center py-3 px-3">
-        <FavoriteToggle credential={credential} triggerUpdate={triggerUpdate} />
+        <FavoriteToggle
+          item={credential}
+          itemType="Credential"
+          triggerUpdate={triggerUpdate}
+        />
         <label
           className="pl-4 cursor-pointer text-2xl flex-grow"
           onClick={() => {

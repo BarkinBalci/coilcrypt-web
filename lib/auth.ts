@@ -5,6 +5,7 @@ import { NextAuthOptions } from 'next-auth'
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { prisma } from '@/lib/prisma'
 
+
 export const authConfig: NextAuthOptions = {
   providers: [
     EmailProvider({
@@ -18,10 +19,10 @@ export const authConfig: NextAuthOptions = {
       },
       from: process.env.EMAIL_FROM
     }),
-  GitHubProvider({
-  clientId: process.env.GITHUB_ID as string,
-  clientSecret: process.env.GITHUB_SECRET as string,
-  }),
+    GitHubProvider({
+      clientId: process.env.GITHUB_ID as string,
+      clientSecret: process.env.GITHUB_SECRET as string,
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
@@ -32,7 +33,16 @@ export const authConfig: NextAuthOptions = {
     signOut: '/auth/signout',
     error: '/auth/error', // Error code passed in query string as ?error=
     verifyRequest: '/auth/verify-request', // (used for check email message)
+
+  },
+  callbacks: {
+    async jwt({ token, user, account, profile, isNewUser }) {
+      return token
+    },
     
+    async session({ session, token, user }) {
+      return session
+    }
   },
   adapter: PrismaAdapter(prisma),
 }

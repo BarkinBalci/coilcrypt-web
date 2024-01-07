@@ -2,17 +2,19 @@ import * as React from "react";
 import { Icons } from "@/app/icons";
 
 interface FavoriteToggleProps {
-  credential: any;
-  triggerUpdate: () => void; // Add this line
+  item: any; // Change 'credential' to a more generic 'item'
+  itemType: "Credential" | "Note"; // Add this line
+  triggerUpdate: () => void;
 }
 
-async function favoriteCredential(credentialId: String) {
-  const response = await fetch("/api/vault/favoriteCredential", {
+async function favoriteItem(itemId: String, itemType: "Credential" | "Note") {
+  const response = await fetch(`/api/vault/favorite${itemType}`, {
+    // Use the itemType in the URL
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ credentialId }),
+    body: JSON.stringify({ itemId }),
   });
 
   if (!response.ok) {
@@ -24,21 +26,22 @@ async function favoriteCredential(credentialId: String) {
 }
 
 export function FavoriteToggle({
-  credential,
-  triggerUpdate, // Add this line
+  item,
+  itemType, 
+  triggerUpdate,
 }: FavoriteToggleProps) {
-  const [isChecked, setIsChecked] = React.useState(credential.favorite);
+ const [isChecked, setIsChecked] = React.useState(item.favorite);
 
   React.useEffect(() => {
-    setIsChecked(credential.favorite);
-  }, [credential.favorite]);
+    setIsChecked(item.favorite);
+  }, [item.favorite]);
 
   const handleFavoriteChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    await favoriteCredential(credential.id);
+    await favoriteItem(item.id, itemType);
     setIsChecked(!isChecked);
-    triggerUpdate(); // Add this line
+    triggerUpdate();
   };
 
   return (

@@ -15,6 +15,7 @@ interface Note {
   id: number;
   name: string;
   content: string;
+  favorite: boolean;
   creationDate: string;
   revisionDate: string;
 }
@@ -65,13 +66,19 @@ function VaultComponent() {
   const sortedNotes = vault.notes
     .filter((note) => note.name.toLowerCase().includes(searchTerm))
     .sort((a, b) => {
-      switch (sortOption) {
-        case "A-Z":
-          return a.name.localeCompare(b.name);
-        case "Z-A":
-          return b.name.localeCompare(a.name);
-        default:
-          return 0;
+      if (a.favorite && !b.favorite) {
+        return -1;
+      } else if (!a.favorite && b.favorite) {
+        return 1;
+      } else {
+        switch (sortOption) {
+          case "A-Z":
+            return a.name.localeCompare(b.name);
+          case "Z-A":
+            return b.name.localeCompare(a.name);
+          default:
+            return 0;
+        }
       }
     });
 
@@ -115,11 +122,11 @@ function VaultComponent() {
           </select>
         </div>
         <AddCredentialModal triggerUpdate={triggerUpdate} />
-        <AddNoteModal />
+        <AddNoteModal triggerUpdate={triggerUpdate} />
       </div>
       <h2>Notes:</h2>
       {sortedNotes.map((note) => (
-        <NoteItem key={note.id} note={note} />
+        <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
       ))}
 
       <h2>Credentials:</h2>

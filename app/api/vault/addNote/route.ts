@@ -27,6 +27,14 @@ export async function POST(request: Request, response: Response) {
 
   const { name, content} = await request.json();
 
+  if (name.length > 64) {
+    return NextResponse.json("Name exceeds the maximum limit", { status: 400 });
+  }
+
+  if (content.length > 3000) {
+    return NextResponse.json("Content exceeds the maximum limit", { status: 400 });
+  }
+
   const updatedVault = await prisma.vault.update({
     where: {
         id: vault.id,

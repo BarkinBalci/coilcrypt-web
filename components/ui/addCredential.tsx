@@ -70,6 +70,7 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
               className="input input-bordered w-full"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={64}
             />
             <div className="label">
               <span className="label-text">Username:</span>
@@ -79,6 +80,7 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
               className="input input-bordered w-full"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              maxLength={64}
             />
             <PasswordGenerator onPasswordChange={setPassword} />
             <div className="label">
@@ -89,6 +91,7 @@ export function AddCredentialModal(props: { triggerUpdate: () => void }) {
               className="input input-bordered w-full"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
+              maxLength={128}
             />
           </div>
           <div className="modal-action">
