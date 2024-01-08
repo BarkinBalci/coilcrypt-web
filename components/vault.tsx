@@ -63,49 +63,49 @@ function VaultComponent() {
     );
   }
 
-const sortedNotes = vault.notes
-  ? vault.notes
-      .filter((note) => note.name.toLowerCase().includes(searchTerm))
-      .sort((a, b) => {
-        if (a.favorite && !b.favorite) {
-          return -1;
-        } else if (!a.favorite && b.favorite) {
-          return 1;
-        } else {
-          switch (sortOption) {
-            case "A-Z":
-              return a.name.localeCompare(b.name);
-            case "Z-A":
-              return b.name.localeCompare(a.name);
-            default:
-              return 0;
+  const sortedNotes = vault.notes
+    ? vault.notes
+        .filter((note) => note.name.toLowerCase().includes(searchTerm))
+        .sort((a, b) => {
+          if (a.favorite && !b.favorite) {
+            return -1;
+          } else if (!a.favorite && b.favorite) {
+            return 1;
+          } else {
+            switch (sortOption) {
+              case "A-Z":
+                return a.name.localeCompare(b.name);
+              case "Z-A":
+                return b.name.localeCompare(a.name);
+              default:
+                return 0;
+            }
           }
-        }
-      })
-  : [];
+        })
+    : [];
 
-const sortedCredentials = vault.credentials
-  ? vault.credentials
-      .filter((credential) =>
-        credential.name.toLowerCase().includes(searchTerm)
-      )
-      .sort((a, b) => {
-        if (a.favorite && !b.favorite) {
-          return -1;
-        } else if (!a.favorite && b.favorite) {
-          return 1;
-        } else {
-          switch (sortOption) {
-            case "A-Z":
-              return a.name.localeCompare(b.name);
-            case "Z-A":
-              return b.name.localeCompare(a.name);
-            default:
-              return 0;
+  const sortedCredentials = vault.credentials
+    ? vault.credentials
+        .filter((credential) =>
+          credential.name.toLowerCase().includes(searchTerm)
+        )
+        .sort((a, b) => {
+          if (a.favorite && !b.favorite) {
+            return -1;
+          } else if (!a.favorite && b.favorite) {
+            return 1;
+          } else {
+            switch (sortOption) {
+              case "A-Z":
+                return a.name.localeCompare(b.name);
+              case "Z-A":
+                return b.name.localeCompare(a.name);
+              default:
+                return 0;
+            }
           }
-        }
-      })
-  : [];
+        })
+    : [];
 
   return (
     <div className="min-h-screen h-full flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
@@ -130,22 +130,41 @@ const sortedCredentials = vault.credentials
         <AddCredentialModal triggerUpdate={triggerUpdate} />
         <AddNoteModal triggerUpdate={triggerUpdate} />
       </div>
-      {sortedNotes.length > 0 && (
-        <h2 className="text-left w-full text-xl font-bold">Notes:</h2>
+      {sortedNotes.length === 0 && sortedCredentials.length === 0 ? (
+        <>
+          <div className="card lg:card-side bg-base-200 shadow-xl">
+            <figure>
+              <Icons.vault />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Welcome to your vault!</h2>
+              <p>
+                You can store all types of sensitive data here, transmit it securely to
+                anyone, and do so much more. Get started by adding a credential or a note to your vault.
+              </p>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          {sortedNotes.length > 0 && (
+            <h2 className="text-left w-full text-xl font-bold">Notes:</h2>
+          )}
+          {sortedNotes.map((note) => (
+            <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
+          ))}
+          {sortedCredentials.length > 0 && (
+            <h2 className="text-left w-full text-xl font-bold">Credentials:</h2>
+          )}
+          {sortedCredentials.map((credential) => (
+            <CredentialItem
+              key={credential.id}
+              credential={credential}
+              triggerUpdate={triggerUpdate}
+            />
+          ))}
+        </>
       )}
-      {sortedNotes.map((note) => (
-        <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
-      ))}
-      {sortedCredentials.length > 0 && (
-        <h2 className="text-left w-full text-xl font-bold">Credentials:</h2>
-      )}
-      {sortedCredentials.map((credential) => (
-        <CredentialItem
-          key={credential.id}
-          credential={credential}
-          triggerUpdate={triggerUpdate}
-        />
-      ))}
     </div>
   );
 }

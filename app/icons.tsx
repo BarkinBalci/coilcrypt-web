@@ -552,4 +552,149 @@ export const Icons = {
       </g>
     </svg>
   ),
+  vault: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 200 200"
+      style={{ width: "80%", height: "80%" }}
+    >
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M4 31a18 18 0 0 1 18-18h156a18 18 0 0 1 18 18v122.08a18 18 0 0 1-18 18H22a18 18 0 0 1-18-18V31Zm18-14A14 14 0 0 0 8 31v122.08a14 14 0 0 0 14 14h156a14 14 0 0 0 14-14V31a14 14 0 0 0-14-14H22Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M82 116.7a2 2 0 0 1 2 2v15.5a2 2 0 0 1-4 0v-15.5a2 2 0 0 1 2-2Zm0-68.81a2 2 0 0 1 2 2v15.5a2 2 0 0 1-4 0V49.9c0-1.1.9-2 2-2Zm-17.43 61.58a2 2 0 0 1 0 2.83l-10.96 10.96a2 2 0 0 1-2.83-2.83l10.96-10.96a2 2 0 0 1 2.83 0Zm48.65-48.65a2 2 0 0 1 0 2.83L102.26 74.6a2 2 0 1 1-2.83-2.83l10.96-10.96a2 2 0 0 1 2.83 0ZM64.57 74.61a2 2 0 0 1-2.83 0L50.78 63.65a2 2 0 0 1 2.83-2.83l10.96 10.96a2 2 0 0 1 0 2.83Zm48.65 48.65a2 2 0 0 1-2.83 0L99.43 112.3a2 2 0 0 1 2.83-2.83l10.96 10.97a2 2 0 0 1 0 2.82ZM126.5 92a2 2 0 0 1-2 2H109a2 2 0 1 1 0-4h15.5a2 2 0 0 1 2 2Zm-70 0a2 2 0 0 1-2 2H39a2 2 0 1 1 0-4h15.5a2 2 0 0 1 2 2Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M82 68a24 24 0 1 0 0 48 24 24 0 0 0 0-48ZM54 92a28 28 0 1 1 56 0 28 28 0 0 1-56 0Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M82 75a17 17 0 1 0 0 34 17 17 0 0 0 0-34ZM63 92a19 19 0 1 1 38 0 19 19 0 0 1-38 0Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M22.54 169.08v7.57a4 4 0 0 0 4 4h18.04a4 4 0 0 0 4-4v-7.57h4v7.57a8 8 0 0 1-8 8H26.54a8 8 0 0 1-8-8v-7.57h4Zm128.88 0v7.57a4 4 0 0 0 4 4h18.04a4 4 0 0 0 4-4v-7.57h4v7.57a8 8 0 0 1-8 8h-18.04a8 8 0 0 1-8-8v-7.57h4ZM179.47 67.3h2.78a3 3 0 0 0 3-3V42.26a3 3 0 0 0-3-3h-2.78v-2h2.78a5 5 0 0 1 5 5V64.3a5 5 0 0 1-5 5h-2.78v-2Zm0 77.52h2.78a3 3 0 0 0 3-3v-22.04a3 3 0 0 0-3-3h-2.78v-2h2.78a5 5 0 0 1 5 5v22.04a5 5 0 0 1-5 5h-2.78v-2Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M19.54 37.54a9 9 0 0 1 9-9h142.92a9 9 0 0 1 9 9v109.98a9 9 0 0 1-9 9H28.54a9 9 0 0 1-9-9V37.54Zm9-7a7 7 0 0 0-7 7v109.98a7 7 0 0 0 7 7h142.92a7 7 0 0 0 7-7V37.54a7 7 0 0 0-7-7H28.54Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M34 39a3 3 0 0 0-3 3v20.18a1 1 0 1 1-2 0V42a5 5 0 0 1 5-5h91.15a1 1 0 1 1 0 2H34Zm137 79.23a1 1 0 0 1 1 1V143a5 5 0 0 1-5 5H75.6a1 1 0 0 1 0-2H167a3 3 0 0 0 3-3v-23.77a1 1 0 0 1 1-1Z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  ),
+  magnify: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 200 200 "
+      style={{ width: "80%", height: "80%" }}
+    >
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M93.77 171a1 1 0 0 1 1-1h61.73a1 1 0 1 1 0 2H94.77a1 1 0 0 1-1-1Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M113.74 171v-18.1h2V171h-2Zm19.97 0v-18.1h2V171h-2Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M187 63h-55.5v-4H187a10 10 0 0 1 10 10v74.26a10 10 0 0 1-10 10H63a10 10 0 0 1-10-10V120.5h4v22.76a6 6 0 0 0 6 6h124a6 6 0 0 0 6-6V69a6 6 0 0 0-6-6Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M186 69h-52.5v-2H186a3 3 0 0 1 3 3v72a3 3 0 0 1-3 3H64a3 3 0 0 1-3-3v-18h2v18a1 1 0 0 0 1 1h122a1 1 0 0 0 1-1V70a1 1 0 0 0-1-1Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M132.3 79a48 48 0 1 0-96 0 48 48 0 0 0 96 0Zm-48-52a52 52 0 1 1 0 104 52 52 0 0 1 0-104Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M85.5 122a1 1 0 0 1-1 1C59.93 123 40 103.31 40 79a1 1 0 0 1 2 0c0 23.19 19.02 42 42.5 42a1 1 0 0 1 1 1ZM128 80a1 1 0 0 1-1-1c0-23.19-19.02-42-42.5-42a1 1 0 1 1 0-2c24.57 0 44.5 19.69 44.5 44a1 1 0 0 1-1 1Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M8.95 147.82a3 3 0 0 0 0 4.24l2.21 2.22a3 3 0 0 0 4.25 0l36.85-36.86a2 2 0 1 1 2.83 2.83l-36.85 36.86a7 7 0 0 1-9.9 0l-2.22-2.22a7 7 0 0 1 0-9.9l36.86-36.85a2 2 0 0 1 2.82 2.83L8.95 147.82ZM112.43 58.6a2 2 0 0 1-.03 2.83l-35.59 35A2 2 0 0 1 74 96.4L54.57 76.68a2 2 0 1 1 2.86-2.81l18 18.3 34.17-33.6a2 2 0 0 1 2.83.03Z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  ),
+  share: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 200 200"
+      style={{ width: "80%", height: "80%" }}
+    >
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M164 5c-5.8 0-10 4-10 8.29V21h-4v-7.71C150 6.24 156.59 1 164 1s14 5.21 14 12.29V21h-4v-7.71c0-4.3-4.2-8.29-10-8.29ZM39 151c-5.8 0-10 4-10 8.29V167h-4v-7.71c0-7.05 6.58-12.29 14-12.29 7.41 0 14 5.21 14 12.29V167h-4v-7.71c0-4.3-4.2-8.29-10-8.29Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M144 29a10 10 0 0 1 10-10h20a10 10 0 0 1 10 10v13a10 10 0 0 1-10 10h-20a10 10 0 0 1-10-10V29Zm10-6a6 6 0 0 0-6 6v13a6 6 0 0 0 6 6h20a6 6 0 0 0 6-6V29a6 6 0 0 0-6-6h-20ZM19 175a10 10 0 0 1 10-10h20a10 10 0 0 1 10 10v13a10 10 0 0 1-10 10H29a10 10 0 0 1-10-10v-13Zm10-6a6 6 0 0 0-6 6v13a6 6 0 0 0 6 6h20a6 6 0 0 0 6-6v-13a6 6 0 0 0-6-6H29Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        d="M163 34.32c-.6-.24-1-.7-1-1.24v-.64c0-.8.9-1.44 2-1.44s2 .64 2 1.44v.64c0 .53-.4 1-1 1.24v3.96c0 .4-.45.72-1 .72s-1-.32-1-.72v-3.96Zm-125 146c-.6-.24-1-.7-1-1.24v-.64c0-.8.9-1.44 2-1.44s2 .64 2 1.44v.64c0 .53-.4 1-1 1.24v3.96c0 .4-.45.72-1 .72s-1-.32-1-.72v-3.96Z"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M117.94 69.94a2 2 0 0 1 .81 2l-9.8 52.61a2 2 0 0 1-2.68 1.5l-14.9-5.74-7.57 8.81a2 2 0 0 1-3.52-1.3v-13.08a2 2 0 0 1 .47-1.29l22.67-26.89a2 2 0 1 1 3.05 2.58l-22.19 26.33v6.95l4.97-5.79a2 2 0 0 1 2.23-.56l13.98 5.39 8.57-46-49.88 28.47 10.48 4.77a2 2 0 0 1-1.65 3.64l-14.04-6.4a2 2 0 0 1-.16-3.55l57.01-32.55a2 2 0 0 1 2.15.1Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M57.45 149.68a2 2 0 0 1-.3-2.82l.3-.37a2 2 0 0 1 3.1 2.52l-.3.37a2 2 0 0 1-2.8.3Zm5.71-7.06a2 2 0 0 1-.3-2.81l.6-.75a2 2 0 1 1 3.11 2.52l-.6.74a2 2 0 0 1-2.81.3Zm6.01-7.43a2 2 0 0 1-.3-2.81l.3-.37a2 2 0 1 1 3.12 2.52l-.3.37a2 2 0 0 1-2.82.3Zm55.46-68.49a2 2 0 0 1-.3-2.8l.3-.38a2 2 0 0 1 3.12 2.52l-.3.37a2 2 0 0 1-2.82.3Zm5.72-7.05a2 2 0 0 1-.3-2.81l.6-.75a2 2 0 0 1 3.11 2.52l-.6.74a2 2 0 0 1-2.81.3Zm6.01-7.43a2 2 0 0 1-.3-2.81l.3-.37a2 2 0 1 1 3.12 2.51l-.3.38a2 2 0 0 1-2.82.3ZM100 14a86 86 0 0 0-86 86 1 1 0 0 1-2 0 88 88 0 0 1 111.44-84.84 1 1 0 1 1-.53 1.93A86.09 86.09 0 0 0 100 14Zm87 85a1 1 0 0 1 1 1 88 88 0 0 1-100.26 87.15 1 1 0 0 1 .28-1.98A86 86 0 0 0 186 100a1 1 0 0 1 1-1Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M100 8a92 92 0 0 0-92 92 91.64 91.64 0 0 0 8.75 39.21 2 2 0 1 1-3.62 1.7A95.64 95.64 0 0 1 4 100 96 96 0 0 1 125.57 7.44a2 2 0 0 1-1.06 3.86A92.1 92.1 0 0 0 100 8Zm87.74 58.14a2 2 0 0 1 2.56 1.2A95.83 95.83 0 0 1 196 100a96 96 0 0 1-109.37 95.08 2 2 0 0 1 .55-3.97A92 92 0 0 0 192 100c0-11-1.93-21.53-5.46-31.3a2 2 0 0 1 1.2-2.56Z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  ),
 };

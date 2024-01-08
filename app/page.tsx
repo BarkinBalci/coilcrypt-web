@@ -17,7 +17,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
         <div className="card card-compact w-full md:w-96 bg-base-100">
           <figure className="px-10 pt-10">
-            <Icons.landing1/>
+            <Icons.landing1 />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Powerful security within minutes</h2>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="card card-compact w-full md:w-96 bg-base-100">
           <figure className="px-10 pt-10">
-            <Icons.landing2/>
+            <Icons.landing2 />
           </figure>
           <div className="card-body">
             <h2 className="card-title">
@@ -44,7 +44,7 @@ export default function Home() {
 
         <div className="card card-compact w-full md:w-96 bg-base-100">
           <figure className="px-10 pt-10">
-            <Icons.landing3/>
+            <Icons.landing3 />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Protect what&apos;s important to you</h2>
@@ -60,46 +60,48 @@ export default function Home() {
         CoilCrypt helps businesses run quickly and securely
       </h1>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 pb-16">
-        <div className="card w-full md:w-96 bg-base-200">
-        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className="card w-full md:w-96 bg-base-200 shadow-x1">
+          <figure>
+            <Icons.vault />
+          </figure>
           <div className="card-body">
-            <h2 className="card-title">
-              University of Toronto Press solves for efficient password sharing
-              with CoilCrypt
-            </h2>
+            <h2 className="card-title">Protect more than your passwords</h2>
             <p>
-              Robust password management, secure sharing, and powerful
-              application commands simplify workflows and enhance security for
-              one of North America’s largest university presses.
+              Store all types of sensitive data, transmit it securely to anyone,
+              access vault health reports—and much more.
             </p>
             <div className="card-actions justify-end"></div>
           </div>
         </div>
 
-        <div className="card w-full md:w-96 bg-base-200">
-        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className="card w-full md:w-96 bg-base-200 shadow-x1">
+          <figure>
+            <Icons.magnify />
+          </figure>
           <div className="card-body">
             <h2 className="card-title">
-              High-growth delivery startup Glovo boosts password security and
-              compliance with CoilCrypt
+              Gain peace of mind with comprehensive compliance
             </h2>
             <p>
-              Open source transparency, end-to-end encryption, and
-              cross-platform accessibility were reasons why Glovo selected
-              CoilCrypt for secure password management.{" "}
+              Protect your online data using a password manager you can trust.
+              CoilCrypt conducts regular third-party security audits comliant
+              with industry standarts.
             </p>
             <div className="card-actions justify-end"></div>
           </div>
         </div>
-        <div className="card w-full md:w-96 bg-base-200">
-        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className="card w-full md:w-96 bg-base-200 shadow-x1">
+          <figure>
+            <Icons.share />
+          </figure>
           <div className="card-body">
             <h2 className="card-title">
-              Case Study - How Intesys uses CoilCrypt for business collaboration
+              Securely share encrypted information directly with anyone
             </h2>
             <p>
-              Intesys chose CoilCrypt primarily because of the open source
-              nature of the software and the opportunity to use it on-premises.
+              CoilCrypt&apos;s share feature allows all users to transmit data
+              directly to others, while maintaining end-to-end encrypted
+              security and limiting exposure.
             </p>
             <div className="card-actions justify-end"></div>
           </div>
