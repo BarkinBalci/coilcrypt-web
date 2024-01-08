@@ -5,6 +5,7 @@ import * as React from "react";
 import { showToast } from "@/components/ui/toast";
 import { Icons } from "../icons";
 import { PasswordGenerator } from "@/components/ui/passwordGenerator";
+import { encryptFile, decryptFile } from "@/lib/crypto";
 
 export default function EncryptionPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -13,106 +14,56 @@ export default function EncryptionPage() {
   const [password, setPassword] = useState<string>("");
   const [operation, setOperation] = useState<"encrypt" | "decrypt">("encrypt");
 
-  const encryptFile = async (file: File, password: string) => {
+  const handleEncryptFile = async (file: File, password: string) => {
     showToast({
       message: "Encrypting...",
       toastId: "encrypt",
       type: "loading",
     });
-    const fileData = await file.arrayBuffer();
-    const salt = window.crypto.getRandomValues(new Uint8Array(16));
-    const iv = window.crypto.getRandomValues(new Uint8Array(16));
-    const passwordKey = await window.crypto.subtle.importKey(
-      "raw",
-      new TextEncoder().encode(password),
-      "PBKDF2",
-      false,
-      ["deriveKey"]
-    );
-    const aesKey = await window.crypto.subtle.deriveKey(
-      {
-        name: "PBKDF2",
-        salt: salt,
-        iterations: 100000,
-        hash: "SHA-256",
-      },
-      passwordKey,
-      { name: "AES-CBC", length: 256 },
-      false,
-      ["encrypt", "decrypt"]
-    );
-    const encryptedData = await window.crypto.subtle.encrypt(
-      {
-        name: "AES-CBC",
-        iv: iv,
-      },
-      aesKey,
-      fileData
-    );
+    try {
+      const encryptedContentBuffer = await encryptFile(file, password);
 
-    const encryptedContent = new Uint8Array(
-      salt.byteLength + iv.byteLength + encryptedData.byteLength
-    );
-    encryptedContent.set(new Uint8Array(salt), 0);
-    encryptedContent.set(new Uint8Array(iv), salt.byteLength);
-    encryptedContent.set(
-      new Uint8Array(encryptedData),
-      salt.byteLength + iv.byteLength
-    );
-    showToast({
-      message: "Encryption is done!",
-      toastId: "encrypt",
-      type: "success",
-    });
+      setEncryptedData(encryptedContentBuffer);
+      downloadFile(encryptedContentBuffer, file.name + ".encrypted");
 
-    setEncryptedData(encryptedContent.buffer);
-    downloadFile(encryptedContent.buffer, file.name + ".encrypted");
+      showToast({
+        message: "Encryption is done!",
+        toastId: "encrypt",
+        type: "success",
+      });
+    } catch (error) {
+      showToast({
+        message: `Encryption failed!`,
+        toastId: "encrypt",
+        type: "error",
+      });
+    }
   };
 
-  const decryptFile = async (file: File, password: string) => {
+  const handleDecryptFile = async (file: File, password: string) => {
     showToast({
       message: "Decrypting...",
       toastId: "decrypt",
       type: "loading",
     });
-    const fileData = await file.arrayBuffer();
-    const salt = fileData.slice(0, 16);
-    const iv = fileData.slice(16, 32);
-    const actualEncryptedData = fileData.slice(32);
-    const passwordKey = await window.crypto.subtle.importKey(
-      "raw",
-      new TextEncoder().encode(password),
-      "PBKDF2",
-      false,
-      ["deriveKey"]
-    );
-    const aesKey = await window.crypto.subtle.deriveKey(
-      {
-        name: "PBKDF2",
-        salt: salt,
-        iterations: 100000,
-        hash: "SHA-256",
-      },
-      passwordKey,
-      { name: "AES-CBC", length: 256 },
-      false,
-      ["encrypt", "decrypt"]
-    );
-    const decryptedContent = await window.crypto.subtle.decrypt(
-      {
-        name: "AES-CBC",
-        iv: iv,
-      },
-      aesKey,
-      actualEncryptedData
-    );
-    showToast({
-      message: "Decryption is done!",
-      toastId: "decrypt",
-      type: "success",
-    });
-    setDecryptedData(decryptedContent);
-    downloadFile(decryptedContent, file.name.replace(".encrypted", ""));
+
+    try {
+      const decryptedContent = await decryptFile(file, password);
+      setDecryptedData(decryptedContent);
+      downloadFile(decryptedContent, file.name.replace(".encrypted", ""));
+
+      showToast({
+        message: "Decryption is done!",
+        toastId: "decrypt",
+        type: "success",
+      });
+    } catch (error) {
+      showToast({
+        message: `Decryption failed!`,
+        toastId: "decrypt",
+        type: "error",
+      });
+    }
   };
 
   const downloadFile = (content: ArrayBuffer, fileName: string) => {
@@ -159,7 +110,7 @@ export default function EncryptionPage() {
       <div className="flex flex-col mx-auto w-full">
         <div className="label">
           <span className="label-text">Crytography:</span>
-        </div>  
+        </div>
         <div className="join w-full">
           <label className="flex items-center btn btn-accent join-item">
             <span className="leading-normal md:hidden">
@@ -178,7 +129,9 @@ export default function EncryptionPage() {
           />
           <button
             className="btn btn-accent join-item"
-            onClick={() => file && password && encryptFile(file, password)}
+            onClick={() =>
+              file && password && handleEncryptFile(file, password)
+            }
             disabled={operation === "decrypt"}
           >
             <span className="hidden lg:inline-block mr-2 whitespace-nowrap">
@@ -188,7 +141,9 @@ export default function EncryptionPage() {
           </button>
           <button
             className="btn btn-accent join-item"
-            onClick={() => file && password && decryptFile(file, password)}
+            onClick={() =>
+              file && password && handleDecryptFile(file, password)
+            }
             disabled={operation === "encrypt"}
           >
             <span className="hidden lg:inline-block mr-2 whitespace-nowrap">
