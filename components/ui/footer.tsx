@@ -9,13 +9,21 @@ export function Footer() {
           <footer className="footer p-10 text-base-content">
             <nav>
               <header className="footer-title">Products</header>
-              <a className="link link-hover">Desktop Client</a>
-              <a className="link link-hover">Web Extention</a>
+              <a href="/download" className="link link-hover">
+                Desktop Client
+              </a>
+              <a href="/download" className="link link-hover">
+                Web Extention
+              </a>
             </nav>
             <nav>
               <header className="footer-title">Company</header>
-              <a className="link link-hover">About us</a>
-              <a className="link link-hover">Contact</a>
+              <a href="/about" className="link link-hover">
+                About us
+              </a>
+              <a href="/about" className="link link-hover">
+                Contact
+              </a>
             </nav>
             <nav>
               <header className="footer-title">Legal</header>
@@ -31,7 +39,7 @@ export function Footer() {
               <a href="/generator" className="link link-hover">
                 Password Generator
               </a>
-              <a href="/strenght" className="link link-hover">
+              <a href="/generator" className="link link-hover">
                 Password Strenght Tester
               </a>
             </nav>
