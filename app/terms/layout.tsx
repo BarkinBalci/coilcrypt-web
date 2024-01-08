@@ -36,10 +36,6 @@ const sidebarNavItems = [
     href: "#disclaimer-of-warranties",
   },
   {
-    title: "Limitation of Liability",
-    href: "#limitation-of-liability",
-  },
-  {
     title: "Governing Law",
     href: "#governing-law",
   },
