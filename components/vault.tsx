@@ -134,7 +134,7 @@ function VaultComponent() {
         <>
           <div className="card lg:card-side bg-base-200 shadow-xl">
             <figure>
-              <Icons.vault />
+              <Icons.smallvault />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Welcome to your vault!</h2>
