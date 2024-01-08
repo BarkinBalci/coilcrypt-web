@@ -1,11 +1,11 @@
-const textEncoder = new TextEncoder();
-
 export const decryptFile = async (file: File, password: string) => {
     const fileData = await file.arrayBuffer();
-    const [salt, iv, actualEncryptedData] = [fileData.slice(0, 16), fileData.slice(16, 32), fileData.slice(32)];
+    const salt = fileData.slice(0, 16);
+    const iv = fileData.slice(16, 32);
+    const actualEncryptedData = fileData.slice(32);
     const passwordKey = await window.crypto.subtle.importKey(
         "raw",
-        textEncoder.encode(password),
+        new TextEncoder().encode(password),
         "PBKDF2",
         false,
         ["deriveKey"]
@@ -14,7 +14,7 @@ export const decryptFile = async (file: File, password: string) => {
         {
             name: "PBKDF2",
             salt: salt,
-            iterations: 100000,
+            iterations: 1000000,
             hash: "SHA-256",
         },
         passwordKey,
@@ -30,6 +30,7 @@ export const decryptFile = async (file: File, password: string) => {
         aesKey,
         actualEncryptedData
     );
+
     return decryptedContent;
 };
 
@@ -39,7 +40,7 @@ export const encryptFile = async (file: File, password: string): Promise<ArrayBu
     const iv = window.crypto.getRandomValues(new Uint8Array(16));
     const passwordKey = await window.crypto.subtle.importKey(
         "raw",
-        textEncoder.encode(password),
+        new TextEncoder().encode(password),
         "PBKDF2",
         false,
         ["deriveKey"]
