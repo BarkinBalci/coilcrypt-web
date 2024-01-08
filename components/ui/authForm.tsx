@@ -42,19 +42,19 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       <div className="card mx-auto w-full max-w-xl">
         <div className="bg-base-200 rounded-xl">
           <div className="py-16 px-10">
-            <h2 className="text-2xl font-semibold mb-2 text-center">
+            <h2 className="text-2xl font-semibold text-center">
               Create an account
             </h2>
-            <h3 className="text-1xl font-semibold mb-2 text-center opacity-75">
+            <h3 className="text-1xl font-semibold mb-4 text-center opacity-75">
               Enter your email below to create your account
             </h3>
             <form onSubmit={onSubmit} noValidate>
               <div className="mb-4">
-                <label className="block text-sm font-bold mb-2" htmlFor="email">
-                  Email
-                </label>
+                <div className="label">
+                  <span className="label-text font-bold">Email</span>
+                </div>
                 <input
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full border-accent"
                   id="email"
                   type="email"
                   placeholder="Enter your email adress"
@@ -76,7 +76,11 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             <button
               type="submit"
               className={"btn mt-2 w-full btn-neutral"}
-              onClick={() => signIn("google", {callbackUrl: `${window.location.origin}/vault`})}
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: `${window.location.origin}/vault`,
+                })
+              }
             >
               <Icons.google className="mr-1 h-5 w-5" />
               Google
@@ -84,7 +88,11 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             <button
               type="submit"
               className={"btn mt-4 w-full btn-neutral"}
-              onClick={() => signIn("github", {callbackUrl: `${window.location.origin}/vault`})}
+              onClick={() =>
+                signIn("github", {
+                  callbackUrl: `${window.location.origin}/vault`,
+                })
+              }
             >
               <Icons.gitHub className="mr-1 h-5 w-5" />
               GitHub

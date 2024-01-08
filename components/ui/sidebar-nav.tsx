@@ -15,11 +15,11 @@ export function SidebarNav({
   children,
   ...props
 }: SidebarNavProps) {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState(items[0].href);
 
   useEffect(() => {
     const handleScroll = () => {
-      let currentLink = "";
+      let currentLink = items[0].href; 
       for (let i = 0; i < items.length; i++) {
         const element = document.querySelector(items[i].href);
         if (element) {

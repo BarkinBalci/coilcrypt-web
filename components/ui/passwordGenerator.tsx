@@ -48,7 +48,7 @@ export function PasswordGenerator({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 w-full">
       <div>
         <div className="label">
           <span className="label-text">Password:</span>

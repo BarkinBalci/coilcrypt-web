@@ -36,11 +36,11 @@ export function Footer() {
             </nav>
             <nav>
               <header className="footer-title">Tools</header>
-              <a href="/generator" className="link link-hover">
-                Password Generator
+              <a href="/cryptography" className="link link-hover">
+                Cryptography
               </a>
-              <a href="/generator" className="link link-hover">
-                Password Strenght Tester
+              <a href="/checksum" className="link link-hover">
+                Checksum
               </a>
             </nav>
           </footer>
