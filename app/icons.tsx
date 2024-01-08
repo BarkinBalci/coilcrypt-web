@@ -557,6 +557,57 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 200 200"
+      className="w-auto h-auto px-16 py-8"
+    >
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M4 31a18 18 0 0 1 18-18h156a18 18 0 0 1 18 18v122.08a18 18 0 0 1-18 18H22a18 18 0 0 1-18-18V31Zm18-14A14 14 0 0 0 8 31v122.08a14 14 0 0 0 14 14h156a14 14 0 0 0 14-14V31a14 14 0 0 0-14-14H22Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M82 116.7a2 2 0 0 1 2 2v15.5a2 2 0 0 1-4 0v-15.5a2 2 0 0 1 2-2Zm0-68.81a2 2 0 0 1 2 2v15.5a2 2 0 0 1-4 0V49.9c0-1.1.9-2 2-2Zm-17.43 61.58a2 2 0 0 1 0 2.83l-10.96 10.96a2 2 0 0 1-2.83-2.83l10.96-10.96a2 2 0 0 1 2.83 0Zm48.65-48.65a2 2 0 0 1 0 2.83L102.26 74.6a2 2 0 1 1-2.83-2.83l10.96-10.96a2 2 0 0 1 2.83 0ZM64.57 74.61a2 2 0 0 1-2.83 0L50.78 63.65a2 2 0 0 1 2.83-2.83l10.96 10.96a2 2 0 0 1 0 2.83Zm48.65 48.65a2 2 0 0 1-2.83 0L99.43 112.3a2 2 0 0 1 2.83-2.83l10.96 10.97a2 2 0 0 1 0 2.82ZM126.5 92a2 2 0 0 1-2 2H109a2 2 0 1 1 0-4h15.5a2 2 0 0 1 2 2Zm-70 0a2 2 0 0 1-2 2H39a2 2 0 1 1 0-4h15.5a2 2 0 0 1 2 2Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M82 68a24 24 0 1 0 0 48 24 24 0 0 0 0-48ZM54 92a28 28 0 1 1 56 0 28 28 0 0 1-56 0Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M82 75a17 17 0 1 0 0 34 17 17 0 0 0 0-34ZM63 92a19 19 0 1 1 38 0 19 19 0 0 1-38 0Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-secondary)"
+        fill-rule="evenodd"
+        d="M22.54 169.08v7.57a4 4 0 0 0 4 4h18.04a4 4 0 0 0 4-4v-7.57h4v7.57a8 8 0 0 1-8 8H26.54a8 8 0 0 1-8-8v-7.57h4Zm128.88 0v7.57a4 4 0 0 0 4 4h18.04a4 4 0 0 0 4-4v-7.57h4v7.57a8 8 0 0 1-8 8h-18.04a8 8 0 0 1-8-8v-7.57h4ZM179.47 67.3h2.78a3 3 0 0 0 3-3V42.26a3 3 0 0 0-3-3h-2.78v-2h2.78a5 5 0 0 1 5 5V64.3a5 5 0 0 1-5 5h-2.78v-2Zm0 77.52h2.78a3 3 0 0 0 3-3v-22.04a3 3 0 0 0-3-3h-2.78v-2h2.78a5 5 0 0 1 5 5v22.04a5 5 0 0 1-5 5h-2.78v-2Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M19.54 37.54a9 9 0 0 1 9-9h142.92a9 9 0 0 1 9 9v109.98a9 9 0 0 1-9 9H28.54a9 9 0 0 1-9-9V37.54Zm9-7a7 7 0 0 0-7 7v109.98a7 7 0 0 0 7 7h142.92a7 7 0 0 0 7-7V37.54a7 7 0 0 0-7-7H28.54Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M34 39a3 3 0 0 0-3 3v20.18a1 1 0 1 1-2 0V42a5 5 0 0 1 5-5h91.15a1 1 0 1 1 0 2H34Zm137 79.23a1 1 0 0 1 1 1V143a5 5 0 0 1-5 5H75.6a1 1 0 0 1 0-2H167a3 3 0 0 0 3-3v-23.77a1 1 0 0 1 1-1Z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  ),
+  smallvault: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 200 200"
       style={{ width: "80%", height: "80%" }}
     >
       <path
@@ -608,7 +659,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 200 200 "
-      style={{ width: "80%", height: "80%" }}
+      className="w-auto h-auto px-16 py-8"
     >
       <path
         fill="var(--color-secondary)"
@@ -659,7 +710,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 200 200"
-      style={{ width: "80%", height: "80%" }}
+      className="w-auto h-auto px-16 py-8"
     >
       <path
         fill="var(--color-secondary)"
@@ -695,6 +746,93 @@ export const Icons = {
         d="M100 8a92 92 0 0 0-92 92 91.64 91.64 0 0 0 8.75 39.21 2 2 0 1 1-3.62 1.7A95.64 95.64 0 0 1 4 100 96 96 0 0 1 125.57 7.44a2 2 0 0 1-1.06 3.86A92.1 92.1 0 0 0 100 8Zm87.74 58.14a2 2 0 0 1 2.56 1.2A95.83 95.83 0 0 1 196 100a96 96 0 0 1-109.37 95.08 2 2 0 0 1 .55-3.97A92 92 0 0 0 192 100c0-11-1.93-21.53-5.46-31.3a2 2 0 0 1 1.2-2.56Z"
         clip-rule="evenodd"
       ></path>
+    </svg>
+  ),
+
+  folder: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+      />
+    </svg>
+  ),
+  file: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+      />
+    </svg>
+  ),
+  settings: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+      />
+    </svg>
+  ),
+
+  locked: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+      />
+    </svg>
+  ),
+  unlocked: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+      />
     </svg>
   ),
 };
