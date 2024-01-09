@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Error",
+  description: "",
+};
+
 export default function ErrorPage() {
     return (
         <div className="flex items-center justify-center h-screen">
