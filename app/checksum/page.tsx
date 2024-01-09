@@ -77,14 +77,17 @@ export default function ChecksumPage() {
 
   return (
     <div className="min-h-screen h-full flex-col flex items-center space-y-6 mx-auto pt-6 max-w-5xl px-4">
-      <div className="flex flex-row space-x-2 mx-auto w-full">
+      <div className="flex flex-col mx-auto w-full">
+        <div className="label">
+          <span className="label-text">Checksum:</span>
+        </div>
         <div className="join w-full">
           <label className="flex items-center btn btn-accent join-item">
             <span className="leading-normal md:hidden">
               <Icons.file />
             </span>
             <span className="hidden md:leading-normal md:block">
-              CHOOSE FILE
+              Choose File
             </span>
             <input type="file" className="hidden" onChange={handleFileChange} />
           </label>
@@ -110,16 +113,19 @@ export default function ChecksumPage() {
           </button>
         </div>
       </div>
-      <div className="flex flex-row space-x-2 mx-auto w-full">
+      <div className="flex flex-col mx-auto w-full">
+        <div className="label">
+          <span className="label-text">Hash:</span>
+        </div>
         <div className="join w-full">
           <input
             type="text"
-            className="input input-accent join-item w-full"
+            className="input input-bordered join-item w-full"
             value={hash || ""}
             readOnly
           />
           <button
-            className="btn join-item btn-accent"
+            className="btn join-item btn-secondary"
             onClick={copyToClipboard}
           >
             <Icons.clipboard />
