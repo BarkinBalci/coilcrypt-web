@@ -130,7 +130,11 @@ function VaultComponent() {
         <AddCredentialModal triggerUpdate={triggerUpdate} />
         <AddNoteModal triggerUpdate={triggerUpdate} />
       </div>
-      {sortedNotes.length === 0 && sortedCredentials.length === 0 ? (
+      {sortedCredentials.length === 0 && sortedNotes.length === 0 ? (
+        <div>
+          <p>There are no search results.</p>
+        </div>
+      ) : vault.notes.length === 0 && vault.credentials.length === 0 ? (
         <>
           <div className="card lg:card-side bg-base-200 shadow-xl">
             <figure>
@@ -139,8 +143,9 @@ function VaultComponent() {
             <div className="card-body">
               <h2 className="card-title">Welcome to your vault!</h2>
               <p>
-                You can store all types of sensitive data here, transmit it securely to
-                anyone, and do so much more. Get started by adding a credential or a note to your vault.
+                You can store all types of sensitive data here, transmit it
+                securely to anyone, and do so much more. Get started by adding a
+                credential or a note to your vault.
               </p>
             </div>
           </div>
