@@ -4,7 +4,6 @@ import { FavoriteToggle } from "./favoriteToggle";
 import { PasswordGenerator } from "./passwordGenerator";
 import { Toaster } from "react-hot-toast";
 import { showToast } from "./toast";
-import e from "express";
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
@@ -108,6 +107,7 @@ export function CredentialItem({
   const [showPassword, setShowPassword] = useState<number[]>([]);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [isEditing, setIsEditing] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const [name, setName] = useState(credential.name);
   const [url, setUrl] = useState(credential.url);
@@ -196,7 +196,36 @@ export function CredentialItem({
         className="modal modal-bottom sm:modal-middle"
       >
         <div className="modal-box">
-          {isEditing ? (
+          {isDeleting ? (
+            <div>
+              <h3 className="font-bold text-lg">Confirm deletion:</h3>
+              <p className="pt-4 text-md">
+                Are you sure you want to delete the
+                <span className="font-bold text-lg"> {credential.name} </span>
+                credential? This action cannot be undone.
+              </p>
+              <div className="flex items-center justify-between pt-8">
+                <div>
+                  <button
+                    className="btn btn-error"
+                    onClick={() =>
+                      handleDeleteCredential(credential.id.toString())
+                    }
+                  >
+                    Delete <Icons.trash />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    className="btn btn-neutral"
+                    onClick={() => setIsDeleting(false)}
+                  >
+                    Cancel <Icons.cancel />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : isEditing ? (
             <div>
               <h3 className="font-bold text-lg">Edit Credential</h3>
               <div className="label">
@@ -260,7 +289,6 @@ export function CredentialItem({
                   <button
                     className="btn btn-warning"
                     onClick={() => {
-                      dialogRef?.current?.close();
                       setIsEditing(false);
                     }}
                   >
@@ -347,9 +375,7 @@ export function CredentialItem({
                 <div>
                   <button
                     className="btn btn-error"
-                    onClick={() =>
-                      handleDeleteCredential(credential.id.toString())
-                    }
+                    onClick={() => setIsDeleting(true)}
                   >
                     Delete <Icons.trash />
                   </button>
@@ -359,7 +385,14 @@ export function CredentialItem({
           )}
         </div>
         <form method="dialog" className="modal-backdrop">
-          <button onClick={() => setIsEditing(false)}>close</button>
+          <button
+            onClick={() => {
+              setIsEditing(false);
+              setIsDeleting(false);
+            }}
+          >
+            close
+          </button>
         </form>
         <Toaster />
       </dialog>

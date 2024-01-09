@@ -31,13 +31,12 @@ async function deleteNote(noteId: String) {
     });
 
     throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  else{
-  showToast({
-    message: "Deleted the Note!",
-    toastId: "deleteNote",
-    type: "success",
-  });
+  } else {
+    showToast({
+      message: "Deleted the Note!",
+      toastId: "deleteNote",
+      type: "success",
+    });
   }
   const message = await response.json();
   console.log(message);
@@ -64,8 +63,7 @@ async function updateNote(name: String, content: String, noteId: String) {
       type: "error",
     });
     throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  else{
+  } else {
     showToast({
       message: "Updated the Note!",
       toastId: "updateNote",
@@ -79,6 +77,7 @@ async function updateNote(name: String, content: String, noteId: String) {
 export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [isEditing, setIsEditing] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const [name, setName] = useState(note.name);
   const [content, setContent] = useState(note.content);
@@ -129,7 +128,34 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
         className="modal modal-bottom sm:modal-middle"
       >
         <div className="modal-box">
-          {isEditing ? (
+          {isDeleting ? (
+            <div>
+              <h3 className="font-bold text-lg">Confirm deletion:</h3>
+              <p className="pt-4 text-md">
+                Are you sure you want to delete the
+                <span className="font-bold text-lg"> {note.name} </span>
+                note? This action cannot be undone.
+              </p>
+              <div className="flex items-center justify-between pt-8">
+                <div>
+                  <button
+                    className="btn btn-error"
+                    onClick={() => handleDeleteNote(note.id.toString())}
+                  >
+                    Delete <Icons.trash />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    className="btn btn-neutral"
+                    onClick={() => setIsDeleting(false)}
+                  >
+                    Cancel <Icons.cancel />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : isEditing ? (
             <div>
               <h3 className="font-bold text-lg">Edit Note</h3>
               <div className="label">
@@ -167,7 +193,6 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
                   <button
                     className="btn btn-warning"
                     onClick={() => {
-                      dialogRef?.current?.close();
                       setIsEditing(false);
                     }}
                   >
@@ -202,7 +227,7 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
                 <div>
                   <button
                     className="btn btn-error"
-                    onClick={() => handleDeleteNote(note.id.toString())}
+                    onClick={() => setIsDeleting(true)}
                   >
                     Delete <Icons.trash />
                   </button>
@@ -212,7 +237,14 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
           )}
         </div>
         <form method="dialog" className="modal-backdrop">
-          <button onClick={() => setIsEditing(false)}>close</button>
+          <button
+            onClick={() => {
+              setIsEditing(false);
+              setIsDeleting(false);
+            }}
+          >
+            close
+          </button>
         </form>
         <Toaster />
       </dialog>
