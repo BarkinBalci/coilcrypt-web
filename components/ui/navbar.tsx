@@ -37,6 +37,17 @@ export async function Navbar() {
                   <a href="/vault">Vault</a>
                 </li>
               )}
+              <li>
+                <a>Tools</a>
+                <ul className="p-2">
+                  <li>
+                    <a href="/cryptography">Cryptography</a>
+                  </li>
+                  <li>
+                    <a href="/checksum">Checksum</a>
+                  </li>
+                </ul>
+              </li>
               {session && (
                 <li>
                   <a href="/settings">Settings</a>
@@ -56,6 +67,19 @@ export async function Navbar() {
                 <a href="/vault">Vault</a>
               </li>
             )}
+            <li>
+              <details>
+                <summary>Tools</summary>
+                <ul className="p-2">
+                  <li>
+                    <a href="/cryptography">Cryptography</a>
+                  </li>
+                  <li>
+                    <a href="/checksum">Checksum</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
             {session && (
               <li>
                 <a href="/settings">Settings</a>

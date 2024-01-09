@@ -19,7 +19,7 @@ export default async function SettingsPage() {
     <div className="drawer lg:drawer-open z-20">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
-        <div className="flex flex-col min-h-screen h-full items-center justify-center">
+        <div className="flex flex-col min-h-screen h-full items-center justify-center mx-4">
           The settings page is currently work in progress, but the sign out
           button works 😅
         </div>
