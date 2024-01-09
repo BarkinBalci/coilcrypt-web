@@ -17,7 +17,7 @@ export const decryptFile = async (file: File, password: string) => {
     return decryptedContent;
 };
 
-export const encryptFile = async (file: File, password: string): Promise<ArrayBuffer> => {
+export const encryptFile = async (file: File, password: string) => {
     const fileData = await file.arrayBuffer();
     const salt = window.crypto.getRandomValues(new Uint8Array(16));
     const iv = window.crypto.getRandomValues(new Uint8Array(16));
@@ -69,4 +69,34 @@ export const PBKDF2 = async (
         ["encrypt", "decrypt"]
     );
     return aesKey;
+};
+
+export const encrypt = async (text: string, password: string, salt: Uint8Array, iv: Uint8Array) => {
+    const textEncoder = new TextEncoder();
+    const textData = textEncoder.encode(text);
+    const aesKey = await PBKDF2(password, salt, 1000000, "SHA-256");
+    const encryptedData = await window.crypto.subtle.encrypt(
+        {
+            name: "AES-CBC",
+            iv: iv,
+        },
+        aesKey,
+        textData
+    );
+    const encryptedContent = new Uint8Array(encryptedData.byteLength);
+    return encryptedContent.buffer;
+};
+
+export const decrypt = async (encryptedData: ArrayBuffer, password: string, salt: Uint8Array, iv: Uint8Array) => {
+    const aesKey = await PBKDF2(password, salt, 1000000, "SHA-256");
+    const decryptedContent = await window.crypto.subtle.decrypt(
+        {
+            name: "AES-CBC",
+            iv: iv,
+        },
+        aesKey,
+        encryptedData
+    );
+    const textDecoder = new TextDecoder();
+    return textDecoder.decode(decryptedContent);
 };
