@@ -1,23 +1,55 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Icons } from "@/app/icons";
 
 interface PasswordGeneratorProps {
   onPasswordChange: (newPassword: string) => void;
-  defaultPassword?: string; // Add this line
+  defaultPassword?: string;
 }
-
 
 export function PasswordGenerator({
   onPasswordChange,
-  defaultPassword = "", // Add this line
+  defaultPassword = "", 
 }: PasswordGeneratorProps) {
-  const [password, setPassword] = useState(defaultPassword); // Modify this line
+  const [password, setPassword] = useState(defaultPassword); 
   const [length, setLength] = useState(24);
   const [useUppercase, setUseUppercase] = useState(true);
   const [useLowercase, setUseLowercase] = useState(true);
   const [useNumbers, setUseNumbers] = useState(true);
   const [useSymbols, setUseSymbols] = useState(true);
+  const [labelTexts, setLabelTexts] = useState({
+    uppercase: "A-Z",
+    lowercase: "a-z",
+    numbers: "0-9",
+    symbols: "!@#$%^&*",
+  });
+
+  const parentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (parentRef.current && parentRef.current.offsetWidth > 700) {
+        setLabelTexts({
+          uppercase: "Uppercase (A-Z)",
+          lowercase: "Lowercase (a-z)",
+          numbers: "Numbers (0-9)",
+          symbols: "Symbols (!@#$%^&*)",
+        });
+      } else {
+        setLabelTexts({
+          uppercase: "A-Z",
+          lowercase: "a-z",
+          numbers: "0-9",
+          symbols: "!@#$%^&*",
+        });
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once to set initial state
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const generatePassword = () => {
     let charset = "";
@@ -97,10 +129,10 @@ export function PasswordGenerator({
           <span>36</span>
         </div>
       </div>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between" ref={parentRef}>
         <div className="form-control">
           <label className="label cursor-pointer">
-            <span className="label-text mr-2">A-Z</span>
+            <span className="label-text mr-2">{labelTexts.uppercase}</span>
             <input
               type="checkbox"
               className="checkbox"
@@ -114,7 +146,7 @@ export function PasswordGenerator({
         </div>
         <div className="form-control">
           <label className="label cursor-pointer">
-            <span className="label-text mr-2">a-z</span>
+            <span className="label-text mr-2">{labelTexts.lowercase}</span>
             <input
               type="checkbox"
               className="checkbox"
@@ -128,7 +160,7 @@ export function PasswordGenerator({
         </div>
         <div className="form-control">
           <label className="label cursor-pointer">
-            <span className="label-text mr-2">0-9</span>
+            <span className="label-text mr-2">{labelTexts.numbers}</span>
             <input
               type="checkbox"
               className="checkbox"
@@ -142,7 +174,7 @@ export function PasswordGenerator({
         </div>
         <div className="form-control">
           <label className="label cursor-pointer">
-            <span className="label-text mr-2">!@#$%^&*</span>
+            <span className="label-text mr-2">{labelTexts.symbols}</span>
             <input
               type="checkbox"
               className="checkbox"
