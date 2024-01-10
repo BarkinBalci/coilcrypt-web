@@ -100,14 +100,18 @@ export default function DownloadPage() {
             <h2 className="card-title">Opera</h2>
           </div>
         </div>
-        <div className="col-span-full text-center pt-16 pb-4">
+        <div className="col-span-full text-center pt-16 pb-16">
           <h1 className="text-3xl pb-2">Web Application</h1>
           <p className="pb-6">
             Need to access account settings or are using a friend's computer?
+            <br />
             Access your password manager from any web browser with the Bitwarden
             web app.
+            <br />
           </p>
-          <a className="btn btn-accent" href="/vault">Web Vault</a>
+          <a className="btn btn-accent ob" href="/vault">
+            Web Vault
+          </a>
         </div>
       </div>
     </div>
