@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mx-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl pb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl pb-16">
         <div className="col-span-full text-center pt-16 pb-4">
           <h1 className="text-3xl pb-2">
             Everything you need out of a password manager
@@ -58,7 +58,7 @@ export default function Home() {
             CoilCrypt helps businesses run quickly and securely
           </h1>
         </div>
-        <div className="card bg-base-200 flex flex-1">
+        <div className="card bg-base-200 flex flex-1 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
           <figure>
             <Icons.vault />
           </figure>
@@ -70,7 +70,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="card bg-base-200 flex flex-1">
+        <div className="card bg-base-200 flex flex-1 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
           <figure>
             <Icons.magnify />
           </figure>
@@ -85,7 +85,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="card bg-base-200 flex flex-1">
+        <div className="card bg-base-200 flex flex-1 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
           <figure>
             <Icons.share />
           </figure>
@@ -100,7 +100,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-        
       </div>
     </div>
   );
