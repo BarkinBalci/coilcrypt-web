@@ -233,6 +233,10 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
                   </button>
                 </div>
               </div>
+              <div className="pt-5">
+                <p className="text-xs text-opacity-50 text-secondary">Updated: {new Date(note.revisionDate).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</p>
+                <p className="text-xs text-opacity-50 text-secondary">Created: {new Date(note.creationDate).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</p>
+              </div>
             </div>
           )}
         </div>

@@ -8,16 +8,35 @@ import { showToast } from "./toast";
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
   const id = "copyToClipboard"
-    showToast({
-      message: "Copied to Clipboard!",
-      toastId: "copyClipboard",
-      type: "success",
-    });
+  showToast({
+    message: "Copied to Clipboard!",
+    toastId: "copyClipboard",
+    type: "success",
+  });
 }
 
 function openUrl(url: string) {
+  if (!url.startsWith("http://") && !url.startsWith("https://")) {
+    url = "https://" + url;
+  }
+  const urlPattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name and extension
+    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+    '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+
+  if (!urlPattern.test(url)) {
+    showToast({
+      message: "Invalid URL!",
+      toastId: "openUrl",
+      type: "error",
+    });
+    return;
+  }
   window.open(url, "_blank");
 }
+
 interface CredentialItemProps {
   credential: any;
   triggerUpdate: () => void;
@@ -47,13 +66,13 @@ async function deleteCredential(credentialId: String) {
     });
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-else{
-  showToast({
-    message: "Deleted the Credential!",
-    toastId: "deleteCredential",
-    type: "success",
-  });
-}
+  else {
+    showToast({
+      message: "Deleted the Credential!",
+      toastId: "deleteCredential",
+      type: "success",
+    });
+  }
 
   const message = await response.json();
   console.log(message);
@@ -88,13 +107,13 @@ async function updateCredential(
     });
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  else{
-  showToast({
-    message: "Updated the Credential!",
-    toastId: "updateCredential",
-    type: "success",
-  });
-}
+  else {
+    showToast({
+      message: "Updated the Credential!",
+      toastId: "updateCredential",
+      type: "success",
+    });
+  }
 
   const message = await response.json();
   console.log(message);
@@ -380,6 +399,11 @@ export function CredentialItem({
                     Delete <Icons.trash />
                   </button>
                 </div>
+
+              </div>
+              <div className="pt-5">
+                <p className="text-xs text-opacity-50 text-secondary">Updated: {new Date(credential.revisionDate).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</p>
+                <p className="text-xs text-opacity-50 text-secondary">Created: {new Date(credential.creationDate).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</p>
               </div>
             </div>
           )}
