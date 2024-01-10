@@ -3,12 +3,12 @@ import * as React from "react";
 import { Icons } from "./icons";
 
 export const metadata: Metadata = {
-  title: "CoilCrypt - Home",
+  title: "CoilCrypt",
   description: "",
 };
 
 export default function Home() {
-  
+
   return (
     <div className="flex flex-col items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mx-4">
       <h1 className="text-3xl pt-16 pb-4 flex-wrap text-center">
