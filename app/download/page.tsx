@@ -103,9 +103,10 @@ export default function DownloadPage() {
         <div className="col-span-full text-center pt-16 pb-16">
           <h1 className="text-3xl pb-2">Web Application</h1>
           <p className="pb-6">
-            Need to access account settings or are using a friend's computer?
+            Need to access account settings or are using a friend&apos;s
+            computer?
             <br />
-            Access your password manager from any web browser with the Bitwarden
+            Access your password manager from any web browser with the CoilCrypt
             web app.
             <br />
           </p>
