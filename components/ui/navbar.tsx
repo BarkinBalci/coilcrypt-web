@@ -61,7 +61,7 @@ export async function Navbar() {
           <a href="/" className="btn btn-ghost text-2xl">
             CoilCrypt
           </a>
-          <ul className="menu menu-horizontal  hidden lg:flex px-1">
+          <ul className="menu menu-horizontal hidden lg:flex px-1">
             {session && (
               <li>
                 <a href="/vault">Vault</a>
@@ -70,7 +70,7 @@ export async function Navbar() {
             <li>
               <details>
                 <summary>Tools</summary>
-                <ul className="p-2">
+                <ul className="p-2 bg-base-100 shadow border">
                   <li>
                     <a href="/cryptography">Cryptography</a>
                   </li>
