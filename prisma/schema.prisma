@@ -79,7 +79,7 @@ model Credential {
   favorite Boolean @default(false)
   reprompt Boolean @default(false)
 
-  creatationDate DateTime @default(now())
+  creationDate DateTime @default(now())
   revisionDate   DateTime @default(now())
 
   vault Vault @relation(fields: [vaultId], references: [id], onDelete: Cascade)
@@ -96,7 +96,7 @@ model Note {
   favorite Boolean @default(false)
   reprompt Boolean @default(false)
 
-  creatationDate DateTime @default(now())
+  creationDate DateTime @default(now())
   revisionDate   DateTime @default(now())
 
   vault Vault @relation(fields: [vaultId], references: [id], onDelete: Cascade)
