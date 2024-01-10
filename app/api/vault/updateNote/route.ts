@@ -44,6 +44,7 @@ export async function POST(request: Request, response: Response) {
         data: {
             name,
             content,
+            revisionDate: new Date().toISOString()
         }
     });
 
