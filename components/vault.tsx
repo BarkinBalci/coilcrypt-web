@@ -108,7 +108,7 @@ function VaultComponent() {
     : [];
 
   return (
-    <div className="min-h-screen h-full flex-col flex items-center space-y-6 mx-auto pb-64 pt-6 max-w-5xl px-4">
+    <div className="min-h-screen h-full flex-col flex items-center mx-auto pb-64 pt-6 max-w-5xl px-4">
       <div className="flex flex-row space-x-2 mx-auto w-full">
         <div className="join w-full">
           <button className="btn btn-primary join-item">
@@ -153,21 +153,36 @@ function VaultComponent() {
       ) : (
         <>
           {sortedNotes.length > 0 && (
-            <h2 className="text-left w-full text-xl font-bold">Notes:</h2>
+            <div className="label w-full pt-6">
+              <span className="label-text">
+                Notes:
+              </span>
+            </div>
           )}
-          {sortedNotes.map((note) => (
-            <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
-          ))}
+          <div className="w-full space-y-4">
+            {sortedNotes.map((note) => (
+              <NoteItem
+                key={note.id}
+                note={note}
+                triggerUpdate={triggerUpdate}
+              />
+            ))}
+          </div>
+
           {sortedCredentials.length > 0 && (
-            <h2 className="text-left w-full text-xl font-bold">Credentials:</h2>
+            <div className="label w-full pt-6">
+              <span className="label-text">Credentials:</span>
+            </div>
           )}
-          {sortedCredentials.map((credential) => (
-            <CredentialItem
-              key={credential.id}
-              credential={credential}
-              triggerUpdate={triggerUpdate}
-            />
-          ))}
+          <div className="w-full space-y-4">
+            {sortedCredentials.map((credential) => (
+              <CredentialItem
+                key={credential.id}
+                credential={credential}
+                triggerUpdate={triggerUpdate}
+              />
+            ))}
+          </div>
         </>
       )}
     </div>
