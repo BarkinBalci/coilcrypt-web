@@ -21,6 +21,8 @@
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@tabler/icons-react": "^2.44.0",
+    "@trpc/client": "^10.45.0",
+    "@trpc/server": "^10.45.0",
     "autoprefixer": "^10.4.16",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

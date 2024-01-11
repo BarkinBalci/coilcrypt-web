@@ -114,15 +114,8 @@ function VaultComponent() {
           <button className="btn btn-primary join-item">
             <Icons.search />
           </button>
-          <input
-            className="join-item input input-bordered input-primary w-full"
-            type="text"
-            onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
-          />
-          <select
-            className="join-item select-primary select"
-            onChange={(e) => setSortOption(e.target.value)}
-          >
+          <input className="join-item input input-bordered input-primary w-full" type="text" onChange={(e) => setSearchTerm(e.target.value.toLowerCase())} />
+          <select className="join-item select-primary select" onChange={(e) => setSortOption(e.target.value)}>
             <option selected>A-Z</option>
             <option>Z-A</option>
           </select>
@@ -130,42 +123,35 @@ function VaultComponent() {
         <AddCredentialModal triggerUpdate={triggerUpdate} />
         <AddNoteModal triggerUpdate={triggerUpdate} />
       </div>
-      {sortedCredentials.length === 0 && sortedNotes.length === 0 ? (
-        <div>
-          <p>There are no search results.</p>
-        </div>
-      ) : vault.notes.length === 0 && vault.credentials.length === 0 ? (
-        <>
-          <div className="card lg:card-side bg-base-200 shadow-xl">
+      {vault.notes.length === 0 && vault.credentials.length === 0 ? (
+        <div className="pt-6">
+          <div className="card sm:card-side bg-base-200 shadow-xl">
             <figure>
               <Icons.smallvault />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Welcome to your vault!</h2>
               <p>
-                You can store all types of sensitive data here, transmit it
-                securely to anyone, and do so much more. Get started by adding a
-                credential or a note to your vault.
+                You can store all types of sensitive data here, transmit it securely to anyone, and do so much more. Get started by adding a credential or a
+                note to your vault.
               </p>
             </div>
           </div>
-        </>
+        </div>
+      ) : sortedCredentials.length === 0 && sortedNotes.length === 0 ? (
+        <div className="pt-6">
+          <p>There are no search results.</p>
+        </div>
       ) : (
         <>
           {sortedNotes.length > 0 && (
             <div className="label w-full pt-6">
-              <span className="label-text">
-                Notes:
-              </span>
+              <span className="label-text">Notes:</span>
             </div>
           )}
           <div className="w-full space-y-4">
             {sortedNotes.map((note) => (
-              <NoteItem
-                key={note.id}
-                note={note}
-                triggerUpdate={triggerUpdate}
-              />
+              <NoteItem key={note.id} note={note} triggerUpdate={triggerUpdate} />
             ))}
           </div>
 
@@ -176,11 +162,7 @@ function VaultComponent() {
           )}
           <div className="w-full space-y-4">
             {sortedCredentials.map((credential) => (
-              <CredentialItem
-                key={credential.id}
-                credential={credential}
-                triggerUpdate={triggerUpdate}
-              />
+              <CredentialItem key={credential.id} credential={credential} triggerUpdate={triggerUpdate} />
             ))}
           </div>
         </>

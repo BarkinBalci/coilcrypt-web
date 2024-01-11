@@ -4,38 +4,12 @@ export const Icons = {
   logo: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
       <rect width="256" height="256" fill="none" />
-      <line
-        x1="208"
-        y1="128"
-        x2="128"
-        y2="208"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <line
-        x1="192"
-        y1="40"
-        x2="40"
-        y2="192"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
+      <line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16" />
+      <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16" />
     </svg>
   ),
   twitter: (props: IconProps) => (
-    <svg
-      {...props}
-      height="23"
-      viewBox="0 0 1200 1227"
-      width="23"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg {...props} height="23" viewBox="0 0 1200 1227" width="23" xmlns="http://www.w3.org/2000/svg">
       <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
     </svg>
   ),
@@ -49,15 +23,9 @@ export const Icons = {
   ),
   radix: (props: IconProps) => (
     <svg viewBox="0 0 25 25" fill="none" {...props}>
-      <path
-        d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"
-        fill="currentcolor"
-      ></path>
+      <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z" fill="currentcolor"></path>
       <path d="M12 0H4V8H12V0Z" fill="currentcolor"></path>
-      <path
-        d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"
-        fill="currentcolor"
-      ></path>
+      <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z" fill="currentcolor"></path>
     </svg>
   ),
   aria: (props: IconProps) => (
@@ -147,36 +115,18 @@ export const Icons = {
   ),
 
   showPassword: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
       />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
     </svg>
   ),
 
   hidePassword: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -201,14 +151,7 @@ export const Icons = {
     </svg>
   ),
   trash: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -218,14 +161,7 @@ export const Icons = {
   ),
 
   edit: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -235,14 +171,7 @@ export const Icons = {
   ),
 
   refresh: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -251,30 +180,12 @@ export const Icons = {
     </svg>
   ),
   search: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+      <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
     </svg>
   ),
   addUser: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -283,14 +194,7 @@ export const Icons = {
     </svg>
   ),
   link: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -299,14 +203,7 @@ export const Icons = {
     </svg>
   ),
   staroutline: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-8 h-8 swap-off"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 swap-off">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -315,12 +212,7 @@ export const Icons = {
     </svg>
   ),
   star: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="#FFD700"
-      className="w-8 h-8 swap-on"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" className="w-8 h-8 swap-on">
       <path
         fillRule="evenodd"
         d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
@@ -329,14 +221,7 @@ export const Icons = {
     </svg>
   ),
   user: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -345,14 +230,7 @@ export const Icons = {
     </svg>
   ),
   key: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -361,14 +239,7 @@ export const Icons = {
     </svg>
   ),
   discard: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -377,14 +248,7 @@ export const Icons = {
     </svg>
   ),
   save: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -394,12 +258,7 @@ export const Icons = {
   ),
 
   landing3: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 200 200"
-      style={{ width: "80%", height: "80%" }}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" style={{ width: "80%", height: "80%" }}>
       <path
         fill="var(--color-primary)"
         fill-rule="evenodd"
@@ -469,12 +328,7 @@ export const Icons = {
     </svg>
   ),
   landing2: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 200 200"
-      style={{ width: "80%", height: "80%" }}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" style={{ width: "80%", height: "80%" }}>
       <path
         fill="var(--color-secondary)"
         fill-rule="evenodd"
@@ -515,20 +369,11 @@ export const Icons = {
   ),
 
   landing1: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 201 200"
-      style={{ width: "80%", height: "80%" }}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 201 200" style={{ width: "80%", height: "80%" }}>
       <clipPath id="icon-easy-flat_svg__a">
         <path d="M.5 0h200v200H.5z"></path>
       </clipPath>
-      <g
-        fill-rule="evenodd"
-        clip-path="url(#icon-easy-flat_svg__a)"
-        clip-rule="evenodd"
-      >
+      <g fill-rule="evenodd" clip-path="url(#icon-easy-flat_svg__a)" clip-rule="evenodd">
         <g fill="var(--color-secondary)">
           <path d="M101.5 53a2 2 0 0 1 2 2v47.69a2 2 0 0 1-.6 1.44l-23 22.3a2 2 0 0 1-2.8-2.87l22.4-21.72V55c0-1.1.9-2 2-2zM89.67 10v6.06h23.26V10zm-2-4a2 2 0 0 0-2 2v10.06c0 1.1.9 2 2 2h27.26a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"></path>
           <path d="M108.5 28V18h2v10zm-14-10v10h-2V18zm56.09 12.3a5 5 0 0 1 7.07 0l15.9 15.91a5 5 0 0 1 0 7.07l-8.89 8.9-2.82-2.83 8.89-8.9a1 1 0 0 0 0-1.41l-15.9-15.9a1 1 0 0 0-1.42 0l-8.9 8.89-2.83-2.83z"></path>
@@ -553,12 +398,7 @@ export const Icons = {
     </svg>
   ),
   vault: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 200 200"
-      className="w-auto h-auto px-16 py-8"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" className="w-auto h-auto px-16 py-8">
       <path
         fill="var(--color-secondary)"
         fill-rule="evenodd"
@@ -604,12 +444,7 @@ export const Icons = {
     </svg>
   ),
   smallvault: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 200 200"
-      style={{ width: "80%", height: "80%" }}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" style={{ width: "80%", height: "80%" }}>
       <path
         fill="var(--color-secondary)"
         fill-rule="evenodd"
@@ -655,24 +490,9 @@ export const Icons = {
     </svg>
   ),
   magnify: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 200 200 "
-      className="w-auto h-auto px-16 py-8"
-    >
-      <path
-        fill="var(--color-secondary)"
-        fill-rule="evenodd"
-        d="M93.77 171a1 1 0 0 1 1-1h61.73a1 1 0 1 1 0 2H94.77a1 1 0 0 1-1-1Z"
-        clip-rule="evenodd"
-      ></path>
-      <path
-        fill="var(--color-secondary)"
-        fill-rule="evenodd"
-        d="M113.74 171v-18.1h2V171h-2Zm19.97 0v-18.1h2V171h-2Z"
-        clip-rule="evenodd"
-      ></path>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200 " className="w-auto h-auto px-16 py-8">
+      <path fill="var(--color-secondary)" fill-rule="evenodd" d="M93.77 171a1 1 0 0 1 1-1h61.73a1 1 0 1 1 0 2H94.77a1 1 0 0 1-1-1Z" clip-rule="evenodd"></path>
+      <path fill="var(--color-secondary)" fill-rule="evenodd" d="M113.74 171v-18.1h2V171h-2Zm19.97 0v-18.1h2V171h-2Z" clip-rule="evenodd"></path>
       <path
         fill="var(--color-secondary)"
         fill-rule="evenodd"
@@ -706,12 +526,7 @@ export const Icons = {
     </svg>
   ),
   share: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 200 200"
-      className="w-auto h-auto px-16 py-8"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" className="w-auto h-auto px-16 py-8">
       <path
         fill="var(--color-secondary)"
         fill-rule="evenodd"
@@ -750,14 +565,7 @@ export const Icons = {
   ),
 
   folder: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -766,14 +574,7 @@ export const Icons = {
     </svg>
   ),
   file: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -782,36 +583,18 @@ export const Icons = {
     </svg>
   ),
   settings: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
       />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
     </svg>
   ),
 
   locked: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -820,14 +603,7 @@ export const Icons = {
     </svg>
   ),
   unlocked: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -836,27 +612,13 @@ export const Icons = {
     </svg>
   ),
   cancel: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6 18 18 6M6 6l12 12"
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
     </svg>
   ),
   windows: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 185 185">
-      <path
-        fill="#0078D4"
-        d="M0 0h87.33v87.33H0V0Zm96.91 0h87.33v87.33H96.91V0ZM0 96.92h87.33v87.32H0V96.92Zm96.91 0h87.33v87.32H96.91V96.92Z"
-      ></path>
+      <path fill="#0078D4" d="M0 0h87.33v87.33H0V0Zm96.91 0h87.33v87.33H96.91V0ZM0 96.92h87.33v87.32H0V96.92Zm96.91 0h87.33v87.32H96.91V96.92Z"></path>
     </svg>
   ),
   macos: (props: IconProps) => (
@@ -868,12 +630,7 @@ export const Icons = {
     </svg>
   ),
   linux: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      fill="none"
-      viewBox="0 0 99 104"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 99 104">
       <defs>
         <path
           id="icon-linux-square_svg__j"
@@ -914,33 +671,18 @@ export const Icons = {
         d="M43.08 56.85c-.4 1.49-.68 3-.8 4.57-.2 2.16-.16 4.36-.28 6.57-.08 1.84-.32 3.72 0 5.56.16.88.44 1.72.8 2.52.08-.32.12-.6.12-.92.12-1.48-.12-2.96-.2-4.44-.16-2.6.2-5.2.36-7.81.16-2.04.12-4.04 0-6.05Z"
         opacity=".11"
       />
-      <path
-        fill="#7D7D7D"
-        d="M36.07 42.12c-.04-.44-.68-.52-1-.28-.24.2-.48.84-.28 1.12.36.4 1.32-.2 1.28-.84Z"
-        opacity=".25"
-      />
+      <path fill="#7D7D7D" d="M36.07 42.12c-.04-.44-.68-.52-1-.28-.24.2-.48.84-.28 1.12.36.4 1.32-.2 1.28-.84Z" opacity=".25" />
       <path
         fill="#7D7D7D"
         d="M69.1 54.65c.37-.04 2.73 1.92 2.41 2.68-.32.73-.92.28-1.36.28-.44 0-1.6.53-1.8.2-.2-.32.52-1.12.88-1.8.32-.52-.48-1.32-.12-1.36Z"
         opacity=".75"
       />
-      <path
-        fill="#7D7D7D"
-        d="M54.81 10.13c-.8.56-.48 1.28-.12 2.04s-.76 2.8-.8 2.88c0 .08 2.2-1.04 2.84-1.8.73-.88 2.53 1.2 2.45.88 0-.56-3.53-4.56-4.37-4Z"
-      />
+      <path fill="#7D7D7D" d="M54.81 10.13c-.8.56-.48 1.28-.12 2.04s-.76 2.8-.8 2.88c0 .08 2.2-1.04 2.84-1.8.73-.88 2.53 1.2 2.45.88 0-.56-3.53-4.56-4.37-4Z" />
       <path
         fill="#838385"
         d="M61.02 34.4c-.68.63.32 1.55.8 2.67.28.68 1.12 1.69 1.92 1.53.6-.12.96-1 .92-1.6-.12-1.17-1.12-1.45-1.84-1.85-.56-.32-1.32-1.2-1.8-.76Z"
       />
-      <mask
-        id="icon-linux-square_svg__d"
-        width={41}
-        height={61}
-        x={28}
-        y={31}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__d" width={41} height={61} x={28} y={31} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M40.6 33.43c-.32.4-.56.92-.68 1.44-.12.52-.16 1.04-.2 1.6-.04 1.08.04 2.17-.24 3.2-.32 1.13-1 2.09-1.64 3-1.17 1.61-2.33 3.3-2.89 5.17a8.94 8.94 0 0 0-.32 3.57 36.47 36.47 0 0 0-3.32 6 32.27 32.27 0 0 0-2.68 10.01 25.6 25.6 0 0 0 1.8 12.5c1.2 2.84 3 5.4 5.32 7.4a17.39 17.39 0 0 0 19.54 2.44c2.49-1.31 4.6-3.28 6.65-5.24 1.24-1.2 2.44-2.4 3.36-3.84 1.8-2.76 2.45-6.09 2.8-9.33.69-5.69.73-11.73-1.8-16.9-.84-1.76-2-3.4-3.36-4.84a26.65 26.65 0 0 0-2.12-7.21c-.76-1.64-1.68-3.2-2.4-4.89-.28-.68-.52-1.4-.84-2.04a6.49 6.49 0 0 0-1.25-1.84 5.33 5.33 0 0 0-1.96-1.12 8.51 8.51 0 0 0-2.24-.4c-1.52-.08-3.04.12-4.56.08-1.2-.04-2.4-.28-3.65-.2-.6.04-1.2.16-1.76.36-.68.24-1.2.6-1.56 1.08"
@@ -953,15 +695,7 @@ export const Icons = {
           d="M39.84 39.12a9.26 9.26 0 0 0 2.92 3.96c.44.36.88.68 1.4.88.52.24 1.08.36 1.6.32a3.45 3.45 0 0 0 1.53-.52c.48-.28.92-.6 1.36-.88.8-.48 1.64-.92 2.44-1.36 1-.52 1.92-1.16 2.76-1.92.36-.36.72-.72 1.16-1.04.4-.29.92-.53 1.44-.49.4.04.77.2 1.13.29.2.04.4.08.56.04.2-.04.36-.13.52-.25a.9.9 0 0 0 .24-.64c0-.24-.08-.48-.2-.68-.2-.4-.56-.76-.72-1.24-.12-.4-.12-.84-.08-1.24 0-.4 0-.84-.2-1.24a1.5 1.5 0 0 0-.68-.64 1.9 1.9 0 0 0-.93-.24c-.64-.04-1.28.08-1.92.12-.84.04-1.68-.04-2.56 0-1.04.08-2.08.36-3.16.36-1.2 0-2.4-.4-3.6-.2-.53.08-1 .28-1.49.44-.48.16-1 .32-1.52.32-.6 0-1.16-.2-1.76-.24-.28-.04-.6 0-.88.12s-.52.28-.68.56c-.08.16-.12.32-.12.48 0 .16 0 .32.04.52.08.32.24.64.36.96.56 1.04.64 2.28 1.04 3.45Z"
         />
       </g>
-      <mask
-        id="icon-linux-square_svg__e"
-        width={41}
-        height={61}
-        x={28}
-        y={31}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__e" width={41} height={61} x={28} y={31} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M40.6 33.43c-.32.4-.56.92-.68 1.44-.12.52-.16 1.04-.2 1.6-.04 1.08.04 2.17-.24 3.2-.32 1.13-1 2.09-1.64 3-1.17 1.61-2.33 3.3-2.89 5.17a8.94 8.94 0 0 0-.32 3.57 38.17 38.17 0 0 0-3.32 6 32.27 32.27 0 0 0-2.68 10.01 25.6 25.6 0 0 0 1.8 12.5c1.2 2.84 3 5.4 5.32 7.4a17.39 17.39 0 0 0 19.54 2.44c2.49-1.31 4.6-3.28 6.65-5.24 1.24-1.2 2.44-2.4 3.36-3.84 1.8-2.76 2.45-6.09 2.8-9.33.69-5.69.73-11.73-1.8-16.9-.84-1.76-2-3.4-3.36-4.84a26.65 26.65 0 0 0-2.12-7.21c-.76-1.64-1.68-3.2-2.4-4.89-.28-.68-.52-1.4-.84-2.04a7.1 7.1 0 0 0-1.25-1.84 5.33 5.33 0 0 0-1.96-1.12 8.51 8.51 0 0 0-2.24-.4c-1.52-.08-3.04.12-4.56.08-1.2-.04-2.4-.28-3.65-.2-.6.04-1.2.16-1.76.36-.68.24-1.2.6-1.56 1.08"
@@ -978,15 +712,7 @@ export const Icons = {
         fill="#050507"
         d="M70.1 53.13a10.22 10.22 0 0 1 3.57 6.4 15.8 15.8 0 0 1-.32 5.81c-.44 1.92-1.12 3.73-1.76 5.57a11 11 0 0 0-.64 2.24c-.12.76-.04 1.6.32 2.28A3.3 3.3 0 0 0 73.35 77a5.2 5.2 0 0 0 2.6.04c.85-.2 2.29-.48 2.97-1.04 1.76-1.36 2.16-3.72 2.6-5.84a17.7 17.7 0 0 0-.16-6.65c-.52-3-1.4-5.93-2.52-8.77a32.17 32.17 0 0 0-3.13-5.92c-1.24-1.8-2.96-3.25-4.24-5-.44-.61-1-1.25-1.44-1.9-.96-1.31-.72-1.07-1.32-1.95-.44-.64-1.08-.84-1.8-1.12a3.6 3.6 0 0 0-2.25-.16 3.5 3.5 0 0 0-2.16 1.96c-.4.92-.48 1.96-.32 2.96.2 1.28.8 2.44 1.44 3.56a12.9 12.9 0 0 0 2.72 3.4c1.17.97 2.57 1.6 3.77 2.57ZM33.47 43.4c-2.24 2.56-4.6 5.05-5.84 7.85-.65 1.4-.93 2.92-1.37 4.4a30.2 30.2 0 0 1-1.92 4.89c-.68 1.48-1.44 2.88-2.2 4.32a11.09 11.09 0 0 0-1.32 3.29c-.16.92-.08 1.88.16 2.76.24.92.6 1.76 1.04 2.6 1.8 3.52 4.52 6.6 7.73 8.93a30 30 0 0 0 4.64 2.72c.88.4 1.84.76 2.8.8.49 0 1-.08 1.45-.28.44-.2.84-.52 1.12-.92a2.6 2.6 0 0 0 .36-1.72 4.24 4.24 0 0 0-.6-1.68c-.76-1.24-1.96-2.16-3.13-3.04-2.52-1.93-4.92-4-7.24-6.13a9.3 9.3 0 0 1-1.76-2 7.7 7.7 0 0 1-.85-2.45c-.44-2.36-.32-4.8.48-7.08.33-.88.73-1.72 1.13-2.56a31.02 31.02 0 0 1 2.24-4.29c1.12-1.68 2.64-3.08 3.56-4.88a18.5 18.5 0 0 0 1.4-4.89c.24-1.32.68-2.6.92-3.92-.44.8-1.88 2.16-2.8 3.28Z"
       />
-      <mask
-        id="icon-linux-square_svg__f"
-        width={20}
-        height={40}
-        x={62}
-        y={38}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__f" width={20} height={40} x={62} y={38} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M70.1 53.13a10.22 10.22 0 0 1 3.57 6.4 15.8 15.8 0 0 1-.32 5.81c-.44 1.88-1.12 3.73-1.76 5.57a11 11 0 0 0-.64 2.24c-.12.76-.04 1.6.32 2.28A3.3 3.3 0 0 0 73.35 77a5.2 5.2 0 0 0 2.6.04 6.3 6.3 0 0 0 2.33-1.16 9.23 9.23 0 0 0 3.24-5.68c.4-2.2.24-4.45-.16-6.65-.52-3-1.4-5.93-2.52-8.77a32.17 32.17 0 0 0-3.13-5.92c-1.24-1.8-2.96-3.25-4.24-5-.44-.61-1-1.25-1.44-1.9-.96-1.31-.72-1.07-1.32-1.95-.44-.64-1.08-.84-1.8-1.12a3.6 3.6 0 0 0-2.25-.16 3.5 3.5 0 0 0-2.16 1.96c-.4.92-.48 1.96-.32 2.96.2 1.28.8 2.44 1.44 3.56a12.9 12.9 0 0 0 2.72 3.4c1.17.93 2.57 1.57 3.77 2.53"
@@ -998,15 +724,7 @@ export const Icons = {
           d="M65.54 50.13c.16.16.32.32.48.44 1.2.96 1.85 2.08 3.05 3.04 1.96 1.56 4 4.24 4.36 6.73.32 1.92-.08 2.96-.6 5.24-.48 2.28-1.88 5.49-2.64 7.65-.28.88.6.52.48 1.44-.04.44-.08.92 0 1.36a16.89 16.89 0 0 1 1-3.92c.8-2.28 1.72-4.49 2.36-6.85.64-2.36.56-4 .24-6a10.14 10.14 0 0 0-3.96-6.41c-1.48-1.08-3.2-1.8-4.77-2.72Z"
         />
       </g>
-      <mask
-        id="icon-linux-square_svg__g"
-        width={21}
-        height={46}
-        x={20}
-        y={40}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__g" width={21} height={46} x={20} y={40} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M33.47 43.4c-2.24 2.56-4.6 5.05-5.84 7.85-.65 1.4-.93 2.92-1.37 4.4a30.2 30.2 0 0 1-1.92 4.89c-.68 1.48-1.44 2.88-2.2 4.32a11.09 11.09 0 0 0-1.32 3.29c-.16.92-.08 1.88.16 2.76.24.88.6 1.76 1.04 2.6 1.8 3.52 4.52 6.6 7.73 8.93a30 30 0 0 0 4.64 2.72c.88.4 1.84.76 2.8.8.49 0 1-.08 1.45-.28.44-.2.84-.52 1.12-.92a2.6 2.6 0 0 0 .36-1.72 4.24 4.24 0 0 0-.6-1.68c-.76-1.24-1.96-2.16-3.13-3.04-2.52-1.93-4.92-4-7.24-6.13a9.3 9.3 0 0 1-1.76-2 7.7 7.7 0 0 1-.85-2.45c-.44-2.36-.32-4.8.48-7.08.33-.88.73-1.72 1.13-2.56a31.02 31.02 0 0 1 2.24-4.29c1.12-1.68 2.64-3.08 3.56-4.88a18.5 18.5 0 0 0 1.4-4.89c.24-1.32.68-2.6.92-3.92-.44.8-1.88 2.16-2.8 3.28Z"
@@ -1028,15 +746,7 @@ export const Icons = {
         fill="url(#icon-linux-square_svg__i)"
         d="M88.65 88.65c-.84 1-2 1.64-3.17 2.24-1.96 1-4.04 1.88-5.88 3.12a23.8 23.8 0 0 0-3.49 2.8c-.92.89-1.8 1.8-2.8 2.57a8.1 8.1 0 0 1-3.52 1.48 8.52 8.52 0 0 1-4.57-.68 5.76 5.76 0 0 1-2.56-2 6.14 6.14 0 0 1-.72-3.17c0-1.92.36-3.84.68-5.76.28-1.6.56-3.17.72-4.77.32-2.92.32-5.84.12-8.8-.04-.49-.08-1 0-1.49.08-.48.28-.96.64-1.28.36-.28.8-.44 1.24-.44.44-.04.92.04 1.37.12 1.04.16 2.12.28 3.16.56.64.16 1.28.4 1.92.56 1.08.28 2.24.44 3.36.32 1.2-.16 2.37-.6 3.6-.56.49 0 1 .12 1.49.24.48.16.96.36 1.32.72.28.28.44.64.6.96a6 6 0 0 1 .36 1.68c.04.52.04 1 .12 1.53.16.84.6 1.56 1.12 2.2.52.64 1.16 1.2 1.8 1.72.64.52 1.29 1.08 1.97 1.56.32.24.64.44.96.68.32.24.6.52.8.88.28.48.32 1.04.16 1.56-.12.48-.4.97-.8 1.45Z"
       />
-      <mask
-        id="icon-linux-square_svg__k"
-        width={29}
-        height={29}
-        x={61}
-        y={72}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__k" width={29} height={29} x={61} y={72} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <use xlinkHref="#icon-linux-square_svg__j" />
       </mask>
       <g mask="url(#icon-linux-square_svg__k)">
@@ -1045,15 +755,7 @@ export const Icons = {
           d="M88.57 86.12c-.2.48-.48.96-.84 1.36a9.1 9.1 0 0 1-2.89 2c-1.8.93-3.68 1.69-5.36 2.81-1.12.72-2.2 1.6-3.17 2.52-.84.8-1.64 1.64-2.56 2.32a7.28 7.28 0 0 1-3.2 1.33c-1.4.2-2.84-.08-4.17-.64-.92-.4-1.8-.97-2.32-1.8a5.4 5.4 0 0 1-.64-2.85c0-1.76.32-3.48.64-5.2.24-1.45.52-2.85.64-4.29.28-2.6.28-5.28.08-7.89a4.86 4.86 0 0 1 0-1.32c.08-.44.24-.88.6-1.16.32-.28.72-.4 1.16-.4.4-.04.85.04 1.25.12.96.16 1.92.24 2.88.48.6.16 1.16.36 1.76.52 1 .28 2.04.4 3.04.28 1.09-.12 2.17-.52 3.29-.52.44 0 .92.08 1.32.24.44.12.88.32 1.2.64.24.24.4.56.56.88.2.48.32 1 .36 1.52 0 .56-.12 1.09-.04 1.6.04.45.24.85.48 1.2.24.37.52.73.8 1.05.56.64 1.08 1.32 1.8 1.8.8.56 1.73.88 2.53 1.44.24.16.48.32.64.56.24.4.32.92.16 1.4Z"
         />
       </g>
-      <mask
-        id="icon-linux-square_svg__l"
-        width={29}
-        height={29}
-        x={61}
-        y={72}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__l" width={29} height={29} x={61} y={72} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <use xlinkHref="#icon-linux-square_svg__j" />
       </mask>
       <g mask="url(#icon-linux-square_svg__l)">
@@ -1062,15 +764,7 @@ export const Icons = {
           d="M88.45 85.56c-.2.48-.52.96-.84 1.36-.8.97-1.85 1.6-2.97 2.05-1.84.68-3.84.8-5.64 1.56-1.12.48-2.08 1.2-3.09 1.88a16 16 0 0 1-2.52 1.48c-1 .44-2.08.68-3.16.84-.68.12-1.36.2-2.08.16-.68-.04-1.4-.2-2-.56a2.62 2.62 0 0 1-1.13-1.16 4.07 4.07 0 0 1-.32-1.84c0-1.68.36-3.32.36-5 0-1.45-.28-2.89-.4-4.33-.16-2.8.44-5.65-.08-8.37-.08-.44-.2-.88-.2-1.32 0-.24.04-.44.12-.64.08-.2.2-.4.36-.52.16-.12.32-.16.48-.2.16-.04.36-.04.52 0 .36.04.68.2 1 .28.97.28 2 .28 2.97.48.6.12 1.2.36 1.8.52 1.04.28 2.08.4 3.12.28 1.12-.12 2.25-.56 3.37-.52.48 0 .92.08 1.36.24.44.12.88.32 1.24.68.24.24.4.56.56.88.2.48.36 1 .36 1.52 0 .28-.04.56-.08.8-.04.28-.04.56.04.8.08.28.2.52.36.72.16.2.32.4.48.65.44.6.76 1.28 1.12 1.96a6 6 0 0 0 1.32 1.8c.76.64 1.77.92 2.6 1.44.25.16.49.32.69.56.12.2.24.44.28.68.12.36.08.6 0 .84Z"
         />
       </g>
-      <mask
-        id="icon-linux-square_svg__m"
-        width={29}
-        height={29}
-        x={61}
-        y={72}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__m" width={29} height={29} x={61} y={72} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <use xlinkHref="#icon-linux-square_svg__j" />
       </mask>
       <g mask="url(#icon-linux-square_svg__m)">
@@ -1083,15 +777,7 @@ export const Icons = {
         fill="url(#icon-linux-square_svg__o)"
         d="M22.98 70.87c.52-.2 1.08-.24 1.64-.16.56.12 1.04.32 1.52.64.92.64 1.6 1.52 2.25 2.4a96.86 96.86 0 0 1 4.24 6.33c1.04 1.76 2.04 3.6 3.24 5.24.8 1.08 1.69 2.08 2.49 3.17.8 1.08 1.52 2.24 1.88 3.56a6.95 6.95 0 0 1-3 7.77 6.37 6.37 0 0 1-3.53.92c-1.96-.08-3.72-1.04-5.56-1.76-3.69-1.48-7.73-1.93-11.54-3.09-1.16-.36-2.32-.76-3.52-1.08-.52-.16-1.04-.28-1.56-.48a2.86 2.86 0 0 1-1.24-1.04c-.2-.36-.32-.8-.28-1.2.04-.4.12-.84.24-1.24.28-.8.76-1.52 1.04-2.28.52-1.29.6-2.69.52-4.05-.08-1.36-.28-2.72-.4-4.08-.04-.6-.04-1.24.04-1.84a2.67 2.67 0 0 1 2.28-2.33c.56-.12 1.12-.12 1.68-.12.56 0 1.12.04 1.68 0a3.69 3.69 0 0 0 1.6-.44 4.3 4.3 0 0 0 1.17-1.08c.32-.44.56-.92.84-1.36.28-.48.52-.92.88-1.36.36-.44.92-.84 1.4-1.04Z"
       />
-      <mask
-        id="icon-linux-square_svg__q"
-        width={31}
-        height={31}
-        x={10}
-        y={70}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__q" width={31} height={31} x={10} y={70} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <use xlinkHref="#icon-linux-square_svg__p" />
       </mask>
       <g mask="url(#icon-linux-square_svg__q)">
@@ -1100,15 +786,7 @@ export const Icons = {
           d="M23.78 71.75c.48-.2 1-.2 1.48-.08.48.12.96.36 1.32.64.8.6 1.37 1.48 1.89 2.32a121.8 121.8 0 0 1 3.68 6.25c.88 1.6 1.72 3.24 2.84 4.68.72.96 1.56 1.88 2.29 2.8.72.97 1.4 2 1.72 3.17a6.23 6.23 0 0 1-.48 4.56 6 6 0 0 1-5.49 3.2c-1.8-.07-3.4-.95-5.08-1.55-3.25-1.17-6.73-1.33-10.05-2.25-1.2-.32-2.37-.76-3.53-1.04-.52-.12-1.08-.24-1.56-.44-.52-.2-.96-.52-1.24-1-.2-.36-.28-.76-.28-1.16 0-.4.12-.8.24-1.16.28-.76.76-1.44 1.04-2.2a8.5 8.5 0 0 0 .4-3.6c-.08-1.2-.28-2.45-.36-3.65a5.66 5.66 0 0 1 .08-1.64c.12-.52.36-1.04.72-1.44.44-.4 1-.65 1.6-.73.6-.08 1.2-.04 1.76 0 .6.04 1.2.12 1.77.08.6-.04 1.2-.16 1.68-.52.44-.32.8-.76 1.04-1.2.24-.48.44-.96.64-1.48.2-.48.4-1 .72-1.44.24-.52.68-.92 1.16-1.12Z"
         />
       </g>
-      <mask
-        id="icon-linux-square_svg__r"
-        width={31}
-        height={31}
-        x={10}
-        y={70}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__r" width={31} height={31} x={10} y={70} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <use xlinkHref="#icon-linux-square_svg__p" />
       </mask>
       <g mask="url(#icon-linux-square_svg__r)">
@@ -1135,15 +813,7 @@ export const Icons = {
         fill="#050507"
         d="M80.04 72.27a2.13 2.13 0 0 0-.64-.92 3.9 3.9 0 0 0-.96-.6c-.68-.28-1.44-.4-2.2-.56-.69-.12-1.4-.28-2.09-.4a5.82 5.82 0 0 0-2.2-.04c-.64.16-1.2.48-1.68.88s-.84.96-1.12 1.56a6.77 6.77 0 0 0-.52 3.32c.08.84.28 1.72.84 2.37.44.52 1.08.84 1.72 1.04 1.12.32 2.36.32 3.48-.04a8.9 8.9 0 0 0 4.57-3.45c.36-.52.68-1.12.8-1.72.16-.48.16-1 0-1.44Z"
       />
-      <mask
-        id="icon-linux-square_svg__v"
-        width={13}
-        height={11}
-        x={68}
-        y={69}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__v" width={13} height={11} x={68} y={69} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M80.04 72.27a2.13 2.13 0 0 0-.64-.92 3.9 3.9 0 0 0-.96-.6c-.68-.28-1.44-.4-2.2-.56-.69-.12-1.4-.28-2.09-.4a5.82 5.82 0 0 0-2.2-.04c-.64.16-1.2.48-1.68.88s-.84.96-1.12 1.56a6.77 6.77 0 0 0-.52 3.32c.08.84.28 1.72.84 2.37.44.52 1.08.84 1.72 1.04 1.12.32 2.36.32 3.48-.04a8.9 8.9 0 0 0 4.57-3.45c.36-.52.68-1.12.8-1.72.16-.48.16-1 0-1.44Z"
@@ -1155,15 +825,7 @@ export const Icons = {
           d="M72.4 69.43c-.17 0-.37.04-.53.04-1.12.2-2.12.88-2.68 1.88-.4.68-.6 1.48-.52 2.28.04-.56.16-1.08.44-1.6a3.12 3.12 0 0 1 2.2-1.6 4.98 4.98 0 0 1 1.72.04l1.64.24c.84.2 1.68.48 2.4.96.17.12.33.24.45.4.12.16.24.32.28.52.04.28-.04.6-.16.84-.16.24-.32.48-.56.68l-.52.48c.8-.16 1.64-.4 2.32-.84.28-.2.56-.44.72-.76.16-.32.24-.68.16-1-.04-.24-.2-.44-.32-.6-.12-.16-.36-.32-.52-.44-.84-.6-1.84-1-2.89-1.12-.68-.12-1.32-.24-2-.32-.6-.08-1.12-.12-1.64-.08Z"
         />
       </g>
-      <mask
-        id="icon-linux-square_svg__x"
-        width={13}
-        height={11}
-        x={68}
-        y={69}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__x" width={13} height={11} x={68} y={69} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M80.04 72.27a2.13 2.13 0 0 0-.64-.92 3.9 3.9 0 0 0-.96-.6c-.68-.28-1.44-.4-2.2-.56-.69-.12-1.4-.28-2.09-.4a5.82 5.82 0 0 0-2.2-.04c-.64.16-1.2.48-1.68.88-.48.44-.84.96-1.12 1.56a6.77 6.77 0 0 0-.52 3.32c.08.84.28 1.72.84 2.37.44.52 1.08.84 1.72 1.04 1.12.32 2.36.32 3.48-.04a8.9 8.9 0 0 0 4.57-3.45c.36-.52.68-1.12.8-1.72.16-.48.16-1 0-1.44Z"
@@ -1187,15 +849,7 @@ export const Icons = {
         fill="url(#icon-linux-square_svg__A)"
         d="M41.24 24.38c.08.2.32.28.48.44.12.16.28.32.36.52.16.36-.16.92.16 1.2.08.08.28.08.36 0 .36-.32.28-1 .12-1.48a1.69 1.69 0 0 0-.84-1.04c-.2-.08-.48-.16-.64-.04-.08.08-.08.28 0 .4Z"
       />
-      <mask
-        id="icon-linux-square_svg__B"
-        width={8}
-        height={11}
-        x={38}
-        y={20}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__B" width={8} height={11} x={38} y={20} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M41.08 20.18c-.56.04-1.12.28-1.52.68-.4.4-.72.88-.88 1.44-.36 1.08-.28 2.24-.2 3.4.08 1.04.16 2.08.52 3.05.2.48.48.92.84 1.28a2.74 2.74 0 0 0 4-.04 3.9 3.9 0 0 0 1.04-1.8c.2-.69.24-1.4.24-2.09a8.2 8.2 0 0 0-.4-2.6 6.2 6.2 0 0 0-1.32-2.28 3.33 3.33 0 0 0-1.04-.76c-.44-.2-.84-.28-1.28-.28"
@@ -1219,23 +873,12 @@ export const Icons = {
         fill="#050507"
         d="M53.21 22.86a2.28 2.28 0 0 0-1.68 1 3.56 3.56 0 0 0-.56 1.88c-.04.52.04 1 .2 1.48s.44.92.84 1.25c.4.32.88.52 1.4.56.52.04 1.04-.12 1.44-.4a2.96 2.96 0 0 0 1.16-2.09c.08-.72 0-1.48-.36-2.12a3.05 3.05 0 0 0-1.56-1.44c-.28-.08-.6-.12-.88-.12Z"
       />
-      <path
-        fill="#161615"
-        d="M53.97 25.06c-.28.12-.72.04-.84.32-.08.16.04.44.2.48.32.12.84-.12.96-.44a.44.44 0 0 0-.16-.44c-.04 0-.08.08-.16.08Z"
-      />
+      <path fill="#161615" d="M53.97 25.06c-.28.12-.72.04-.84.32-.08.16.04.44.2.48.32.12.84-.12.96-.44a.44.44 0 0 0-.16-.44c-.04 0-.08.08-.16.08Z" />
       <path
         fill="url(#icon-linux-square_svg__F)"
         d="M55.25 25.78c.36-.36-.28-1.36-.76-1.76-.36-.28-1.4-.6-1.36-.28.04.32.52.72.84 1.04.4.4 1.12 1.16 1.28 1Z"
       />
-      <mask
-        id="icon-linux-square_svg__G"
-        width={10}
-        height={12}
-        x={48}
-        y={19}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__G" width={10} height={12} x={48} y={19} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M51.13 20.18a5.1 5.1 0 0 0-2 2.48 6.25 6.25 0 0 0 .16 4 6.5 6.5 0 0 0 2.36 3.37c.56.4 1.24.68 1.92.76.68.08 1.4-.04 2.04-.36a3.95 3.95 0 0 0 1.69-1.84c.36-.77.52-1.6.56-2.49a7.94 7.94 0 0 0-.4-3.2 5.33 5.33 0 0 0-2.09-2.76 3.87 3.87 0 0 0-1.64-.6c-.6-.08-1.2-.04-1.72.2-.28.08-.6.28-.88.44"
@@ -1285,15 +928,7 @@ export const Icons = {
         d="M44.16 27.9c-.28-.08-.76.4-.6.69.04.08.16.16.24.12.12-.08.24-.33.36-.45.12-.08.08-.32 0-.36Z"
         opacity=".8"
       />
-      <mask
-        id="icon-linux-square_svg__O"
-        width={20}
-        height={15}
-        x={38}
-        y={26}
-        maskUnits="userSpaceOnUse"
-        style={{ maskType: "luminance" }}
-      >
+      <mask id="icon-linux-square_svg__O" width={20} height={15} x={38} y={26} maskUnits="userSpaceOnUse" style={{ maskType: "luminance" }}>
         <path
           fill="#fff"
           d="M47.29 26.66c-.89 0-1.77.16-2.6.44a9 9 0 0 0-3.81 2.6c-.6.4-1.16.93-1.64 1.49-.28.32-.52.68-.64 1.08-.12.32-.16.64-.2.96-.04.12-.04.24-.04.36 0 .08 0 .12.04.2 0 0 0 .04.04.04.04.08.04.16.08.2.08.16.2.24.36.36.12.08.28.16.4.28a6.87 6.87 0 0 1 1.88 1.84c.72.92 1.36 1.97 2.32 2.65a4.8 4.8 0 0 0 2.32.84 7.8 7.8 0 0 0 2.89-.32c.88-.24 1.72-.6 2.48-1.08 1.48-.93 2.68-2.25 4.32-2.85.36-.12.72-.24 1.08-.4.37-.16.69-.4.85-.72.16-.32.16-.72.2-1.08.04-.4.16-.76.24-1.12.08-.4.08-.8-.08-1.12-.04-.08-.08-.16-.12-.2a.68.68 0 0 0-.12-.4c-.16-.24-.4-.44-.68-.56a5.51 5.51 0 0 0-1.17-.32c-1.2-.28-2.36-.72-3.44-1.28-.56-.28-1.08-.57-1.6-.89-.56-.28-1.12-.6-1.72-.76a5.82 5.82 0 0 0-1.64-.24Z"
@@ -1458,119 +1093,49 @@ export const Icons = {
           <stop offset=".56" stopColor="#735421" />
           <stop offset={1} stopColor="#AB8D30" />
         </radialGradient>
-        <linearGradient
-          id="icon-linux-square_svg__h"
-          x1="70.83"
-          x2="71.98"
-          y1="83.71"
-          y2="92.53"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__h" x1="70.83" x2="71.98" y1="83.71" y2="92.53" gradientUnits="userSpaceOnUse">
           <stop stopColor="#010101" />
           <stop offset={1} stopColor="#010101" stopOpacity={0} />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__i"
-          x1={65}
-          x2="80.35"
-          y1="99.22"
-          y2="74.31"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__i" x1={65} x2="80.35" y1="99.22" y2="74.31" gradientUnits="userSpaceOnUse">
           <stop stopColor="#3D2C13" />
           <stop offset={1} stopColor="#AC7A2B" />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__n"
-          x1="73.01"
-          x2="72.55"
-          y1="73.29"
-          y2="77.36"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__n" x1="73.01" x2="72.55" y1="73.29" y2="77.36" gradientUnits="userSpaceOnUse">
           <stop stopColor="#F3CD16" />
           <stop offset={1} stopColor="#F3CD16" stopOpacity={0} />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__o"
-          x1="16.88"
-          x2="32.13"
-          y1="78.32"
-          y2="103.9"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__o" x1="16.88" x2="32.13" y1="78.32" y2="103.9" gradientUnits="userSpaceOnUse">
           <stop stopColor="#B8842C" />
           <stop offset={1} stopColor="#372813" />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__s"
-          x1="33.74"
-          x2="38.54"
-          y1={84}
-          y2="93.03"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__s" x1="33.74" x2="38.54" y1={84} y2="93.03" gradientUnits="userSpaceOnUse">
           <stop stopColor="#EAC41D" />
           <stop offset={1} stopColor="#EAC41D" stopOpacity={0} />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__y"
-          x1="71.27"
-          x2="72.22"
-          y1="72.14"
-          y2="72.1"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__y" x1="71.27" x2="72.22" y1="72.14" y2="72.1" gradientUnits="userSpaceOnUse">
           <stop stopColor="#7D7D7D" />
           <stop offset={1} stopColor="#7D7D7D" stopOpacity=".33" />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__A"
-          x1="41.07"
-          x2="42.94"
-          y1="23.26"
-          y2="26.59"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__A" x1="41.07" x2="42.94" y1="23.26" y2="26.59" gradientUnits="userSpaceOnUse">
           <stop stopColor="#767675" stopOpacity={0} />
           <stop offset=".26" stopColor="#767675" />
           <stop offset=".5" stopColor="#767675" />
           <stop offset={1} stopColor="#767675" stopOpacity={0} />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__D"
-          x1="41.12"
-          x2="45.4"
-          y1="17.68"
-          y2="21.8"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__D" x1="41.12" x2="45.4" y1="17.68" y2="21.8" gradientUnits="userSpaceOnUse">
           <stop stopColor="#656565" stopOpacity={0} />
           <stop offset=".31" stopColor="#656565" stopOpacity=".58" />
           <stop offset=".47" stopColor="#656565" />
           <stop offset=".73" stopColor="#656565" stopOpacity=".26" />
           <stop offset={1} stopColor="#656565" stopOpacity={0} />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__F"
-          x1="53.46"
-          x2="55.61"
-          y1="23.52"
-          y2="26.06"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__F" x1="53.46" x2="55.61" y1="23.52" y2="26.06" gradientUnits="userSpaceOnUse">
           <stop stopColor="#959494" stopOpacity=".39" />
           <stop offset=".5" stopColor="#959494" />
           <stop offset={1} stopColor="#959494" stopOpacity=".39" />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__H"
-          x1="52.02"
-          x2="58.85"
-          y1="18.76"
-          y2="22.75"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__H" x1="52.02" x2="58.85" y1="18.76" y2="22.75" gradientUnits="userSpaceOnUse">
           <stop stopColor="#757575" />
           <stop offset=".13" stopColor="#8C8C8C" />
           <stop offset=".25" stopColor="#A4A4A5" />
@@ -1578,28 +1143,14 @@ export const Icons = {
           <stop offset=".62" stopColor="#D4D4D4" />
           <stop offset={1} stopColor="#7D7D7D" />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__I"
-          x1="54.15"
-          x2="58.69"
-          y1="17.49"
-          y2="21.78"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__I" x1="54.15" x2="58.69" y1="17.49" y2="21.78" gradientUnits="userSpaceOnUse">
           <stop stopColor="#656565" stopOpacity={0} />
           <stop offset=".31" stopColor="#656565" stopOpacity=".58" />
           <stop offset=".47" stopColor="#656565" />
           <stop offset=".73" stopColor="#656565" stopOpacity=".26" />
           <stop offset={1} stopColor="#656565" stopOpacity={0} />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__L"
-          x1="38.72"
-          x2="56.76"
-          y1="31.57"
-          y2="31.43"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__L" x1="38.72" x2="56.76" y1="31.57" y2="31.43" gradientUnits="userSpaceOnUse">
           <stop stopColor="#AC7A2B" />
           <stop offset=".12" stopColor="#D7A029" />
           <stop offset=".26" stopColor="#ECB91E" />
@@ -1608,14 +1159,7 @@ export const Icons = {
           <stop offset=".77" stopColor="#F6D812" />
           <stop offset={1} stopColor="#F5CD33" />
         </linearGradient>
-        <linearGradient
-          id="icon-linux-square_svg__P"
-          x1="56.78"
-          x2="57.05"
-          y1="31.02"
-          y2="32.29"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="icon-linux-square_svg__P" x1="56.78" x2="57.05" y1="31.02" y2="32.29" gradientUnits="userSpaceOnUse">
           <stop stopColor="#F6CE2E" />
           <stop offset={1} stopColor="#D59B29" />
         </linearGradient>
@@ -1623,25 +1167,14 @@ export const Icons = {
     </svg>
   ),
   chrome: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 512"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" {...props}>
       <g clipPath="url(#chrome_svg__a)">
-        <path
-          fill="#DB4437"
-          d="M40.08 119.17l115.11 195.9 101.18-175.04h228.17A255.44 255.44 0 00395.37 41a255.94 255.94 0 00-355.29 78.17z"
-        />
+        <path fill="#DB4437" d="M40.08 119.17l115.11 195.9 101.18-175.04h228.17A255.44 255.44 0 00395.37 41a255.94 255.94 0 00-355.29 78.17z" />
         <path
           fill="#FFCD40"
           d="M357.6 315.08L245 511.74a256 256 0 00136.45-32.42 255.55 255.55 0 0093.09-89.62 255.1 255.1 0 009.24-249.67H256.37L357.6 315.08z"
         />
-        <path
-          fill="#0B9D58"
-          d="M40.14 119.3a255.04 255.04 0 0078.4 352.8 255.92 255.92 0 00126.43 39.6l111.98-196.65H154.5L40.14 119.29z"
-        />
+        <path fill="#0B9D58" d="M40.14 119.3a255.04 255.04 0 0078.4 352.8 255.92 255.92 0 00126.43 39.6l111.98-196.65H154.5L40.14 119.29z" />
         <path
           fill="#F1F1F1"
           d="M256.37 373.43c64.54 0 116.86-52.25 116.86-116.7s-52.32-116.7-116.87-116.7c-64.54 0-116.86 52.25-116.86 116.7s52.32 116.7 116.87 116.7z"
@@ -1659,12 +1192,7 @@ export const Icons = {
     </svg>
   ),
   safari: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 512"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" {...props}>
       <g filter="url(#safari_svg__a)" opacity={0.53}>
         <path
           fill="#000"
@@ -1688,79 +1216,30 @@ export const Icons = {
         d="M257.5 37.25a3.27 3.27 0 00-3.28 3.28V78.3a3.27 3.27 0 003.28 3.28 3.27 3.27 0 003.28-3.28V40.53a3.27 3.27 0 00-3.28-3.28zm-21.43 1.36a3 3 0 00-.67 0 3.27 3.27 0 00-2.92 3.6l1.65 15.8a3.27 3.27 0 003.6 2.92 3.27 3.27 0 002.92-3.6L239 41.53a3.27 3.27 0 00-2.93-2.92zm43.01.01a3.27 3.27 0 00-2.93 2.92l-1.66 15.8a3.27 3.27 0 002.91 3.6 3.27 3.27 0 003.6-2.91l1.67-15.8a3.27 3.27 0 00-2.92-3.6 3.46 3.46 0 00-.67 0zm-65.03 3.18a3.27 3.27 0 00-3.19 3.95l7.83 36.96a3.27 3.27 0 003.88 2.52 3.27 3.27 0 002.53-3.88l-7.83-36.96a3.27 3.27 0 00-3.22-2.6zm87.05.03a3.27 3.27 0 00-3.22 2.6l-7.86 36.95a3.27 3.27 0 002.53 3.88 3.27 3.27 0 003.88-2.52l7.86-36.95a3.27 3.27 0 00-3.2-3.96zm-108.06 5.89a3.18 3.18 0 00-1.3.15 3.27 3.27 0 00-2.1 4.13l4.91 15.11a3.27 3.27 0 004.13 2.1 3.27 3.27 0 002.1-4.12l-4.9-15.12a3.27 3.27 0 00-2.84-2.25zm128.95 0a3.27 3.27 0 00-2.83 2.26l-4.92 15.11a3.27 3.27 0 002.1 4.13 3.27 3.27 0 004.14-2.1L325.39 52a3.27 3.27 0 00-2.1-4.12 3.3 3.3 0 00-1.3-.15zm-149.73 7.6a3.26 3.26 0 00-1.27.29 3.27 3.27 0 00-1.66 4.32l15.34 34.52A3.27 3.27 0 00189 96.1a3.27 3.27 0 001.66-4.32l-15.35-34.52a3.27 3.27 0 00-3.05-1.95zm170.75.12a3.27 3.27 0 00-3.06 1.94l-15.4 34.5a3.27 3.27 0 001.66 4.33 3.27 3.27 0 004.33-1.66l15.4-34.5a3.27 3.27 0 00-1.66-4.33 3.3 3.3 0 00-1.28-.28zM152.97 65.52a3.24 3.24 0 00-1.86.44 3.27 3.27 0 00-1.2 4.47l7.95 13.76a3.27 3.27 0 004.47 1.2 3.27 3.27 0 001.2-4.47l-7.95-13.77a3.27 3.27 0 00-2.6-1.63zm209.06 0a3.26 3.26 0 00-2.61 1.64l-7.95 13.76a3.27 3.27 0 001.2 4.47 3.27 3.27 0 004.48-1.2l7.94-13.76a3.27 3.27 0 00-1.2-4.47 3.27 3.27 0 00-1.86-.44zM134.25 77.2a3.29 3.29 0 00-1.82.62 3.27 3.27 0 00-.73 4.58l22.2 30.58a3.27 3.27 0 004.57.72 3.27 3.27 0 00.73-4.57L137 78.55a3.27 3.27 0 00-2.75-1.35zm246.74.17a3.26 3.26 0 00-2.76 1.34l-22.24 30.55a3.27 3.27 0 00.73 4.58 3.27 3.27 0 004.57-.72l22.23-30.55a3.27 3.27 0 00-.72-4.58 3.27 3.27 0 00-1.81-.62zM117.5 91.23a3.26 3.26 0 00-2.36.84 3.27 3.27 0 00-.24 4.63l10.63 11.8a3.27 3.27 0 004.63.25 3.27 3.27 0 00.24-4.62l-10.63-11.81a3.27 3.27 0 00-2.27-1.09zm280.02.03a3.28 3.28 0 00-2.26 1.08l-10.64 11.8a3.27 3.27 0 00.24 4.63 3.27 3.27 0 004.63-.24l10.64-11.8a3.27 3.27 0 00-.25-4.63 3.27 3.27 0 00-2.36-.84zm-296.06 15.38a3.27 3.27 0 00-2.26 1.08 3.27 3.27 0 00.24 4.63l28.09 25.27a3.27 3.27 0 004.62-.24 3.27 3.27 0 00-.24-4.63l-28.09-25.27a3.27 3.27 0 00-2.36-.84zm312.18.11a3.26 3.26 0 00-2.36.84l-28.1 25.25a3.27 3.27 0 00-.25 4.63 3.27 3.27 0 004.62.24l28.1-25.25a3.27 3.27 0 00.25-4.63 3.27 3.27 0 00-2.26-1.08zM88.12 123.79a3.26 3.26 0 00-2.77 1.35 3.27 3.27 0 00.73 4.58l12.86 9.34a3.27 3.27 0 004.57-.73 3.27 3.27 0 00-.72-4.57l-12.86-9.34a3.27 3.27 0 00-1.81-.63zm338.85.12a3.28 3.28 0 00-1.81.62l-12.87 9.34a3.27 3.27 0 00-.73 4.57 3.27 3.27 0 004.58.73l12.87-9.33a3.27 3.27 0 00.72-4.58 3.27 3.27 0 00-2.76-1.35zM75.65 142.08a3.26 3.26 0 00-2.6 1.64 3.27 3.27 0 001.2 4.47l32.72 18.89a3.27 3.27 0 004.47-1.2 3.27 3.27 0 00-1.2-4.47l-32.72-18.9a3.27 3.27 0 00-1.87-.43zm363.7 0a3.26 3.26 0 00-1.87.44l-32.72 18.89a3.27 3.27 0 00-1.2 4.47 3.27 3.27 0 004.47 1.2l32.73-18.89a3.27 3.27 0 001.2-4.47 3.27 3.27 0 00-2.6-1.64zm-373.13 19.5a3.26 3.26 0 00-3.05 1.94 3.27 3.27 0 001.65 4.33l14.52 6.47a3.27 3.27 0 004.33-1.65 3.27 3.27 0 00-1.66-4.33l-14.52-6.47a3.26 3.26 0 00-1.27-.29zm382.62.14a3.29 3.29 0 00-1.27.28l-14.52 6.46a3.27 3.27 0 00-1.66 4.33 3.27 3.27 0 004.32 1.66l14.52-6.46a3.27 3.27 0 001.66-4.33 3.27 3.27 0 00-3.05-1.94zM57.82 181.96a3.27 3.27 0 00-2.84 2.25 3.27 3.27 0 002.1 4.13l35.93 11.7a3.27 3.27 0 004.14-2.1 3.27 3.27 0 00-2.1-4.12l-35.93-11.7a3.29 3.29 0 00-1.3-.16zm399.4.14a3.18 3.18 0 00-1.29.15L420 193.93a3.27 3.27 0 00-2.1 4.13 3.27 3.27 0 004.12 2.1l35.94-11.68a3.27 3.27 0 002.1-4.13 3.27 3.27 0 00-2.83-2.25zM52.6 203.35a3.27 3.27 0 00-3.23 2.6 3.27 3.27 0 002.52 3.89l15.55 3.3a3.27 3.27 0 003.89-2.52 3.27 3.27 0 00-2.52-3.89l-15.55-3.3a3.2 3.2 0 00-.66-.07zm409.83.04a4.04 4.04 0 00-.66.07l-15.55 3.3a3.27 3.27 0 00-2.52 3.88 3.27 3.27 0 003.88 2.53l15.55-3.3a3.27 3.27 0 002.53-3.89 3.27 3.27 0 00-3.23-2.6zm-413.8 21.48a3.27 3.27 0 00-2.93 2.92 3.27 3.27 0 002.91 3.6l37.58 3.97a3.27 3.27 0 003.6-2.91 3.27 3.27 0 00-2.91-3.6l-37.58-3.97a3.44 3.44 0 00-.67 0zm417.8.29a2.97 2.97 0 00-.67 0l-37.59 3.92a3.27 3.27 0 00-2.92 3.6 3.27 3.27 0 003.6 2.91l37.59-3.92a3.27 3.27 0 002.91-3.6 3.27 3.27 0 00-2.93-2.91zM47.98 246.9a3.27 3.27 0 00-3.28 3.28 3.27 3.27 0 003.28 3.27h15.9a3.27 3.27 0 003.27-3.27 3.27 3.27 0 00-3.28-3.28h-15.9zm403.13 0a3.27 3.27 0 00-3.28 3.28 3.27 3.27 0 003.28 3.27h15.9a3.27 3.27 0 003.27-3.27 3.27 3.27 0 00-3.28-3.28h-15.9zm-364.3 17.85a3.02 3.02 0 00-.66 0l-37.59 3.93a3.27 3.27 0 00-2.91 3.6 3.27 3.27 0 003.6 2.91l37.58-3.92a3.27 3.27 0 002.92-3.6 3.27 3.27 0 00-2.94-2.92zm341.33.24a3.27 3.27 0 00-2.93 2.91 3.27 3.27 0 002.91 3.6l37.58 3.98a3.27 3.27 0 003.6-2.92 3.27 3.27 0 00-2.91-3.6L428.82 265a3.45 3.45 0 00-.67 0zM68.1 287.1a3.41 3.41 0 00-.66.07l-15.55 3.3a3.27 3.27 0 00-2.52 3.89 3.27 3.27 0 003.88 2.52l15.55-3.3a3.27 3.27 0 002.52-3.88 3.27 3.27 0 00-3.22-2.6zm378.82.03a3.27 3.27 0 00-3.23 2.6 3.27 3.27 0 002.53 3.88l15.54 3.3a3.27 3.27 0 003.89-2.52 3.27 3.27 0 00-2.52-3.88l-15.55-3.3a3.27 3.27 0 00-.66-.07zm-352.64 12.9a3.18 3.18 0 00-1.29.15l-35.94 11.68a3.27 3.27 0 00-2.1 4.13 3.27 3.27 0 004.13 2.1L95 306.42a3.27 3.27 0 002.1-4.12 3.27 3.27 0 00-2.84-2.26zm326.42.12a3.26 3.26 0 00-2.83 2.25 3.27 3.27 0 002.1 4.13l35.93 11.7a3.27 3.27 0 004.13-2.1 3.27 3.27 0 00-2.1-4.13L422 300.3a3.27 3.27 0 00-1.3-.15zM80.56 325.62a3.28 3.28 0 00-1.27.28l-14.52 6.47a3.27 3.27 0 00-1.66 4.32 3.27 3.27 0 004.32 1.66l14.52-6.46a3.27 3.27 0 001.66-4.32 3.27 3.27 0 00-3.05-1.95zm353.83.13a3.26 3.26 0 00-3.06 1.94A3.27 3.27 0 00433 332l14.52 6.48a3.27 3.27 0 004.32-1.66 3.27 3.27 0 00-1.65-4.33l-14.52-6.47a3.26 3.26 0 00-1.27-.28zm-325.55 7.1a3.24 3.24 0 00-1.87.43l-32.73 18.89a3.27 3.27 0 00-1.2 4.47 3.27 3.27 0 004.48 1.2l32.72-18.89a3.27 3.27 0 001.2-4.47 3.27 3.27 0 00-2.6-1.64zm297.33 0a3.26 3.26 0 00-2.61 1.62 3.27 3.27 0 001.2 4.48l32.72 18.89a3.27 3.27 0 004.48-1.2 3.27 3.27 0 00-1.2-4.47l-32.73-18.9a3.27 3.27 0 00-1.86-.43zm-305.5 27.71a3.29 3.29 0 00-1.81.63l-12.87 9.33a3.27 3.27 0 00-.73 4.57 3.27 3.27 0 004.58.73l12.87-9.33a3.27 3.27 0 00.73-4.58 3.27 3.27 0 00-2.77-1.35zm313.58.11a3.26 3.26 0 00-2.76 1.35 3.27 3.27 0 00.72 4.58l12.86 9.34a3.27 3.27 0 004.58-.73 3.27 3.27 0 00-.73-4.57l-12.86-9.34a3.28 3.28 0 00-1.81-.63zm-284.44 1.13a3.26 3.26 0 00-2.36.84l-28.1 25.25a3.27 3.27 0 00-.25 4.63 3.27 3.27 0 004.62.25l28.1-25.26a3.27 3.27 0 00.25-4.62 3.27 3.27 0 00-2.26-1.09zm255.3.1a3.28 3.28 0 00-2.26 1.07 3.27 3.27 0 00.24 4.63l28.09 25.27a3.27 3.27 0 004.62-.24 3.27 3.27 0 00-.24-4.62l-28.09-25.28a3.26 3.26 0 00-2.36-.84zm-228.64 23.98a3.26 3.26 0 00-2.76 1.35l-22.23 30.55a3.27 3.27 0 00.72 4.58 3.27 3.27 0 004.57-.72l22.24-30.55a3.27 3.27 0 00-.73-4.58 3.26 3.26 0 00-1.8-.63zm201.87.14a3.28 3.28 0 00-1.8.63 3.27 3.27 0 00-.74 4.57L378 421.8a3.27 3.27 0 004.57.73 3.27 3.27 0 00.73-4.58l-22.2-30.58a3.27 3.27 0 00-2.76-1.35zm-230.56 4.72a3.28 3.28 0 00-2.27 1.08l-10.63 11.81a3.27 3.27 0 00.24 4.63 3.27 3.27 0 004.62-.25l10.64-11.8a3.27 3.27 0 00-.24-4.63 3.27 3.27 0 00-2.36-.84zm259.42.02a3.25 3.25 0 00-2.36.84 3.27 3.27 0 00-.24 4.62l10.63 11.81a3.27 3.27 0 004.63.24 3.27 3.27 0 00.24-4.62l-10.63-11.81a3.27 3.27 0 00-2.27-1.08zm-199.68 13.1a3.26 3.26 0 00-3.06 1.94l-15.4 34.5a3.27 3.27 0 001.66 4.32 3.27 3.27 0 004.33-1.65l15.4-34.5a3.27 3.27 0 00-1.66-4.33 3.26 3.26 0 00-1.27-.28zm139.75.1a3.27 3.27 0 00-1.27.28 3.27 3.27 0 00-1.66 4.32l15.35 34.52a3.27 3.27 0 004.32 1.66 3.27 3.27 0 001.67-4.32l-15.35-34.52a3.27 3.27 0 00-3.06-1.95zm-166.8 10.56a3.26 3.26 0 00-2.62 1.64l-7.94 13.76a3.27 3.27 0 001.2 4.47 3.27 3.27 0 004.47-1.2l7.95-13.76a3.27 3.27 0 00-1.2-4.47 3.27 3.27 0 00-1.87-.44zm194.07 0a3.25 3.25 0 00-1.87.44 3.27 3.27 0 00-1.2 4.47l7.95 13.76a3.27 3.27 0 004.47 1.2 3.27 3.27 0 001.2-4.47l-7.94-13.76a3.27 3.27 0 00-2.61-1.64zm-132.75.5a3.27 3.27 0 00-3.22 2.6l-7.85 36.94a3.27 3.27 0 002.52 3.89 3.27 3.27 0 003.89-2.53l7.85-36.95a3.27 3.27 0 00-3.19-3.95zm71.3.02a3.27 3.27 0 00-3.19 3.95l7.83 36.96a3.27 3.27 0 003.88 2.52 3.27 3.27 0 002.53-3.88l-7.83-36.95a3.27 3.27 0 00-3.22-2.6zm-35.59 3.73a3.27 3.27 0 00-3.28 3.27v37.78a3.27 3.27 0 003.28 3.27 3.27 3.27 0 003.28-3.27v-37.78a3.27 3.27 0 00-3.28-3.27zm-60.14 12.2a3.27 3.27 0 00-2.83 2.26l-4.92 15.1a3.27 3.27 0 002.1 4.14 3.27 3.27 0 004.13-2.1l4.92-15.12a3.27 3.27 0 00-2.1-4.13 3.3 3.3 0 00-1.3-.15zm120.25.01a3.19 3.19 0 00-1.29.15 3.27 3.27 0 00-2.1 4.13l4.9 15.11a3.27 3.27 0 004.14 2.1 3.27 3.27 0 002.1-4.12l-4.91-15.12a3.27 3.27 0 00-2.84-2.25zm-80.68 8.42a3.27 3.27 0 00-2.93 2.92l-1.66 15.8a3.27 3.27 0 002.91 3.6 3.27 3.27 0 003.6-2.92l1.66-15.8a3.27 3.27 0 00-2.91-3.6 3.29 3.29 0 00-.67 0zm41 .01a2.98 2.98 0 00-.66 0 3.27 3.27 0 00-2.92 3.6l1.65 15.8a3.27 3.27 0 003.6 2.93 3.27 3.27 0 002.92-3.6l-1.65-15.8a3.27 3.27 0 00-2.94-2.93z"
       />
       <g filter="url(#safari_svg__d)" opacity={0.41}>
-        <path
-          fill="#000"
-          d="M411.06 119.17l-179.25 104.1-113.33 178.36 165.8-122.76 126.78-159.7z"
-        />
+        <path fill="#000" d="M411.06 119.17l-179.25 104.1-113.33 178.36 165.8-122.76 126.78-159.7z" />
       </g>
-      <path
-        fill="#FF5150"
-        d="M283.19 277.06l-51.38-53.78 182.26-122.56-130.88 176.34z"
-      />
-      <path
-        fill="#F1F1F1"
-        d="M283.19 277.06l-51.38-53.78-130.88 176.35L283.2 277.07z"
-      />
-      <path
-        fill="#000"
-        d="M100.93 399.63L283.2 277.07l130.88-176.35-313.14 298.9z"
-        opacity={0.24}
-      />
+      <path fill="#FF5150" d="M283.19 277.06l-51.38-53.78 182.26-122.56-130.88 176.34z" />
+      <path fill="#F1F1F1" d="M283.19 277.06l-51.38-53.78-130.88 176.35L283.2 277.07z" />
+      <path fill="#000" d="M100.93 399.63L283.2 277.07l130.88-176.35-313.14 298.9z" opacity={0.24} />
       <defs>
-        <filter
-          id="safari_svg__a"
-          width={474.49}
-          height={456.92}
-          x={20.26}
-          y={41.67}
-          colorInterpolationFilters="sRGB"
-          filterUnits="userSpaceOnUse"
-        >
+        <filter id="safari_svg__a" width={474.49} height={456.92} x={20.26} y={41.67} colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
           <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-          <feGaussianBlur
-            result="effect1_foregroundBlur_1397_3390"
-            stdDeviation={1.18}
-          />
+          <feGaussianBlur result="effect1_foregroundBlur_1397_3390" stdDeviation={1.18} />
         </filter>
-        <filter
-          id="safari_svg__d"
-          width={293.93}
-          height={283.81}
-          x={117.8}
-          y={118.5}
-          colorInterpolationFilters="sRGB"
-          filterUnits="userSpaceOnUse"
-        >
+        <filter id="safari_svg__d" width={293.93} height={283.81} x={117.8} y={118.5} colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
           <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-          <feGaussianBlur
-            result="effect1_foregroundBlur_1397_3390"
-            stdDeviation={0.34}
-          />
+          <feGaussianBlur result="effect1_foregroundBlur_1397_3390" stdDeviation={0.34} />
         </filter>
-        <radialGradient
-          id="safari_svg__c"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="matrix(243.82 0 0 243.733 258.52 217.42)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="safari_svg__c" cx={0} cy={0} r={1} gradientTransform="matrix(243.82 0 0 243.733 258.52 217.42)" gradientUnits="userSpaceOnUse">
           <stop stopColor="#06C2E7" />
           <stop offset={0.25} stopColor="#0DB8EC" />
           <stop offset={0.5} stopColor="#12AEF1" />
           <stop offset={0.75} stopColor="#1F86F9" />
           <stop offset={1} stopColor="#107DDD" />
         </radialGradient>
-        <linearGradient
-          id="safari_svg__b"
-          x1={257.5}
-          x2={257.5}
-          y1={493.9}
-          y2={6.44}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="safari_svg__b" x1={257.5} x2={257.5} y1={493.9} y2={6.44} gradientUnits="userSpaceOnUse">
           <stop stopColor="#BDBDBD" />
           <stop offset={1} stopColor="#fff" />
         </linearGradient>
@@ -1768,12 +1247,7 @@ export const Icons = {
     </svg>
   ),
   firefox: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 512"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" {...props}>
       <path
         fill="url(#ff_svg__a)"
         d="M485.72 171.89c-10.78-25.94-32.65-53.95-49.78-62.8a257.81 257.81 0 0125.13 75.28l.05.42c-28.06-69.91-75.61-98.15-114.48-159.55-1.96-3.1-3.93-6.21-5.84-9.5a78.33 78.33 0 01-2.74-5.12 45.13 45.13 0 01-3.7-9.83.64.64 0 00-.56-.64.88.88 0 00-.47 0c-.03 0-.08.06-.12.07-.04.01-.12.07-.18.1l.1-.17C270.8 36.65 249.63 104.2 247.72 138a124.14 124.14 0 00-68.31 26.32 74.28 74.28 0 00-6.4-4.86 115.04 115.04 0 01-.7-60.65 183.74 183.74 0 00-59.73 46.16h-.12c-9.83-12.46-9.14-53.56-8.58-62.15a44.37 44.37 0 00-8.28 4.4 180.72 180.72 0 00-24.25 20.77 216.66 216.66 0 00-23.2 27.83v.04-.04a209.55 209.55 0 00-33.3 75.16l-.33 1.64a398.68 398.68 0 00-2.44 15.5c0 .18-.03.35-.05.54A236.52 236.52 0 008 262.86v1.29a248.16 248.16 0 00227.1 246.82 248.16 248.16 0 00265.56-204.86c.42-3.2.76-6.37 1.13-9.6a255.2 255.2 0 00-16.1-124.66l.03.04zm-286 194.25c1.17.56 2.25 1.16 3.44 1.69l.18.1a130.35 130.35 0 01-3.61-1.8zm261.4-181.28v-.24l.05.27-.05-.03z"
@@ -1823,14 +1297,7 @@ export const Icons = {
         d="M485.72 171.89c-10.78-25.94-32.65-53.95-49.78-62.8a257.78 257.78 0 0125.13 75.28l.05.42c-28.06-69.91-75.61-98.15-114.48-159.55-1.96-3.1-3.93-6.21-5.84-9.5a78.33 78.33 0 01-2.74-5.12 45.23 45.23 0 01-3.7-9.83.64.64 0 00-.56-.64.88.88 0 00-.47 0c-.03 0-.08.06-.12.07-.04.01-.12.07-.18.1l.1-.17C270.8 36.65 249.64 104.2 247.72 138c2.9-.2 5.76-.45 8.72-.45a125.23 125.23 0 01108.71 63.5 85.66 85.66 0 00-59.83-14.53c89.25 44.62 65.3 198.28-58.38 192.52a110.4 110.4 0 01-32.29-6.23 130.9 130.9 0 01-7.28-2.98c-1.4-.64-2.8-1.28-4.2-2l.18.1a130.35 130.35 0 01-3.61-1.8c1.16.57 2.25 1.17 3.44 1.7-30.3-15.66-55.33-45.27-58.45-81.18 0 0 11.46-42.69 82.02-42.69 7.62 0 29.45-21.29 29.84-27.46-.1-2.02-43.28-19.2-60.12-35.79-9-8.87-13.27-13.14-17.05-16.34a74.28 74.28 0 00-6.4-4.86 115.04 115.04 0 01-.7-60.65 183.74 183.74 0 00-59.73 46.17h-.12c-9.83-12.47-9.14-53.57-8.57-62.16a44.36 44.36 0 00-8.29 4.4 180.71 180.71 0 00-24.25 20.77 216.67 216.67 0 00-23.2 27.84v.03-.04a209.55 209.55 0 00-33.29 75.16l-.33 1.64a424.79 424.79 0 00-2.86 15.66A288.7 288.7 0 008 262.92v1.28a248.16 248.16 0 00399.73 196.05 248.16 248.16 0 0092.94-154.09c.42-3.2.75-6.37 1.13-9.6a255.2 255.2 0 00-16.1-124.66l.01-.01zm-24.62 12.75l.05.26-.04-.26z"
       />
       <defs>
-        <radialGradient
-          id="ff_svg__b"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(436.94 57.74) scale(517.314)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__b" cx={0} cy={0} r={1} gradientTransform="translate(436.94 57.74) scale(517.314)" gradientUnits="userSpaceOnUse">
           <stop offset={0.13} stopColor="#FFBD4F" />
           <stop offset={0.19} stopColor="#FFAC31" />
           <stop offset={0.25} stopColor="#FF9D17" />
@@ -1841,41 +1308,20 @@ export const Icons = {
           <stop offset={0.78} stopColor="#EB0878" />
           <stop offset={0.86} stopColor="#E50080" />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__c"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(244.86 269.01) scale(517.314)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__c" cx={0} cy={0} r={1} gradientTransform="translate(244.86 269.01) scale(517.314)" gradientUnits="userSpaceOnUse">
           <stop offset={0.3} stopColor="#960E18" />
           <stop offset={0.35} stopColor="#B11927" stopOpacity={0.74} />
           <stop offset={0.43} stopColor="#DB293D" stopOpacity={0.34} />
           <stop offset={0.5} stopColor="#F5334B" stopOpacity={0.09} />
           <stop offset={0.53} stopColor="#FF3750" stopOpacity={0} />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__d"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(308.89 -57.5) scale(374.732)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__d" cx={0} cy={0} r={1} gradientTransform="translate(308.89 -57.5) scale(374.732)" gradientUnits="userSpaceOnUse">
           <stop offset={0.13} stopColor="#FFF44F" />
           <stop offset={0.25} stopColor="#FFDC3E" />
           <stop offset={0.51} stopColor="#FF9D12" />
           <stop offset={0.53} stopColor="#FF980E" />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__e"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(187.24 403.47) scale(246.3)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__e" cx={0} cy={0} r={1} gradientTransform="translate(187.24 403.47) scale(246.3)" gradientUnits="userSpaceOnUse">
           <stop offset={0.35} stopColor="#3A8EE6" />
           <stop offset={0.47} stopColor="#5C79F0" />
           <stop offset={0.67} stopColor="#9059FF" />
@@ -1894,14 +1340,7 @@ export const Icons = {
           <stop offset={0.75} stopColor="#7716A8" stopOpacity={0.45} />
           <stop offset={0.97} stopColor="#6E008B" stopOpacity={0.6} />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__g"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(238.46 38.53) scale(177.218)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__g" cx={0} cy={0} r={1} gradientTransform="translate(238.46 38.53) scale(177.218)" gradientUnits="userSpaceOnUse">
           <stop stopColor="#FFE226" />
           <stop offset={0.12} stopColor="#FFDB27" />
           <stop offset={0.29} stopColor="#FFC82A" />
@@ -1909,14 +1348,7 @@ export const Icons = {
           <stop offset={0.73} stopColor="#FF7E37" />
           <stop offset={0.79} stopColor="#FF7139" />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__h"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(379.31 -76.71) scale(756.124)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__h" cx={0} cy={0} r={1} gradientTransform="translate(379.31 -76.71) scale(756.124)" gradientUnits="userSpaceOnUse">
           <stop offset={0.11} stopColor="#FFF44F" />
           <stop offset={0.46} stopColor="#FF980E" />
           <stop offset={0.62} stopColor="#FF5634" />
@@ -1940,41 +1372,20 @@ export const Icons = {
           <stop offset={0.57} stopColor="#FF3647" />
           <stop offset={0.74} stopColor="#E31587" />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__j"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(238.46 102.55) scale(471.985)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__j" cx={0} cy={0} r={1} gradientTransform="translate(238.46 102.55) scale(471.985)" gradientUnits="userSpaceOnUse">
           <stop offset={0.14} stopColor="#FFF44F" />
           <stop offset={0.48} stopColor="#FF980E" />
           <stop offset={0.59} stopColor="#FF5634" />
           <stop offset={0.66} stopColor="#FF3647" />
           <stop offset={0.9} stopColor="#E31587" />
         </radialGradient>
-        <radialGradient
-          id="ff_svg__k"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="translate(360.1 128.16) scale(516.61)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="ff_svg__k" cx={0} cy={0} r={1} gradientTransform="translate(360.1 128.16) scale(516.61)" gradientUnits="userSpaceOnUse">
           <stop offset={0.09} stopColor="#FFF44F" />
           <stop offset={0.23} stopColor="#FFE141" />
           <stop offset={0.51} stopColor="#FFAF1E" />
           <stop offset={0.63} stopColor="#FF980E" />
         </radialGradient>
-        <linearGradient
-          id="ff_svg__a"
-          x1={452.88}
-          x2={40.93}
-          y1={79.41}
-          y2={476.87}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="ff_svg__a" x1={452.88} x2={40.93} y1={79.41} y2={476.87} gradientUnits="userSpaceOnUse">
           <stop offset={0.05} stopColor="#FFF44F" />
           <stop offset={0.11} stopColor="#FFE847" />
           <stop offset={0.23} stopColor="#FFC830" />
@@ -1984,14 +1395,7 @@ export const Icons = {
           <stop offset={0.53} stopColor="#FF3647" />
           <stop offset={0.7} stopColor="#E31587" />
         </linearGradient>
-        <linearGradient
-          id="ff_svg__l"
-          x1={447.88}
-          x2={97.42}
-          y1={77.3}
-          y2={427.83}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="ff_svg__l" x1={447.88} x2={97.42} y1={77.3} y2={427.83} gradientUnits="userSpaceOnUse">
           <stop offset={0.17} stopColor="#FFF44F" stopOpacity={0.8} />
           <stop offset={0.27} stopColor="#FFF44F" stopOpacity={0.63} />
           <stop offset={0.49} stopColor="#FFF44F" stopOpacity={0.22} />
@@ -2001,12 +1405,7 @@ export const Icons = {
     </svg>
   ),
   edge: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 512"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" {...props}>
       <g clipPath="url(#edge_svg__a)">
         <path
           fill="url(#edge_svg__b)"
@@ -2036,14 +1435,7 @@ export const Icons = {
         />
       </g>
       <defs>
-        <radialGradient
-          id="edge_svg__c"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="matrix(190.76 0 0 181.222 314.4 356.91)"
-          gradientUnits="userSpaceOnUse"
-        >
+        <radialGradient id="edge_svg__c" cx={0} cy={0} r={1} gradientTransform="matrix(190.76 0 0 181.222 314.4 356.91)" gradientUnits="userSpaceOnUse">
           <stop offset={0.72} stopOpacity={0} />
           <stop offset={0.95} stopOpacity={0.53} />
           <stop offset={1} />
@@ -2085,25 +1477,11 @@ export const Icons = {
           <stop stopColor="#66EB6E" />
           <stop offset={1} stopColor="#66EB6E" stopOpacity={0} />
         </radialGradient>
-        <linearGradient
-          id="edge_svg__b"
-          x1={117.4}
-          x2={474.08}
-          y1={354.1}
-          y2={354.1}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="edge_svg__b" x1={117.4} x2={474.08} y1={354.1} y2={354.1} gradientUnits="userSpaceOnUse">
           <stop stopColor="#0C59A4" />
           <stop offset={1} stopColor="#114A8B" />
         </linearGradient>
-        <linearGradient
-          id="edge_svg__d"
-          x1={305.44}
-          x2={82.66}
-          y1={199.38}
-          y2={442.04}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="edge_svg__d" x1={305.44} x2={82.66} y1={199.38} y2={442.04} gradientUnits="userSpaceOnUse">
           <stop stopColor="#1B9DE2" />
           <stop offset={0.16} stopColor="#1595DF" />
           <stop offset={0.67} stopColor="#0680D7" />
@@ -2116,12 +1494,7 @@ export const Icons = {
     </svg>
   ),
   vivaldi: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 512"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" {...props}>
       <path
         fill="#EF3939"
         d="M256 511.21c111.94 0 174.15 0 214.9-40.62 40.65-40.62 40.65-102.74 40.65-214.59 0-111.85 0-173.97-40.65-214.59C430.15.9 367.94.9 256 .9 144.06.9 81.85.9 41.1 41.52.44 82.14.44 144.26.44 256.12c0 111.84 0 173.96 40.64 214.58 40.76 40.51 102.97 40.51 214.91 40.51z"
@@ -2135,14 +1508,7 @@ export const Icons = {
         d="M390.51 121.08c-74.66-74.72-195.81-74.72-270.6 0-74.66 74.72-74.66 195.8 0 270.4 74.67 74.72 195.82 74.72 270.6 0 74.78-74.72 74.78-195.8 0-270.4zm-11.45 87.88c-31.55 54.8-63.1 109.6-94.65 164.52-5.84 10.24-14.38 16.31-26.05 17.21-13.03.9-23.36-4.6-29.98-15.86-19.99-34.32-39.75-68.87-59.51-103.3-12.01-20.93-24.14-41.86-36.15-62.9-12.13-21.16 1.57-46.93 25.82-48.17 12.8-.67 22.68 5.3 29.2 16.43 8.86 15.2 17.62 30.61 26.5 45.91 6.4 11.03 12.57 22.17 19.08 32.97 9.43 15.87 23.35 24.76 41.88 25.89 26.16 1.57 50.53-17.45 53.67-45.24.23-2.02.34-4.16.45-5.18-.11-9-1.8-16.65-5.39-23.74-9.77-19.58.67-41.52 21.9-46.25 17.29-3.82 35.25 8.9 37.5 26.45 1.12 7.54-.45 14.62-4.27 21.26z"
       />
       <defs>
-        <linearGradient
-          id="vivaldi_svg__a"
-          x1={160.22}
-          x2={403.24}
-          y1={90.46}
-          y2={513.5}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="vivaldi_svg__a" x1={160.22} x2={403.24} y1={90.46} y2={513.5} gradientUnits="userSpaceOnUse">
           <stop stopOpacity={0.2} />
           <stop offset={0.79} stopOpacity={0.05} />
         </linearGradient>
@@ -2150,12 +1516,7 @@ export const Icons = {
     </svg>
   ),
   opera: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 512"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" {...props}>
       <g clipPath="url(#opera_svg__a)">
         <path
           fill="url(#opera_svg__b)"
@@ -2167,27 +1528,13 @@ export const Icons = {
         />
       </g>
       <defs>
-        <linearGradient
-          id="opera_svg__b"
-          x1={213.31}
-          x2={213.31}
-          y1={8.38}
-          y2={504.57}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="opera_svg__b" x1={213.31} x2={213.31} y1={8.38} y2={504.57} gradientUnits="userSpaceOnUse">
           <stop stopColor="#FF1B2D" />
           <stop offset={0.3} stopColor="#FF1B2D" />
           <stop offset={0.61} stopColor="#FF1B2D" />
           <stop offset={1} stopColor="#A70014" />
         </linearGradient>
-        <linearGradient
-          id="opera_svg__c"
-          x1={341.85}
-          x2={341.85}
-          y1={37.63}
-          y2={476.49}
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="opera_svg__c" x1={341.85} x2={341.85} y1={37.63} y2={476.49} gradientUnits="userSpaceOnUse">
           <stop stopColor="#9C0000" />
           <stop offset={0.7} stopColor="#FF4B4B" />
           <stop offset={1} stopColor="#FF4B4B" />
@@ -2199,16 +1546,7 @@ export const Icons = {
     </svg>
   ),
   qr: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      width="1160px"
-      height="1160px"
-      viewBox="0 0 1160 1160"
-      xmlSpace="preserve"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1160px" height="1160px" viewBox="0 0 1160 1160" xmlSpace="preserve" {...props}>
       <path fill="var(--color-base-100)" d="M0 0H1160V1160H0z" />
       <path
         d="M250 0c138.077 0 250 111.93 250 250 0 138.077-111.923 250-250 250C111.93 500 0 388.077 0 250 0 111.93 111.93 0 250 0z"
@@ -2235,31 +1573,11 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 440 40)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 480 40)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 520 40)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 560 40)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 320 80)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 360 80)"
-        fill="#82cb00"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 480 40)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 520 40)" d="M0 0H100V100H0z" />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 560 40)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 320 80)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 360 80)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 600 80)"
@@ -2270,21 +1588,9 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 640 80)"
         fill="#82cb00"
       />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 320 120)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 360 120)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 400 120)"
-        fill="#82cb00"
-      />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 320 120)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 360 120)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 400 120)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 480 120)"
@@ -2295,16 +1601,8 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 520 120)"
         fill="#82cb00"
       />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 360 160)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 400 160)"
-        d="M0 0H100V100H0z"
-      />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 360 160)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 400 160)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 440 160)"
@@ -2345,21 +1643,13 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 640 240)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 320 280)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 320 280)" d="M0 0H100V100H0z" />
       <path
         d="M500 250v250s-170.194 0-250-.012c-62.324.012-250 0-250 0V249.994C.006 111.931 111.929 0 249.994 0 388.064 0 500 111.93 500 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 440 280)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 560 280)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 560 280)" d="M0 0H100V100H0z" />
       <path
         d="M500 250v250s-170.194 0-250-.012c-62.324.012-250 0-250 0V249.994C.006 111.931 111.929 0 249.994 0 388.064 0 500 111.93 500 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 0 320)"
@@ -2370,251 +1660,75 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 240 320)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 320 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 360 320)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 440 320)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 480 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 520 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 560 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 680 320)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 320 320)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 360 320)" fill="#82cb00" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 440 320)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 480 320)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 520 320)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 560 320)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 320)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 320)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 680 320)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 720 320)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 840 320)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 880 320)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 920 320)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 0 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 40 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 80 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 120 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 160 360)"
-        d="M0 0H100V100H0z"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 840 320)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 880 320)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 920 320)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 0 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 40 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 80 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 120 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 160 360)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 200 360)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 280 360)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 320 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 360 360)"
-        d="M0 0H100V100H0z"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 280 360)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 320 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 360 360)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 400 360)"
         fill="#82cb00"
       />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 480 360)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 520 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 560 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 760 360)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 800 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 840 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 880 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 920 360)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 0 400)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 40 400)"
-        fill="#82cb00"
-      />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 480 360)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 520 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 560 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 360)" d="M0 0H100V100H0z" />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 760 360)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 800 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 840 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 880 360)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 920 360)" d="M0 0H100V100H0z" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 0 400)" fill="#82cb00" />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 40 400)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 240 400)"
         fill="#82cb00"
       />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 280 400)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 360 400)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 520 400)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 560 400)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 400)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 400)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 680 400)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 760 400)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 800 400)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 840 400)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 920 400)"
-        fill="#82cb00"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 960 400)"
-        fill="#82cb00"
-      />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 280 400)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 360 400)" d="M0 0H100V100H0z" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 520 400)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 560 400)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 400)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 400)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 680 400)" fill="#82cb00" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 760 400)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 800 400)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 840 400)" d="M0 0H100V100H0z" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 920 400)" fill="#82cb00" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 960 400)" fill="#82cb00" />
       <path
         d="M500 250v250s-170.194 0-250-.012c-62.324.012-250 0-250 0V249.994C.006 111.931 111.929 0 249.994 0 388.064 0 500 111.93 500 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 80 440)"
         fill="#82cb00"
       />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 360 440)"
-        fill="#82cb00"
-      />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 360 440)" fill="#82cb00" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 400 440)"
@@ -2640,41 +1754,17 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 840 440)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 960 440)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 960 440)" d="M0 0H100V100H0z" />
       <path
         d="M500 250v250s-170.194 0-250-.012c-62.324.012-250 0-250 0V249.994C.006 111.931 111.929 0 249.994 0 388.064 0 500 111.93 500 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 0 480)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 80 480)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 120 480)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 160 480)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 200 480)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 240 480)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 80 480)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 120 480)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 160 480)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 200 480)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 240 480)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 280 480)"
@@ -2685,56 +1775,28 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 440 480)"
         fill="#82cb00"
       />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 480 480)"
-        fill="#82cb00"
-      />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 480 480)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 720 480)"
         fill="#82cb00"
       />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 760 480)"
-        fill="#82cb00"
-      />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 760 480)" fill="#82cb00" />
       <path
         d="M0 250V0h500v250c0 138.064-111.936 250-250 250C111.929 500 0 388.064 0 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 960 480)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 0 520)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 40 520)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 80 520)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 120 520)"
-        fill="#82cb00"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 0 520)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 40 520)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 80 520)" d="M0 0H100V100H0z" />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 120 520)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 320 520)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 360 520)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 360 520)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 400 520)"
@@ -2745,31 +1807,19 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 520 520)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 600 520)"
-        fill="#82cb00"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 600 520)" fill="#82cb00" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 640 520)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 760 520)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 760 520)" d="M0 0H100V100H0z" />
       <path
         d="M500 250v250s-170.194 0-250-.012c-62.324.012-250 0-250 0V249.994C.006 111.931 111.929 0 249.994 0 388.064 0 500 111.93 500 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 920 520)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 0 560)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 0 560)" d="M0 0H100V100H0z" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 240 560)"
@@ -2785,11 +1835,7 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 360 560)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 440 560)"
-        fill="#82cb00"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 440 560)" fill="#82cb00" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 480 560)"
@@ -2800,46 +1846,14 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 560 560)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 560)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 760 560)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 800 560)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 840 560)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 920 560)"
-        fill="#82cb00"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 960 560)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 0 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 160 600)"
-        fill="#82cb00"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 560)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 760 560)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 800 560)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 840 560)" fill="#82cb00" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 920 560)" fill="#82cb00" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 960 560)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 0 600)" d="M0 0H100V100H0z" />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 160 600)" fill="#82cb00" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 200 600)"
@@ -2850,46 +1864,14 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 400 600)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 440 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 680 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 720 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 760 600)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 840 600)"
-        fill="#82cb00"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 880 600)"
-        fill="#82cb00"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 440 600)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 600)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 600)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 680 600)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 720 600)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 760 600)" d="M0 0H100V100H0z" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 840 600)" fill="#82cb00" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 880 600)" fill="#82cb00" />
       <path
         d="M0 250V0h500v250c0 138.064-111.936 250-250 250C111.929 500 0 388.064 0 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 960 600)"
@@ -2915,16 +1897,8 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 240 640)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 280 640)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 320 640)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 280 640)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 320 640)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 360 640)"
@@ -2935,36 +1909,12 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 440 640)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 640)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 640)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 680 640)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 720 640)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 760 640)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 800 640)"
-        fill="#82cb00"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 640)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 640)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 680 640)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 720 640)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 760 640)" d="M0 0H100V100H0z" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 800 640)" fill="#82cb00" />
       <path
         d="M0 250V0h500v250c0 138.064-111.936 250-250 250C111.929 500 0 388.064 0 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 880 640)"
@@ -2990,186 +1940,74 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 520 680)"
         fill="#82cb00"
       />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 600 680)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 680)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 800 680)"
-        d="M0 0H100V100H0z"
-      />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 600 680)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 680)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 800 680)" d="M0 0H100V100H0z" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 360 720)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 400 720)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 400 720)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 440 720)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 720)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 720)" d="M0 0H100V100H0z" />
       <path
         d="M250 0c138.077 0 250 111.93 250 250 0 138.077-111.923 250-250 250C111.93 500 0 388.077 0 250 0 111.93 111.93 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 720 720)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 800 720)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 800 720)" d="M0 0H100V100H0z" />
       <path
         d="M500 250v250s-170.194 0-250-.012c-62.324.012-250 0-250 0V249.994C.006 111.931 111.929 0 249.994 0 388.064 0 500 111.93 500 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 960 720)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 480 760)"
-        fill="#82cb00"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 480 760)" fill="#82cb00" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 520 760)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 600 760)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 760)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 800 760)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 920 760)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 960 760)"
-        d="M0 0H100V100H0z"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 600 760)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 760)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 800 760)" d="M0 0H100V100H0z" />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 920 760)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 960 760)" d="M0 0H100V100H0z" />
       <path
         d="M0 250V0h500v250c0 138.064-111.936 250-250 250C111.929 500 0 388.064 0 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 480 800)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 560 800)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 640 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 680 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 720 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 760 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 800 800)"
-        fill="#82cb00"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 560 800)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 800)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 640 800)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 680 800)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 720 800)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 760 800)" d="M0 0H100V100H0z" />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 800 800)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 880 800)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 920 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 960 800)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 560 840)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 600 840)"
-        d="M0 0H100V100H0z"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 680 840)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 720 840)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 920 840)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 960 840)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 920 800)" d="M0 0H100V100H0z" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 960 800)" d="M0 0H100V100H0z" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 560 840)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 600 840)" d="M0 0H100V100H0z" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 680 840)" fill="#82cb00" />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 720 840)" fill="#82cb00" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 920 840)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 960 840)" d="M0 0H100V100H0z" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 400 880)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 440 880)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 440 880)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 480 880)"
@@ -3190,11 +2028,7 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 880 880)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 960 880)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 960 880)" d="M0 0H100V100H0z" />
       <path
         d="M0 250V0h500v250c0 138.064-111.936 250-250 250C111.929 500 0 388.064 0 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 440 920)"
@@ -3205,16 +2039,8 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 560 920)"
         fill="#82cb00"
       />
-      <path
-        d="M0 500h500V0C223.861.001 0 223.854 0 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 640 920)"
-        fill="#82cb00"
-      />
-      <path
-        d="M0 0v500h500C500 223.853 276.142 0 0 0z"
-        transform="translate(80 80) matrix(.08 0 0 .08 680 920)"
-        fill="#82cb00"
-      />
+      <path d="M0 500h500V0C223.861.001 0 223.854 0 500z" transform="translate(80 80) matrix(.08 0 0 .08 640 920)" fill="#82cb00" />
+      <path d="M0 0v500h500C500 223.853 276.142 0 0 0z" transform="translate(80 80) matrix(.08 0 0 .08 680 920)" fill="#82cb00" />
       <path
         d="M250 0h250v500H250C111.881 500 0 388.021 0 250 0 111.963 111.881 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 760 920)"
@@ -3225,11 +2051,7 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 800 920)"
         fill="#82cb00"
       />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 960 920)"
-        d="M0 0H100V100H0z"
-      />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 960 920)" d="M0 0H100V100H0z" />
       <path
         d="M250 0c138.077 0 250 111.93 250 250 0 138.077-111.923 250-250 250C111.93 500 0 388.077 0 250 0 111.93 111.93 0 250 0z"
         transform="translate(80 80) matrix(.08 0 0 .08 320 960)"
@@ -3240,21 +2062,9 @@ export const Icons = {
         transform="translate(80 80) matrix(.08 0 0 .08 520 960)"
         fill="#82cb00"
       />
-      <path
-        d="M500 0H0v500c276.142 0 500-223.858 500-500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 560 960)"
-        fill="#82cb00"
-      />
-      <path
-        d="M500 500V0H0c.001 276.142 223.853 500 500 500z"
-        transform="translate(80 80) matrix(.08 0 0 .08 640 960)"
-        fill="#82cb00"
-      />
-      <path
-        fill="#82cb00"
-        transform="translate(80 80) matrix(.4 0 0 .4 680 960)"
-        d="M0 0H100V100H0z"
-      />
+      <path d="M500 0H0v500c276.142 0 500-223.858 500-500z" transform="translate(80 80) matrix(.08 0 0 .08 560 960)" fill="#82cb00" />
+      <path d="M500 500V0H0c.001 276.142 223.853 500 500 500z" transform="translate(80 80) matrix(.08 0 0 .08 640 960)" fill="#82cb00" />
+      <path fill="#82cb00" transform="translate(80 80) matrix(.4 0 0 .4 680 960)" d="M0 0H100V100H0z" />
       <path
         d="M250 500H0V250 0h250c138.064 0 250 111.929 250 250 0 138.064-111.936 250-250 250z"
         transform="translate(80 80) matrix(.08 0 0 .08 720 960)"
@@ -3320,6 +2130,77 @@ export const Icons = {
       />
     </svg>
   ),
-
+  about1: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+      <path stroke="var(--color-accent)" stroke-width="4" d="m37.03 117-3.12 37.16A10 10 0 0 0 43.88 165h3.24a10 10 0 0 0 9.97-10.84L53.97 117"></path>
+      <path stroke="var(--color-accent)" stroke-width="2" d="M125 84h3a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6h-2"></path>
+      <path
+        stroke="var(--color-accent)"
+        stroke-width="4"
+        d="M126 52.38c0-1.63-1.6-2.78-3.15-2.25L57.7 72.27c-.34.12-.64.3-.9.55H33.87c-1.32 0-2.86 1.06-2.86 2.38V78h-7.47C18.27 78 14 82.62 14 87.87v14.26c0 5.25 4.27 9.87 9.53 9.87H31v2.8c0 1.31 1.54 2.38 2.86 2.38h22.96c.25.24.55.43.9.55l65.13 22.14a2.38 2.38 0 0 0 3.15-2.25V52.38Z"
+      ></path>
+      <path stroke="var(--color-accent)" stroke-linecap="round" stroke-width="2" d="M32 80v30m25-37v42"></path>
+      <path stroke="var(--color-accent)" stroke-linecap="round" stroke-width="4" d="M161 154c15.31-14.3 25-35.43 25-59s-9.69-44.7-25-59"></path>
+      <path stroke="var(--color-accent)" stroke-linecap="round" stroke-width="2" d="M152 46c12.82 11.62 21 29.25 21 49s-8.18 37.38-21 49"></path>
+      <path stroke="var(--color-accent)" stroke-linecap="round" stroke-width="2" d="M142 54c11.22 7.16 19 22.83 19 41s-7.78 33.84-19 41"></path>
+    </svg>
+  ),
+  about2: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+      <path
+        stroke="var(--color-accent)"
+        stroke-miterlimit="10"
+        stroke-width="4"
+        d="M132.38 80h44.11a7.51 7.51 0 0 1 7.51 7.5v54.1a7.52 7.52 0 0 1-7.5 7.5h-7v25.02a1.88 1.88 0 0 1-3.28 1.26l-23.6-26.22h-51.1a7.52 7.52 0 0 1-7.51-7.51v-21.96"
+      ></path>
+      <path
+        stroke="var(--color-accent)"
+        stroke-miterlimit="10"
+        stroke-width="4"
+        d="M124.25 39h-99.5A8.77 8.77 0 0 0 16 47.71v63.07a8.7 8.7 0 0 0 8.75 8.71h8.2v29.17a2.17 2.17 0 0 0 2.68 2.28c.45-.1.86-.35 1.16-.7l27.6-30.63h59.86a8.7 8.7 0 0 0 8.75-8.71V47.74a8.68 8.68 0 0 0-5.4-8.07 8.79 8.79 0 0 0-3.35-.67Z"
+      ></path>
+      <path stroke="var(--color-accent)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M41 64h66M41 80h66M41 95h66"></path>
+    </svg>
+  ),
+  about3: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M17.47 103.8C9.96 109.88 6 116.61 6 123.5c0 10.74 9.7 21.13 26.94 28.94C50 160.17 73.71 165 100 165c26.3 0 50-4.83 67.06-12.56 17.24-7.81 26.94-18.2 26.94-28.94 0-6.89-3.96-13.62-11.47-19.7-7.51-6.06-18.37-11.28-31.59-15.1l1.12-3.84c13.53 3.9 24.93 9.33 32.98 15.83 8.04 6.5 12.96 14.26 12.96 22.81 0 13.28-11.79 24.65-29.3 32.58C151.03 164.1 126.74 169 100 169c-26.73 0-51.02-4.9-68.7-12.92C13.78 148.15 2 136.78 2 123.5c0-8.55 4.92-16.31 12.96-22.8 8.05-6.51 19.45-11.93 32.99-15.84l1.1 3.84c-13.21 3.82-24.07 9.04-31.58 15.1Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M21.01 106.95c-5.87 4.8-9.01 10.1-9.01 15.55 0 4.69 2.31 9.24 6.69 13.49 4.38 4.25 10.78 8.12 18.76 11.4C53.4 153.92 75.52 158 100 158c24.48 0 46.6-4.07 62.55-10.62 7.98-3.27 14.38-7.14 18.76-11.39 4.38-4.25 6.69-8.8 6.69-13.49 0-5.45-3.14-10.74-9.01-15.55-5.87-4.8-14.37-9.04-24.8-12.36l.61-1.9c10.57 3.36 19.32 7.69 25.45 12.7 6.13 5.03 9.75 10.83 9.75 17.11 0 5.4-2.67 10.44-7.3 14.93-4.62 4.48-11.26 8.47-19.39 11.8C147.06 155.9 124.67 160 100 160s-47.06-4.1-63.31-10.76c-8.13-3.34-14.77-7.33-19.4-11.81-4.62-4.5-7.29-9.54-7.29-14.93 0-6.28 3.62-12.08 9.75-17.1 6.13-5.02 14.88-9.35 25.45-12.71l.6 1.9c-10.42 3.32-18.92 7.55-24.79 12.36ZM125.31 37a16.08 16.08 0 0 0-15.75 19.3l-3.92.8a20.08 20.08 0 1 1 11.65 14.4l1.6-3.67A16.08 16.08 0 1 0 125.31 37Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M125.3 73.16c-2.32 0-4.57.3-6.73.83l-.97-3.88a31.6 31.6 0 0 1 7.7-.95c16.24 0 29.62 12.24 32.05 28.13.3 1.96-.03 3.88-1.34 5.3-1.28 1.38-3.14 1.92-5.09 1.92H122.9v-4h28.02c1.29 0 1.89-.35 2.15-.63.23-.26.5-.8.32-1.99-2.15-14.05-13.94-24.73-28.09-24.73ZM74.68 37a16.08 16.08 0 0 1 15.77 19.3l3.92.8a20.08 20.08 0 1 0-11.65 14.4l-1.6-3.67A16.08 16.08 0 1 1 74.69 37Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M74.7 73.16c2.32 0 4.57.3 6.73.83l.97-3.88a31.68 31.68 0 0 0-7.7-.95c-16.24 0-29.62 12.24-32.05 28.13-.3 1.96.03 3.88 1.34 5.3 1.28 1.38 3.14 1.92 5.09 1.92H77.1v-4H49.08c-1.29 0-1.89-.35-2.15-.63-.23-.26-.5-.8-.32-1.99 2.15-14.05 13.95-24.73 28.09-24.73Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M100 57.5a16.08 16.08 0 1 0 0 32.16 16.08 16.08 0 0 0 0-32.17ZM79.92 73.57a20.08 20.08 0 1 1 40.16 0 20.08 20.08 0 0 1-40.16 0Z"
+        clip-rule="evenodd"
+      ></path>
+      <path
+        fill="var(--color-accent)"
+        fill-rule="evenodd"
+        d="M99.99 93.66c-14.14 0-25.94 10.67-28.1 24.73-.1.67.03 1.44.33 1.98.26.47.56.63.95.63h52.44c1.28 0 1.88-.35 2.14-.63.24-.26.51-.8.33-1.98-2.15-14.06-13.95-24.73-28.1-24.73Zm-32.05 24.12c2.44-15.9 15.82-28.12 32.05-28.12 16.23 0 29.61 12.23 32.04 28.12.3 1.97-.03 3.88-1.33 5.3-1.28 1.39-3.15 1.92-5.1 1.92H73.18a5 5 0 0 1-4.44-2.69 7.28 7.28 0 0 1-.79-4.53Z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  ),
   empty: (props: IconProps) => <div>1</div>,
 };
