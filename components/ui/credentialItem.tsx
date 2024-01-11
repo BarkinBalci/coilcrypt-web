@@ -7,7 +7,7 @@ import { showToast } from "./toast";
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
-  const id = "copyToClipboard"
+  const id = "copyToClipboard";
   showToast({
     message: "Copied to Clipboard!",
     toastId: "copyClipboard",
@@ -19,12 +19,15 @@ function openUrl(url: string) {
   if (!url.startsWith("http://") && !url.startsWith("https://")) {
     url = "https://" + url;
   }
-  const urlPattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name and extension
-    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-    '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+  const urlPattern = new RegExp(
+    "^(https?:\\/\\/)?" + // protocol
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name and extension
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$",
+    "i"
+  ); // fragment locator
 
   if (!urlPattern.test(url)) {
     showToast({
@@ -43,7 +46,6 @@ interface CredentialItemProps {
 }
 
 async function deleteCredential(credentialId: String) {
-
   showToast({
     message: "Waiting for response...",
     toastId: "deleteCredential",
@@ -65,8 +67,7 @@ async function deleteCredential(credentialId: String) {
       type: "error",
     });
     throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  else {
+  } else {
     showToast({
       message: "Deleted the Credential!",
       toastId: "deleteCredential",
@@ -76,7 +77,6 @@ async function deleteCredential(credentialId: String) {
 
   const message = await response.json();
   console.log(message);
-
 }
 
 async function updateCredential(
@@ -106,8 +106,7 @@ async function updateCredential(
       type: "error",
     });
     throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  else {
+  } else {
     showToast({
       message: "Updated the Credential!",
       toastId: "updateCredential",
@@ -164,16 +163,16 @@ export function CredentialItem({
     <div
       key={credential.id}
       id={credential.id.toString()}
-      className="collapse collapse-arrow bg-base-200"
+      className="collapse collapse-arrow bg-base-200 hover:bg-neutral"
     >
-      <div className="flex flex-row items-center py-2 px-2">
+      <div className="flex flex-row items-center px-2">
         <FavoriteToggle
           item={credential}
           itemType="Credential"
           triggerUpdate={triggerUpdate}
         />
         <div
-          className="flex-grow cursor-pointer"
+          className="flex-grow cursor-pointer flex py-4"
           onClick={() => {
             if (dialogRef.current) {
               dialogRef.current.showModal();
@@ -236,7 +235,7 @@ export function CredentialItem({
                 </div>
                 <div>
                   <button
-                    className="btn btn-neutral"
+                    className="btn btn-secondary"
                     onClick={() => setIsDeleting(false)}
                   >
                     Cancel <Icons.cancel />
@@ -330,7 +329,7 @@ export function CredentialItem({
                   readOnly
                 />
                 <button
-                  className="btn btn-neutral join-item"
+                  className="btn btn-secondary join-item"
                   onClick={() => copyToClipboard(credential.username)}
                 >
                   <Icons.clipboard />
@@ -349,7 +348,7 @@ export function CredentialItem({
                   readOnly
                 />
                 <button
-                  className="btn btn-neutral join-item"
+                  className="btn btn-secondary join-item"
                   onClick={() => handleShowPassword(credential.id)}
                 >
                   {showPassword.includes(credential.id) ? (
@@ -359,7 +358,7 @@ export function CredentialItem({
                   )}
                 </button>
                 <button
-                  className="btn btn-neutral join-item"
+                  className="btn btn-secondary join-item"
                   onClick={() => copyToClipboard(credential.password)}
                 >
                   <Icons.clipboard />
@@ -376,7 +375,7 @@ export function CredentialItem({
                   readOnly
                 />
                 <button
-                  className="btn btn-neutral join-item"
+                  className="btn btn-secondary join-item"
                   onClick={() => openUrl(credential.url)}
                 >
                   <Icons.link />
@@ -399,11 +398,32 @@ export function CredentialItem({
                     Delete <Icons.trash />
                   </button>
                 </div>
-
               </div>
               <div className="pt-5">
-                <p className="text-xs text-opacity-50 text-secondary">Updated: {new Date(credential.revisionDate).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</p>
-                <p className="text-xs text-opacity-50 text-secondary">Created: {new Date(credential.creationDate).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</p>
+                <p className="text-xs text-opacity-50 text-secondary">
+                  Updated:{" "}
+                  {new Date(credential.revisionDate).toLocaleString("en-GB", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: false,
+                  })}
+                </p>
+                <p className="text-xs text-opacity-50 text-secondary">
+                  Created:{" "}
+                  {new Date(credential.creationDate).toLocaleString("en-GB", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: false,
+                  })}
+                </p>
               </div>
             </div>
           )}

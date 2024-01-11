@@ -103,16 +103,16 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
     <div
       key={note.id}
       id={note.id.toString()}
-      className="collapse collapse-arrow bg-base-200"
+      className="collapse collapse-arrow bg-base-200 hover:bg-neutral"
     >
-      <div className="flex flex-row items-center py-2 px-2">
+      <div className="flex flex-row items-center px-2">
         <FavoriteToggle
           item={note}
           itemType="Note"
           triggerUpdate={triggerUpdate}
         />
         <label
-          className="pl-2 cursor-pointer text-xl flex-grow"
+          className="pl-2 cursor-pointer text-xl flex-grow py-4"
           onClick={() => {
             if (dialogRef.current) {
               dialogRef.current.showModal();
@@ -147,7 +147,7 @@ export function NoteItem({ note, triggerUpdate }: NoteItemProps) {
                 </div>
                 <div>
                   <button
-                    className="btn btn-neutral"
+                    className="btn btn-secondary"
                     onClick={() => setIsDeleting(false)}
                   >
                     Cancel <Icons.cancel />
