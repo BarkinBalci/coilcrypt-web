@@ -97,7 +97,7 @@ export function PasswordGenerator({
             maxLength={64}
           />
           <button
-            className="btn btn-neutral join-item"
+            className="btn btn-secondary join-item"
             onClick={generatePassword}
           >
             <Icons.refresh />

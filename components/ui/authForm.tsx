@@ -75,7 +75,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
             <button
               type="submit"
-              className={"btn mt-2 w-full btn-neutral"}
+              className={"btn mt-2 w-full btn-secondary"}
               onClick={() =>
                 signIn("google", {
                   callbackUrl: `${window.location.origin}/vault`,
@@ -87,7 +87,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             </button>
             <button
               type="submit"
-              className={"btn mt-4 w-full btn-neutral"}
+              className={"btn mt-4 w-full btn-secondary"}
               onClick={() =>
                 signIn("github", {
                   callbackUrl: `${window.location.origin}/vault`,

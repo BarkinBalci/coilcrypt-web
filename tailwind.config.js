@@ -21,7 +21,7 @@ module.exports = {
           "primary": "#82CB00",
           "secondary": "#1D1D1D",
           "accent": "#82CB00",
-          "neutral": "#1D1D1D",
+          "neutral": "#D1D1D1",
           "base-100": "#FFFFFF",
           "--box-shadow-color-sm": "rgba(0, 0, 0, 0.05)",
           "--box-shadow-color-default": "rgba(0, 0, 0, 0.1)",
@@ -35,7 +35,7 @@ module.exports = {
           "primary": "#82CB00",
           "secondary": "#FFFFFF",
           "accent": "#82CB00",
-          "neutral": "#FFFFFF",
+          "neutral": "#2e2e2e",
           "base-100": "#1D1D1D",
 
           //Shadows are disabled due to contrast related banding @TODO

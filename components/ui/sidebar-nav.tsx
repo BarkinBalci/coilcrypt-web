@@ -53,7 +53,7 @@ export function SidebarNav({
       <div className="drawer-content flex flex-col justify-center">
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-neutral drawer-button lg:hidden fixed bottom-0 right-0 my-6 mx-6 z-20"
+          className="btn btn-secondary drawer-button lg:hidden fixed bottom-0 right-0 my-6 mx-6 z-20"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
