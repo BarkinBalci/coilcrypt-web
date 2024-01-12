@@ -54,7 +54,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                   <span className="label-text font-bold">Email</span>
                 </div>
                 <input
-                  className="input input-bordered w-full border-accent"
+                  className="input input-bordered w-full input-accent"
                   id="email"
                   type="email"
                   placeholder="Enter your email adress"
