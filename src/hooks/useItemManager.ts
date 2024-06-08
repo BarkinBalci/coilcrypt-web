@@ -11,7 +11,7 @@ import { Item } from '../models';
  * Provides functions for managing changes to the tasks in the Realm,
  * such as adding, updating, and deleting tasks.
  */
-export function useTaskManager() {
+export function useItemManager() {
   const realm = useRealm();
   const user = useUser();
   const [requeryFlag, setRequeryFlag] = useState(false);

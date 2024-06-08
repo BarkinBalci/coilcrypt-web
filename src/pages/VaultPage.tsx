@@ -22,7 +22,7 @@ import { AddLogin } from "../components/AddLogin";
 import { AddNote } from "../components/AddNote";
 import { IntroText } from "../components/IntroText";
 import { ItemList } from "../components/ItemList";
-import { useTaskManager } from "../hooks/useTaskManager";
+import { useItemManager } from "../hooks/useItemManager";
 import { SetStateAction, useState } from "react"; // Import useState
 
 /**
@@ -31,7 +31,7 @@ import { SetStateAction, useState } from "react"; // Import useState
  */
 export function VaultPage() {
   const { logins, notes, cards, identities, addLogin, addNote, addCard, addIdentity, toggleFavorite, deleteItem } =
-    useTaskManager();
+    useItemManager();
 
   // Add search term state
   const [searchTerm, setSearchTerm] = useState("");
